@@ -13,6 +13,137 @@
   }
 }
 
+.home-img {
+  width: 925px;
+
+}
+
+p {
+  margin: 0;
+}
+
+.enroll-button-container {
+  margin-top: 160px;
+
+}
+
+.enroll-sub {
+  font-weight: 900;
+  margin-top: 12px;
+}
+
+.enroll-button {
+  border: black solid 1px;
+  padding: 15px 54px;
+  background-color: white;
+  font-weight: 900;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.enroll-button:hover {
+  border: black solid 1px;
+  padding: 15px 54px;
+  background-color: black;
+  color: white;
+  font-weight: 900;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 56px;
+  display: flex;
+  align-items: flex-start;
+  text-transform: uppercase;
+  letter-spacing: -.003em;
+  line-height: .88em;
+  font-weight: 800;
+  transform: scale(1, 1.3);
+  /* padding-bottom: 3px; */
+}
+
+.title-container {
+  display: flex;
+  text-align: start;
+  padding-bottom: 15px;
+}
+
+.sub-title {
+  color: #ABDB8F;
+  font-weight: 900;
+  font-size: 45px;
+  /* line-height: .99em; */
+  transform: scale(1, 1.1);
+}
+
+.profile-img {
+  width: 207px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+  padding: 140px 18px 0px 56px;
+  /* line-height: .88em; */
+}
+
+.left-container {
+  width: 60%;
+  overflow: hidden;
+}
+
+.right-container {
+  width: 40%;
+}
+
+.first {
+  display: flex;
+  align-items: flex-start;
+  height: 666px;
+  padding-bottom: 9px;
+  overflow: hidden;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.second {
+  /* display:flex; */
+  background-color: black;
+  color: white;
+  padding: 36px;
+  text-align: start;
+}
+
+.second-text-container {
+  padding-left: 400px;
+}
+
+.pricing { 
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: black;
+  color: white;
+  padding: 27px 27px 27px 270px;
+}
+
+.enroll {
+  background-color: black;
+  color: white;
+  padding: 36px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -32,6 +163,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
