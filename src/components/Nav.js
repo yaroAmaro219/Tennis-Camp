@@ -13,7 +13,7 @@ export default class Nav extends Component {
         <a class='link' href='#location'>Location</a>
         <a class='link' href='#pricing'>Pricing</a>
         <a class='link' href='#coaches'>Meet the Coaches</a>
-            <a class='link' href='#contact'>Contact</a>
+            {/* <a class='link' href='#contact'>Contact</a> */}
             </div>
           <div class="hamburger">
         <input type="checkbox" id="nav-toggle"/>
@@ -36,8 +36,8 @@ export default class Nav extends Component {
                 onClick={() => document.getElementById("nav-toggle").checked = false}>Meet the Coaches</a></li>
                  <li><a href="#enroll" class="nav-link"
                 onClick={() => document.getElementById("nav-toggle").checked = false}>Enroll</a></li>
-                 <li><a href="#contact" class="nav-link"
-                onClick={() => document.getElementById("nav-toggle").checked = false}>Contact</a></li>
+                 {/* <li><a href="#contact" class="nav-link"
+                onClick={() => document.getElementById("nav-toggle").checked = false}>Contact</a></li> */}
         </ul>
       </div>
       </div>

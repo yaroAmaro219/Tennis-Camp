@@ -89,10 +89,12 @@ class App extends Component {
         <p>Meditation Instructor</p> */}
         </div>
         <div class="enroll" id='enroll'>
-          <h1>Enroll</h1>
+          <h1>Ready to Enroll ?</h1>
           <h1>-</h1>
-          <h3>347-400-6623</h3>
-          <h3>yaroamari@gmai.com</h3>
+          <h3>Call this number to enroll: </h3>
+          <h3><a class='phone' href='tel:3474006623'>347-400-6623</a></h3>
+          <h3>or email:</h3>
+          <h3><a class='phone' href="mailto:yaroamari@gmail.com">yaroamari@gmai.com</a></h3>
         </div>
         {/* <div class='contact' id='contact'>
           <h2>347-400-6623</h2>
