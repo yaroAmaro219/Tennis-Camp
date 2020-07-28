@@ -26,8 +26,16 @@
 
   .nav-container {
     background-color: #ABDB8F;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index:1 ;
   }
 
+}
+
+.blurb {
+  width: 330px;
 }
 
 .page {
@@ -72,6 +80,7 @@ a {
   display: block;
   border-bottom: 1px solid #ccc;
   text-transform: uppercase;
+  font-weight: 900;
   /* padding: 18px;
   margin: 72px; */
 }

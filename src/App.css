@@ -24,13 +24,20 @@ html {
     position: absolute;
   }
 
+  .title-container {
+    margin-bottom: 19px;
+  }
+
   .text-container {
-    padding: unset !important;
+    padding: 180px 18px 0px 18px !important;
   }
 
   .home-img {
-    width: 100%;
-    height: fit-content;
+    /* width: 100%;
+    height: 700px; */
+    /* width: 300px !important; */
+    height: 700px;
+    position: absolute;
   }
 
   .map {
@@ -57,7 +64,13 @@ html {
   .second {
     width: 100%;
   }
+  .enroll-button-container {
+    margin-top: 18px !important;
+  }
 
+  .profile-img {
+    width: 330px !important;
+  }
   
 }
 
@@ -173,7 +186,7 @@ a {
   /* display:flex; */
   background-color: black;
   color: white;
-  padding: 36px;
+  padding: 54px 36px;
   text-align: start;
 }
 
