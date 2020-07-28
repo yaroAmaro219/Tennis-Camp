@@ -9,7 +9,10 @@ html {
 }
 
 #location {
-  padding: 36px;
+  padding: 36px 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 @media screen and (max-width: 850px) {
@@ -22,6 +25,14 @@ html {
     text-align: start;
     overflow: hidden;
     position: absolute;
+  }
+
+  #location {
+    padding: 36px !important;
+  }
+
+  .enroll {
+    padding: 36px 18px !important;
   }
 
   .title-container {
@@ -56,7 +67,7 @@ html {
   }
 
   #pricing.pricing {
-    padding: 18px;
+    padding: 36px 18px;
   }
 
   .second-text-container {
@@ -74,6 +85,12 @@ html {
 
   .profile-img {
     width: 330px !important;
+  }
+
+  .enroll-button {
+    background-color: transparent !important;
+    margin-top: 18px;
+    position: absolute;
   }
 
 }
@@ -99,9 +116,9 @@ html {
 #coaches {
   display: flex;
   flex-direction: column;
-  padding: 24px 380px;
+  padding: 24px 270px;
   text-align: start;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: start;
 }
@@ -213,7 +230,7 @@ a {
   /* display:flex; */
   background-color: black;
   color: white;
-  padding: 54px 160px;
+  padding: 54px 270px;
   text-align: start;
 }
 
@@ -231,9 +248,12 @@ a {
 }
 
 .enroll {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   background-color: black;
   color: white;
-  padding: 36px;
+  padding: 36px 270px;
   width: 100%;
 }
 
