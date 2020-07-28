@@ -17,15 +17,16 @@ class App extends Component {
     }
   }
 
-  scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)   
+  scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)  
+  
+  
 
 
   render() {
     return (
-      <div className="App">
+      <div class="App">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"></link>
         <div class="nav-container">
-          {/* <input type="button" onClick={document.getElementById('enroll').scrollIntoView(true)} >Enroll</input> */}
           <Nav />
         </div>
         <div class='first'>
@@ -67,7 +68,10 @@ class App extends Component {
         </div>
         <div class="third" id='location'>
           <h1>Meet us here</h1>
-          <img class="profile-img" src={artemie} />
+          <iframe class='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1513.387199122326!2d-73.97101520488035!3d40.65690319826187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b179d62b029%3A0xea721f8f25d45234!2sProspect%20Park%20Well%20House!5e0!3m2!1sen!2sus!4v1595889963417!5m2!1sen!2sus"
+            width="600" height="450" frameborder="0"  allowfullscreen="" aria-hidden="false"
+          />
+          
         </div>
         <div class='pricing' id='pricing'>
           <h1>Pricing:</h1>
@@ -76,12 +80,15 @@ class App extends Component {
           <h2>Half day (9am - 12pm or 1pm - 4pm): $55/day per child</h2>
         </div>
         <div class='fifth' id='coaches'>
-          <h1>Meet our coaches</h1>
+          <h1>Meet our coaches!</h1>
+          <h2>Heade Coach, Artemie Amari</h2>
+          <p>​
+            Coach Artemie is one of the top ranked Tennis Pros in the U.S.A. Artemie has a passion for all things tennis; with over 8 years of coaching experience, Artemie has shown hundreds of players how to make the most of their game while having an awesome time!</p>
+          <h1>-</h1>
           <img class="profile-img" src={jacob} />
-          <h5>Artemie Amari</h5>
         <p>City, State and National Champion</p>
-        <h5>Marrisa Cole</h5>
-        <p>Meditation Instructor</p>
+        {/* <h5>Marrisa Cole</h5>
+        <p>Meditation Instructor</p> */}
         </div>
         <div class="enroll" id='enroll'>
           <h1>Enroll</h1>
@@ -89,7 +96,8 @@ class App extends Component {
         <div class='contact' id='contact'>
           <h2>347-400-6623</h2>
         </div>
-        </div>
+      </div>
+  
     );
   }
 }

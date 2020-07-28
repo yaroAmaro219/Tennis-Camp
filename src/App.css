@@ -1,21 +1,73 @@
 .App {
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  height: 100%;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#location {
+  padding: 36px;
+}
+
+@media screen and (max-width: 850px) {
+  .App {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: start;
+    overflow: hidden;
+    position: absolute;
   }
+
+  .text-container {
+    padding: unset !important;
+  }
+
+  .home-img {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .map {
+    width: 300px;
+  }
+
+  #coaches {
+    padding: unset;
+    width: 90%;
+  }
+
+  .first {
+    flex-direction: column;
+  }
+
+  #pricing.pricing {
+    padding: 18px;
+  }
+
+  .second-text-container {
+    padding-left: 0px;
+  }
+
+  .second {
+    width: 100%;
+  }
+
+  
 }
 
 .home-img {
   width: 925px;
+}
 
+#coaches {
+  padding: 24px;
+  text-align: start;
 }
 
 p {
@@ -23,7 +75,7 @@ p {
 }
 
 .enroll-button-container {
-  margin-top: 160px;
+  margin-top: 100px;
 
 }
 
@@ -78,7 +130,7 @@ p {
 }
 
 .profile-img {
-  width: 207px;
+  width: 360px;
 }
 
 h1 {
@@ -126,11 +178,11 @@ a {
 }
 
 .second-text-container {
-  padding-left: 400px;
+  /* padding-left: 400px; */
 }
 
-.pricing { 
-  display:flex;
+.pricing {
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   background-color: black;
@@ -142,7 +194,14 @@ a {
   background-color: black;
   color: white;
   padding: 36px;
+  width: 100%;
 }
+
+.contact {
+  width: 100%;
+  min-height: 28px;
+}
+
 
 .App-header {
   background-color: #282c34;
