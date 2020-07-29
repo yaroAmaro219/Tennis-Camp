@@ -32,6 +32,8 @@ export default class Nav extends Component {
                 onClick={() => document.getElementById("nav-toggle").checked = false}>Pricing</a></li>
                 <li><a href="#coaches" class="nav-link"
                 onClick={() => document.getElementById("nav-toggle").checked = false}>Meet the Coaches</a></li>
+                <li><a href="#bring" class="nav-link"
+                onClick={() => document.getElementById("nav-toggle").checked = false}>What to Bring</a></li>
                  <li><a href="#enroll" class="nav-link"
                   onClick={() => document.getElementById("nav-toggle").checked = false}>Enroll</a></li>
                 <a class='social' href='https://www.instagram.com/tenniscoachesofnyc/' target="_blank" rel="noopener noreferrer" ><img src={insta} /></a>

@@ -1,10 +1,6 @@
 import React, {Component} from "react";
 import artemie from "./images/jacob.jpg";
 import jacob from './MTenn.JPG'
-// import Container from '@material-ui/core/Container';
-// import Typography from '@material-ui/core/Typography';
-// import Box from '@material-ui/core/Box';
-// import Link from '@material-ui/core/Link';
 import Nav from "./components/Nav";
 import './styles/Nav.css'
 import "./App.css";
@@ -16,11 +12,6 @@ class App extends Component {
       toggle: false
     }
   }
-
-  scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)  
-  
-  
-
 
   render() {
     return (
@@ -62,7 +53,6 @@ class App extends Component {
           <h1>Meet us here!</h1>
           <h1>-</h1>
           <iframe class='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.429845963309!2d-73.97954418489897!3d40.664496979337144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b1b5a024031%3A0x85d936291c15cad!2sLafayette%20Memorial!5e0!3m2!1sen!2sus!4v1595932673358!5m2!1sen!2sus" width="600" height="450" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-          
         </div>
         <div class='pricing' id='pricing'>
           <h1>Pricing:</h1>
@@ -76,19 +66,23 @@ class App extends Component {
           <h2>Head Coach,  Artemie Amari</h2>
           <p class='blurb'>​
             Coach Artemie is one of the top ranked Tennis Pros in the U.S.A. Artemie has a passion for all things tennis; with over 8 years of coaching experience, Artemie has shown hundreds of players how to make the most of their game while having an awesome time!</p>
-          
           <img class="profile-img" src={jacob} />
-        <h4>City, State and National Champion</h4>
-        {/* <h5>Marrisa Cole</h5>
-        <p>Meditation Instructor</p> */}
+        <h4>City, State and National Champion (2014, Beacon HS)</h4>
         </div>
         <div class="enroll" id='enroll'>
-          <h1>Ready to Enroll ?</h1>
+          <h1>Ready to Enroll?</h1>
           <h1>-</h1>
           <h3>Call this number to enroll: </h3>
           <h1><a class='phone' href='tel:3474006623'>347-400-6623</a></h1>
           <h3>or email:</h3>
-          <h1><a class='phone' href="mailto:yaroamari@gmail.com">yaroamari@gmai.com</a></h1>
+          <h3><a class='phone' href="mailto:tenniscoachesofnyc@gmail.com">TenniscoachesofNYC@gmail.com</a></h3>
+        </div>
+        <div class='bring' id='bring'>
+          <h1>What to Bring?</h1>
+          <h1>-</h1>
+          <h3>A Racket! We will have extras for those that need.</h3>
+          <h3>Lunch, for those doing full sessions.</h3>
+          <h3>A water bottle!</h3>
         </div>
       </div>
   
