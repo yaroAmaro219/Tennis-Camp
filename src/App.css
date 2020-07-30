@@ -116,6 +116,32 @@ html {
   width: 925px;
 }
 
+.contact {
+  background-color: black;
+  padding: 36px 18px;
+  color: white;
+}
+
+.enroll-button2 {
+  padding: 36px 72px;
+  background-color: #abdb8f;
+  font-size: x-large;
+  color: white;
+}
+
+.enroll-enroll {
+  color: white;
+  font-weight: 700;
+}
+
+.footer {
+  background-color: #abdb8f;
+  padding: 36px 18px;
+  width: 100%;
+  color: white;
+}
+
+
 #coaches {
   display: flex;
   flex-direction: column;
@@ -126,6 +152,10 @@ html {
   text-align: start;
 }
 
+.blurb {
+  text-align: justify;
+}
+
 .bring {
   display: flex;
   flex-direction: column;
@@ -134,7 +164,7 @@ html {
   justify-content: flex-start;
 
   width: 100%;
-  
+
 }
 
 .phone {
