@@ -1,0 +1,51 @@
+
+.enroll-page {
+  padding: 96px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 36px;
+}
+
+.waiver {
+  width: 90%;
+}
+
+.consent-popup {
+  width: 100%;
+}
+
+.input {
+  margin: 9px;
+  padding: 9px;
+}
+
+.date {
+  display: inline-block;
+  padding: 9px;
+  margin: 9px;
+}
+
+.payment {
+  color: black;
+  font-size: larger;
+}
+
+.submit { 
+  /* margin-top: 36px; */
+  padding: 18px 36px;
+  font-weight: 800;
+  border: 1.4px solid black;
+  background-color: white;
+  display: flex;
+  color: black;
+  align-items: center;
+  justify-content: center;
+}

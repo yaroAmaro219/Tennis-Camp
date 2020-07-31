@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  firstname: MyString
+  lastname: MyString
+  phone: MyString
+  email: MyString
+  childname: MyString
+  childage: MyString
+  startdate: 2020-07-31 10:53:18
+  enddate: 2020-07-31 10:53:18
+  question: MyString
+  consent: false
+
+two:
+  firstname: MyString
+  lastname: MyString
+  phone: MyString
+  email: MyString
+  childname: MyString
+  childage: MyString
+  startdate: 2020-07-31 10:53:18
+  enddate: 2020-07-31 10:53:18
+  question: MyString
+  consent: false
