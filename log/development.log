@@ -4632,3 +4632,421 @@ Processing by EnrollsController#create as HTML
 Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 2853)
 
 
+Started POST "/enrolls" for ::1 at 2020-07-31 16:00:29 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Uri", "lastname"=>"Amari", "phone"=>"9172172984", "email"=>"uamari@gmail.com", "childname"=>"kid", "childage"=>"4", "question"=>"yo", "consent"=>true, "startdate"=>"2020-08-13T04:00:00.000Z", "enddate"=>"2020-08-12T04:00:00.000Z"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (1.0ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["firstname", "Uri"], ["lastname", "Amari"], ["phone", "9172172984"], ["email", "uamari@gmail.com"], ["childname", "kid"], ["childage", "4"], ["startdate", "2020-08-13T04:00:00.000Z"], ["enddate", "2020-08-12T04:00:00.000Z"], ["question", "yo"], ["consent", true], ["created_at", "2020-07-31 20:00:29.746278"], ["updated_at", "2020-07-31 20:00:29.746278"]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 42ms (Views: 0.4ms | ActiveRecord: 7.8ms | Allocations: 12408)
+
+
+Started POST "/enrolls" for ::1 at 2020-07-31 16:00:39 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Uri", "lastname"=>"Amari", "phone"=>"9172172984", "email"=>"uamari@gmail.com", "childname"=>"kid", "childage"=>"4", "question"=>"yo", "consent"=>true, "startdate"=>"2020-08-13T04:00:00.000Z", "enddate"=>"2020-08-12T04:00:00.000Z"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (0.4ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["firstname", "Uri"], ["lastname", "Amari"], ["phone", "9172172984"], ["email", "uamari@gmail.com"], ["childname", "kid"], ["childage", "4"], ["startdate", "2020-08-13T04:00:00.000Z"], ["enddate", "2020-08-12T04:00:00.000Z"], ["question", "yo"], ["consent", true], ["created_at", "2020-07-31 20:00:39.174062"], ["updated_at", "2020-07-31 20:00:39.174062"]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 2876)
+
+
+Started GET "/22f78e068d904a791130.hot-update.json" for ::1 at 2020-07-31 16:01:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/22f78e068d904a791130.hot-update.json"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/enrolls" for ::1 at 2020-07-31 16:01:04 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (0.8ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.8ms | Allocations: 2943)
+
+
+Started POST "/enrolls" for ::1 at 2020-07-31 16:01:53 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"", "lastname"=>"", "phone"=>"", "email"=>"", "childname"=>"", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-07-31T20:01:50.113Z", "enddate"=>"2020-07-31T20:01:50.113Z"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (1.7ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["firstname", ""], ["lastname", ""], ["phone", ""], ["email", ""], ["childname", ""], ["childage", ""], ["startdate", "2020-07-31T20:01:50.113Z"], ["enddate", "2020-07-31T20:01:50.113Z"], ["question", ""], ["consent", false], ["created_at", "2020-07-31 20:01:53.636802"], ["updated_at", "2020-07-31 20:01:53.636802"]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 40ms (Views: 0.4ms | ActiveRecord: 6.6ms | Allocations: 12411)
+
+
+Started POST "/enrolls" for ::1 at 2020-07-31 16:02:10 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"", "lastname"=>"", "phone"=>"", "email"=>"", "childname"=>"", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-07-31T20:02:09.283Z", "enddate"=>"2020-07-31T20:02:09.283Z"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (0.3ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["firstname", ""], ["lastname", ""], ["phone", ""], ["email", ""], ["childname", ""], ["childage", ""], ["startdate", "2020-07-31T20:02:09.283Z"], ["enddate", "2020-07-31T20:02:09.283Z"], ["question", ""], ["consent", false], ["created_at", "2020-07-31 20:02:10.821585"], ["updated_at", "2020-07-31 20:02:10.821585"]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 2876)
+
+
+Started POST "/enrolls" for ::1 at 2020-07-31 16:02:41 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"", "lastname"=>"", "phone"=>"", "email"=>"", "childname"=>"", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-07-31T20:02:38.695Z", "enddate"=>"2020-07-31T20:02:38.695Z"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (0.4ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["firstname", ""], ["lastname", ""], ["phone", ""], ["email", ""], ["childname", ""], ["childage", ""], ["startdate", "2020-07-31T20:02:38.695Z"], ["enddate", "2020-07-31T20:02:38.695Z"], ["question", ""], ["consent", false], ["created_at", "2020-07-31 20:02:41.940274"], ["updated_at", "2020-07-31 20:02:41.940274"]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 2871)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:47:34 -0400
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.2) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.2) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2020-08-01 08:47:35 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.2) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.2) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3805599927871995120)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeDataTypeForDate (20200731183255)
+  [1m[35m (3.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (49.0ms)[0m  [1m[35mALTER TABLE "enrolls" ALTER COLUMN "startdate" TYPE character varying[0m
+  [1m[35m (5.0ms)[0m  [1m[35mALTER TABLE "enrolls" ALTER COLUMN "enddate" TYPE character varying[0m
+  [1m[36mprimary::SchemaMigration Create (2.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200731183255"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3805599927871995120)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/enrolls" for ::1 at 2020-08-01 08:48:53 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"", "lastname"=>"", "phone"=>"", "email"=>"", "childname"=>"", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-01T12:48:31.769Z", "enddate"=>"2020-08-01T12:48:31.769Z"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (10.0ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["firstname", ""], ["lastname", ""], ["phone", ""], ["email", ""], ["childname", ""], ["childage", ""], ["startdate", "2020-08-01T12:48:31.769Z"], ["enddate", "2020-08-01T12:48:31.769Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-01 12:48:54.145893"], ["updated_at", "2020-08-01 12:48:54.145893"]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 65ms (Views: 4.3ms | ActiveRecord: 23.5ms | Allocations: 12408)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:49:00 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (1.5ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 114ms (Views: 112.2ms | ActiveRecord: 1.5ms | Allocations: 65684)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-08-01 08:49:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/enrolls" for ::1 at 2020-08-01 08:51:16 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (5.9ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 79ms (Views: 72.6ms | ActiveRecord: 5.9ms | Allocations: 65665)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:51:28 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (2.1ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 101ms (Views: 98.7ms | ActiveRecord: 2.1ms | Allocations: 65634)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:51:36 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (1.6ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 70ms (Views: 68.2ms | ActiveRecord: 1.6ms | Allocations: 65634)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:51:40 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (60.8ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 155ms (Views: 94.1ms | ActiveRecord: 60.8ms | Allocations: 65618)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:51:54 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (1.1ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 111ms (Views: 109.8ms | ActiveRecord: 1.1ms | Allocations: 65615)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:51:57 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (2.1ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 141ms (Views: 138.2ms | ActiveRecord: 2.1ms | Allocations: 65615)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:52:14 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (1.8ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 69ms (Views: 66.7ms | ActiveRecord: 1.8ms | Allocations: 65615)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:53:49 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (7.2ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 90ms (Views: 81.1ms | ActiveRecord: 7.2ms | Allocations: 65612)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:54:12 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (1.7ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 125ms (Views: 122.4ms | ActiveRecord: 1.7ms | Allocations: 65615)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:54:25 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (3.2ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 92ms (Views: 88.6ms | ActiveRecord: 3.2ms | Allocations: 65612)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:54:36 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (3.0ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 80ms (Views: 76.9ms | ActiveRecord: 3.0ms | Allocations: 65615)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:54:46 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (4.6ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 70ms (Views: 65.0ms | ActiveRecord: 4.6ms | Allocations: 65612)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:55:01 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (2.2ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 76ms (Views: 73.5ms | ActiveRecord: 2.2ms | Allocations: 65615)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:55:04 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (9.1ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 131ms (Views: 120.2ms | ActiveRecord: 9.1ms | Allocations: 65615)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:55:32 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (1.3ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 134ms (Views: 132.7ms | ActiveRecord: 1.3ms | Allocations: 65612)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:56:18 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (1.2ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 84ms (Views: 82.4ms | ActiveRecord: 1.2ms | Allocations: 65615)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:56:38 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (1.5ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 1.5ms | Allocations: 65612)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:56:52 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (3.2ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 73ms (Views: 69.8ms | ActiveRecord: 3.2ms | Allocations: 65615)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:57:10 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (2.9ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 61ms (Views: 57.4ms | ActiveRecord: 2.9ms | Allocations: 65612)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:57:28 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (3.9ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 77ms (Views: 72.7ms | ActiveRecord: 3.9ms | Allocations: 65615)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:57:42 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (8.9ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 73ms (Views: 63.9ms | ActiveRecord: 8.9ms | Allocations: 65612)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:57:57 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (1.4ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 68ms (Views: 66.4ms | ActiveRecord: 1.4ms | Allocations: 65615)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:58:10 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (3.0ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 66ms (Views: 62.9ms | ActiveRecord: 3.0ms | Allocations: 65615)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:58:21 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (4.4ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 142ms (Views: 137.5ms | ActiveRecord: 4.4ms | Allocations: 65615)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:58:32 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (6.9ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 64ms (Views: 57.3ms | ActiveRecord: 6.9ms | Allocations: 65612)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-01 08:58:44 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (2.2ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 68ms (Views: 65.1ms | ActiveRecord: 2.2ms | Allocations: 65612)
+
+

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 import DatePicker from 'react-date-picker'
 import Modal from './Modal'
 
@@ -81,22 +82,19 @@ export default class Enroll extends Component {
           <input class='input' type='text' name='childage' onChange={this.handleChange} />
           
           <div class='checkbox'>
-          Half Day Morning (9-12): 
-          <input type='checkbox' />
-          Half Day Afternoon (1-4): 
-          <input type='checkbox' />
-          Full Day: <input type='checkbox' />
+          <h3>Full Day:
+            <input type='checkbox' /></h3>
+          <h3>Half Day Morning (9-12):
+          <input type='checkbox' /></h3> 
+          <h3>Half Day Afternoon (1-4): 
+          <input type='checkbox' /></h3>
           </div>
-          Dates:
+          <h2>Dates:</h2>
           <div class='input'>
             Start:
       <DatePicker class='input' name='date'
-        // selected={this.state.startDate}
             onChange={this.onstartChange}
             value={this.state.startdate}
-        // selectsStart
-        // startDate={startDate}
-        // endDate={endDate}
             />
             </div>
             <div class='input'>
@@ -117,7 +115,7 @@ export default class Enroll extends Component {
           {this.state.modal
               ?
             <Modal handleClose={() => { this.setState({ modal: !this.state.modal }) }}>
-              <h2>{`Hello ${this.state.firstname + ` ` + this.state.lastname}`}</h2>
+              <h2>{`Hello, ${this.state.firstname + ` ` + this.state.lastname}`}</h2>
               <h4>By Agreeing to</h4>
               <div >
                 <p class='waiver'>Liability Release and Parental Consent Form
@@ -180,13 +178,13 @@ agree to all of its terms and conditions. </p>
             <input type='checkbox' onClick={() => { this.setState({ consent: !this.state.consent }) }} />
             <h4 class='consent'>I agree to <a onClick={() => { this.setState({ modal: !this.state.modal }) }} href='#' >terms and conditions</a></h4>
           </div>
-          <a herf='/payment'>
+          <Link class='link-payment' to='/payment'>
           <button class='submit' onClick={(e) => { addEnroll(this.state.firstname, this.state.lastname, this.state.phone, this.state.email, this.state.childname, this.state.childage, this.state.question, this.state.consent, this.state.startdate, this.state.enddate) }}>
           
               Continue to payment
                
             </button>
-            </a>
+            </Link>
         </form >
       </div>
     )

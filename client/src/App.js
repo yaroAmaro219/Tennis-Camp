@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Nav from "./components/Nav";
 import { Route, Switch } from 'react-router-dom'
+import Show from './components/Show'
 import Enroll from './components/Enroll'
 import Home from './components/Home'
 import Payment from './components/Payment'
@@ -9,9 +10,12 @@ import './styles/Nav.css'
 import './styles/Enroll.css'
 import './styles/Payment.css'
 import "./App.css";
+import './styles/Show.css'
 
 import {
-  postEnroll
+  postEnroll,
+  showEnroll,
+  destroyEnroll
 } from './services/api-helper'
 
 class App extends Component {
@@ -52,6 +56,13 @@ class App extends Component {
     }))
   }
 
+  getEnroll = async () => {
+    const enroll = await showEnroll();
+    if (enroll) {
+      this.setState({ enroll })
+    }
+  }
+
   handleChange = (e) => {
     const value = e.target.value;
     this.setState({
@@ -60,8 +71,20 @@ class App extends Component {
     })
   }
 
+  deleteEnroll = async (id) => {
+    await destroyEnroll(id);
+    this.setState(prevState => ({
+      personalPost: {
+        ...prevState.personalPost,
+        posts: prevState.personalPost.posts.filter((post) => {
+          return post.id !== id 
+        })
+      }
+    }))
+  }
+
   render() {
-    console.log(`enroll + ${this.state.enroll}`)
+    console.log(this.state.enroll)
     return (
       <div class="App">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"></link>
@@ -91,6 +114,13 @@ class App extends Component {
           )}/>
            <Route exact path="/payment" render={(props) => (
             <Payment
+            />
+          )}/>
+          <Route exact path="/show" render={(props) => (
+            <Show
+              getEnroll={this.getEnroll}
+              enroll={this.state.enroll}
+              destroyEnroll={this.destroyEnroll}
             />
           )}/>
         </Switch>
