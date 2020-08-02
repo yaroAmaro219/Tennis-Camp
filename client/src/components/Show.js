@@ -30,6 +30,8 @@ export default class Show extends Component {
             <h2>{`End Date: ${enroll.enddate}`}</h2>
             <h2>{`Question: ${enroll.question}`}</h2>
             <h2>{`Consent: ${enroll.consent}`}</h2>
+            <h2>{`Type of day: ${enroll.typeofday}`}</h2>
+            <h2>{`Created at: ${enroll.created_at}`}</h2>
             </div>
       )
     })

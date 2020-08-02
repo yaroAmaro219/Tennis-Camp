@@ -17,7 +17,8 @@ export default class Enroll extends Component {
       enddate: new Date(),
       question: '',
       consent: false,
-      modal: false
+      modal: false,
+      typeofday: ''
     }
   }
 
@@ -59,7 +60,7 @@ export default class Enroll extends Component {
 
   render() {
     const { addEnroll } = this.props
-    console.log(this.state.question)
+    console.log(this.state.typeofday)
     console.log(this.state.enddate)
     console.log(this.state.enddate)
     console.log(this.state.consent)
@@ -83,11 +84,11 @@ export default class Enroll extends Component {
           
           <div class='checkbox'>
           <h3>Full Day:
-            <input type='checkbox' /></h3>
+            <input type='checkbox' onClick={() => this.setState({typeofday: 'full day'})}/></h3>
           <h3>Half Day Morning (9-12):
-          <input type='checkbox' /></h3> 
+          <input type='checkbox' onClick={() => this.setState({typeofday: 'half day morning'})} /></h3> 
           <h3>Half Day Afternoon (1-4): 
-          <input type='checkbox' /></h3>
+          <input type='checkbox'onClick={() => this.setState({typeofday: 'half day afternoon'})} /></h3>
           </div>
           <h2>Dates:</h2>
           <div class='input'>
@@ -179,7 +180,7 @@ agree to all of its terms and conditions. </p>
             <h4 class='consent'>I agree to <a onClick={() => { this.setState({ modal: !this.state.modal }) }} href='#' >terms and conditions</a></h4>
           </div>
           <Link class='link-payment' to='/payment'>
-          <button class='submit' onClick={(e) => { addEnroll(this.state.firstname, this.state.lastname, this.state.phone, this.state.email, this.state.childname, this.state.childage, this.state.question, this.state.consent, this.state.startdate, this.state.enddate) }}>
+          <button class='submit' onClick={(e) => { addEnroll(this.state.firstname, this.state.lastname, this.state.phone, this.state.email, this.state.childname, this.state.childage, this.state.question, this.state.consent, this.state.startdate, this.state.enddate, this.state.typeofday) }}>
           
               Continue to payment
                

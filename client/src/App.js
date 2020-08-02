@@ -34,11 +34,12 @@ class App extends Component {
       consent: false,
       modal: false,
       toggle: false,
-      enroll: ''
+      enroll: '',
+      typeofday: ''
     }
   }
 
-  addEnroll = async (firstname, lastname, phone, email, childname, childage, question, consent, startdate, enddate) => {
+  addEnroll = async (firstname, lastname, phone, email, childname, childage, question, consent, startdate, enddate, typeofday) => {
    const newEnroll = await postEnroll({
       firstname: firstname,
       lastname: lastname,
@@ -49,7 +50,8 @@ class App extends Component {
       question: question,
       consent: consent,
       startdate: startdate,
-      enddate: enddate
+      enddate: enddate,
+      typeofday: typeofday
    })
     this.setState(prevState => ({
       enroll: newEnroll,
