@@ -34,7 +34,7 @@ export default class Home extends Component {
           <h1>-</h1>
           <h2>Weekdays</h2>
           <h2>August 3 - 28</h2>
-            <h2>Full Day: 9am - 4pm</h2>
+            <h2 class='full-day'>Full Day: 9am - 4pm</h2>
             <h2>Half Day: 9am - 12pm</h2>
             </div>
         </div>
@@ -46,7 +46,7 @@ export default class Home extends Component {
         <div class='pricing' id='pricing'>
           <h1>Pricing:</h1>
           <h1>-</h1>
-          <h2>Full day (9am - 4pm): $100/day per child</h2>
+          <h2 class='full-day'>Full day (9am - 4pm): $100/day per child</h2>
           <h2>Half day (9am - 12pm): $55/day per child</h2>
         </div>
         <div class='fifth' id='coaches'>
