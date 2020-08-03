@@ -83,6 +83,7 @@ export default class Enroll extends Component {
           <input class='input' type='text' name='childage' onChange={this.handleChange} />
           
           <div class='checkbox'>
+            <h2>Times:</h2>
           <h3>Full Day:
             <input type='checkbox' onClick={() => this.setState({typeofday: 'full day'})}/></h3>
           <h3>Half Day Morning (9-12):
@@ -90,28 +91,23 @@ export default class Enroll extends Component {
           <h3>Half Day Afternoon (1-4): 
           <input type='checkbox'onClick={() => this.setState({typeofday: 'half day afternoon'})} /></h3>
           </div>
-          <h2>Dates:</h2>
-          <div class='input'>
-            Start:
-      <DatePicker class='input' name='date'
-            onChange={this.onstartChange}
-            value={this.state.startdate}
+          <h2 class='dates-title'>Dates:</h2>
+          <div class='input-dates'>
+            <h4>Start:</h4>
+            <DatePicker class='input-date' name='date'
+              onChange={this.onstartChange}
+              value={this.state.startdate}
             />
-            </div>
-            <div class='input'>
-             End:
-      <DatePicker class='input' name='date'
-        
+             <h4>End:</h4>
+            <DatePicker class='input-date' name='date'
             onChange={this.onendChange}
             value={this.state.enddate}
-      
             />
-            </div>
-            
-      
-
-          Any Questions?
+          </div>
+          <div class='questions'>
+            Have any questions?
           <input class='input' type='text' name='question' onChange={this.handleChange} />
+          </div>
           
           {this.state.modal
               ?
@@ -180,11 +176,13 @@ agree to all of its terms and conditions. </p>
             <h4 class='consent'>I agree to <a onClick={() => { this.setState({ modal: !this.state.modal }) }} href='#' >terms and conditions</a></h4>
           </div>
           <Link class='link-payment' to='/payment'>
+            <div class='continue-payment'>
           <button class='submit' onClick={(e) => { addEnroll(this.state.firstname, this.state.lastname, this.state.phone, this.state.email, this.state.childname, this.state.childage, this.state.question, this.state.consent, this.state.startdate, this.state.enddate, this.state.typeofday) }}>
-          
-              Continue to payment
-               
+       
+                Continue to payment
+                 
             </button>
+            </div>
             </Link>
         </form >
       </div>

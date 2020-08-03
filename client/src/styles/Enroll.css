@@ -1,12 +1,40 @@
 
 .enroll-page {
-  padding: 96px 0px;
+  padding: 96px 0px 63px 0px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 }
+
+.link-payment {
+ margin: 9px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.input-date {
+  margin: 18px 0;
+}
+
+.dates-title {
+  margin-bottom: 0;
+}
+
+.input-dates{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-bottom: 36px;
+}
+
+.questions {
+
+}
+
 
 .form {
   display: flex;
@@ -49,15 +77,10 @@
 }
 
 .submit { 
-  /* margin-top: 36px; */
   padding: 18px 36px;
   font-weight: 800;
   border: 1.4px solid black;
   background-color: white;
   display: flex;
   color: black;
-  align-items: center;
-  justify-content: center;
-  margin-right: auto;
-  margin-left: auto;
 }

@@ -13,7 +13,6 @@ export default class Show extends Component {
   }
 
   render() {
-    console.log(this.state.enroll)
     const enroll =
       this.props.enroll
       &&
