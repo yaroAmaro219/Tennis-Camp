@@ -44,6 +44,6 @@ class EnrollsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def enroll_params
-      params.require(:enroll).permit(:firstname, :lastname, :phone, :email, :childname, :childage,  :question, :consent, :startdate, :enddate)
+      params.require(:enroll).permit(:firstname, :lastname, :phone, :email, :childname, :childage,  :question, :consent, :startdate, :enddate, :typeofday)
     end
   end

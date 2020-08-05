@@ -5060,3 +5060,56 @@ Migrating to Addtypeofdaytoenrolls (20200802123056)
   [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3805599927871995120)[0m
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/enrolls" for ::1 at 2020-08-04 20:30:48 -0400
+  [1m[35m (16.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"", "lastname"=>"", "phone"=>"", "email"=>"", "childname"=>"", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-05T00:30:42.383Z", "enddate"=>"2020-08-05T00:30:42.383Z", "typeofday"=>"half day morning"}}
+[31mUnpermitted parameter: :typeofday[0m
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (54.8ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["firstname", ""], ["lastname", ""], ["phone", ""], ["email", ""], ["childname", ""], ["childage", ""], ["startdate", "2020-08-05T00:30:42.383Z"], ["enddate", "2020-08-05T00:30:42.383Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-05 00:30:49.334241"], ["updated_at", "2020-08-05 00:30:49.334241"]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 181ms (Views: 5.6ms | ActiveRecord: 105.3ms | Allocations: 13157)
+
+
+Started GET "/enrolls" for ::1 at 2020-08-04 20:30:56 -0400
+Processing by EnrollsController#index as HTML
+  [1m[36mEnroll Load (2.7ms)[0m  [1m[34mSELECT "enrolls".* FROM "enrolls"[0m
+  ↳ app/controllers/enrolls_controller.rb:7:in `index'
+Completed 200 OK in 89ms (Views: 85.8ms | ActiveRecord: 2.7ms | Allocations: 68193)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-08-04 20:30:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3805599927871995120)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3805599927871995120)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
