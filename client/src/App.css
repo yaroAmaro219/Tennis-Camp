@@ -12,8 +12,6 @@ html {
   text-decoration: line-through;
 }
 
-
-
 #location {
   padding: 36px 270px;
   display: flex;
@@ -88,7 +86,7 @@ html {
 
   .second {
     width: 100%;
-    padding: 84px 27px !important;
+    padding: 36px !important;
   }
 
   .enroll-button-container {
@@ -118,13 +116,12 @@ html {
   text-decoration: none;
   color: black;
   padding: 15px 54px;
-  border: black solid 1px;
+  background-color: #abdb8f;
 }
 
-.name {}
 
 .beacon {
-  margin: 9px 0px 45px 0px;
+  margin: 9px 0px 18px 0px;
 }
 
 .map {
@@ -185,7 +182,7 @@ html {
 
 .acalades {
   margin: 0;
-
+padding-bottom: 9px;
 }
 
 .consent {

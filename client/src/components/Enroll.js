@@ -153,6 +153,13 @@ export default class Enroll extends Component {
                 onClick={() => this.setState({ typeofday: "half day morning" })}
               />
             </h3>
+            <h3>
+              Fall Enrollment (3:30-5):
+              <input
+                type="checkbox"
+                onClick={() => this.setState({ typeofday: "fall enrollment" })}
+              />
+            </h3> 
           </div>
           <h2 class="dates-title">Dates:</h2>
           <div class="input-dates">

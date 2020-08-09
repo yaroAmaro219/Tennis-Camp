@@ -96,17 +96,6 @@ class App extends Component {
           <Route exact path="/enrolls" render={(props) => (
             <Enroll
               addEnroll={this.addEnroll}
-              // handleChange={this.handleChange}
-              // firstname={this.state.firstname}
-              // lastname={this.state.lastname}
-              // phone={this.state.phone}
-              // email={this.state.email}
-              // childname={this.state.childname}
-              // childage={this.state.childage}
-              // startdate={this.state.startdate}
-              // enddate={this.state.enddate}
-              // question={this.state.question}
-              // consent={this.state.consent}
             />
           )}/>
           <Route exact path="/" render={(props) => (
@@ -129,7 +118,6 @@ class App extends Component {
           <h1>Contact</h1>
           <h1>-</h1>
         <h1><a class='phone' href='tel:3474006623'>347-400-6623</a></h1>
-        <h3>or email:</h3>
         <h3><a class='phone' href="mailto:tenniscoachesofnyc@gmail.com">TenniscoachesofNYC@gmail.com</a></h3>
         </div>
         <div class='footer'>

@@ -31,9 +31,9 @@ export default class Show extends Component {
             <h2>{`Consent: ${enroll.consent}`}</h2>
             <h2>{`Type of day: ${enroll.typeofday}`}</h2>
             <h2>{`Created at: ${enroll.created_at}`}</h2>
-            </div>
-      )
-    })
+          </div>
+        )
+      }).reverse();
     return (
       <div class='show-page'>
         <h1>Show</h1>

@@ -23,7 +23,7 @@ export default class Home extends Component {
               <div class='enroll-button-container'>
                 <p class='enroll-button'>
                 <a class='enroll-home' href='/enrolls'>Enroll</a></p>
-                <h2 class='enroll-sub'>Spots are still available!</h2>
+                {/* <h2 class='enroll-sub'>Spots are still available!</h2> */}
             </div>
             </div>
           </div>
@@ -36,6 +36,11 @@ export default class Home extends Component {
           <h2>August 3 - 28</h2>
             <h2 class='full-day'>Full Day: 9am - 4pm</h2>
             <h2>Half Day: 9am - 12pm</h2>
+            <h1>-</h1>
+            <h1>Accepting Fall</h1>
+            <h1>Enrollment!</h1>
+            <h2>September 8 - October 30</h2>
+          <h2>Weekdays: 3:30pm - 5pm</h2>
             </div>
         </div>
         <div class="third" id='location'>
@@ -48,6 +53,7 @@ export default class Home extends Component {
           <h1>-</h1>
           <h2 class='full-day'>Full day (9am - 4pm): $100/day per child</h2>
           <h2>Half day (9am - 12pm): $55/day per child</h2>
+          <h2>Fall (3:30pm - 5pm): $55/day per child</h2>
         </div>
         <div class='fifth' id='coaches'>
           <h1>Meet our coaches!</h1>
@@ -55,6 +61,7 @@ export default class Home extends Component {
           <h2 class='artemie'>Head Coach,  Artemie Amari</h2>
           <h5 class='blurb'>​Coach Artemie is one of the top ranked Tennis Pros in the U.S.A. Artemie has a passion for all things tennis; with over 8 years of coaching experience, Artemie has shown hundreds of players how to make the most of their game while having an awesome time!</h5>
           <img class="profile-img" src={jacob} />
+          <h4 class='acalades'>#2 in the country USTA (2011)</h4>
           <h4 class='acalades'>City, State and National Champion</h4>
           <h5 class='beacon'>( 2014, Beacon HS )</h5>
         </div>
@@ -67,7 +74,6 @@ export default class Home extends Component {
           <h1>What to Bring?</h1>
           <h1>-</h1>
           <h3 class='bring-h3'>A Racket! We will have extras for those that need.</h3>
-          <h3 class='bring-h3'>Lunch, for those doing full sessions.</h3>
           <h3 class='bring-h3'>A water bottle!</h3>
         </div>
       </div>
