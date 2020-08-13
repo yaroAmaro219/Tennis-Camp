@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import DatePicker from "react-date-picker";
+import emailjs from 'emailjs-com';
 import Modal from "./Modal";
 
 export default class Enroll extends Component {
@@ -22,6 +23,17 @@ export default class Enroll extends Component {
     };
   }
 
+  sendEmail(e) {
+    e.preventDefault();
+    emailjs.send("gmail", "enrollment", {"email":this.state.email, "childname": this.state.childname,"firstname": this.state.firstname, "startdate": this.state.startdate})
+    emailjs.sendForm('gmail', 'enrollment',{childname: this.state.childname, to_name: this.state.firstname, startdate: this.state.startdate, email:this.state.email})
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+
   onstartChange = (date) => {
     this.setState({ startdate: date });
   };
@@ -29,26 +41,6 @@ export default class Enroll extends Component {
   onendChange = (date) => {
     this.setState({ enddate: date });
   };
-
-  // handleSubmit(e) {
-  //   alert('A reservation was submitted for: ' + this.state.childname);
-  //   let data = {
-  //     'first_name': this.state.firstname,
-  //     'last_name': this.state.lastname,
-  //     'phone': this.state.phone,
-  //     'email': this.state.email,
-  //     'child_name': this.state.childname,
-  //     'child_age': this.state.childage,
-  //     'start_date': this.state.startdate,
-  //     'end_date': this.state.enddate,
-  //     'question': this.state.question,
-  //     'consent': this.state.consent
-  //   }
-  //   this.setState({
-  //     reservation: e.target.value
-  //   })
-  //   e.preventDefault();
-  // }
 
   handleChange = (e) => {
     const value = e.target.value;
@@ -58,42 +50,18 @@ export default class Enroll extends Component {
     });
   };
 
-  // sendEmail = (e) => {
-  //   // if (this.state.email) {
-  //   //   <a href={`mailto:${this.state.email}`}>
-
-  //   //   </a>
-
-  //   e.preventDefault();
-
-  //   emailjs
-  //     .sendForm("gmail", "enrollment", e.target, "user_0jJLEALMJ3N3zMDznwbBY")
-  //     .then(
-  //       (result) => {
-  //         console.log(result.text);
-  //       },
-  //       (error) => {
-  //         console.log(error.text);
-  //       }
-  //     );
-  //   e.target.reset();
-  // };
-
   render() {
     const { addEnroll } = this.props;
-    console.log(this.state.typeofday);
-    console.log(this.state.enddate);
-    console.log(this.state.enddate);
-    console.log(this.state.consent);
     return (
       <div class="enroll-page">
+        
         <link
           href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap"
           rel="stylesheet"
         ></link>
         <h1>Enroll</h1>
         <form class="form"
-          // onSubmit={this.sendEmail()}
+          onSubmit={this.sendEmail}
         >
           First Name:
           <input

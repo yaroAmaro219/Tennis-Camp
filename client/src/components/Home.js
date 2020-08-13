@@ -58,7 +58,7 @@ export default class Home extends Component {
         <div class='fifth' id='coaches'>
           <h1>Meet our coaches!</h1>
           <h1>-</h1>
-          <h2 class='artemie'>Head Coach,  Artemie Amari</h2>
+          <h2 class='artemie'>Head Coach,  Artemie </h2>
           <h5 class='blurb'>​Coach Artemie is one of the top ranked Tennis Pros in the U.S.A. Artemie has a passion for all things tennis; with over 8 years of coaching experience, Artemie has shown hundreds of players how to make the most of their game while having an awesome time!</h5>
           <img class="profile-img" src={jacob} />
           <h4 class='acalades'>#2 in the country USTA (2011)</h4>
