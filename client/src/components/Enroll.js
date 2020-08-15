@@ -23,16 +23,23 @@ export default class Enroll extends Component {
     };
   }
 
-  sendEmail(e) {
+ sendEmail = async (e) => {
     e.preventDefault();
-    emailjs.send("gmail", "enrollment", {"email":this.state.email, "childname": this.state.childname,"firstname": this.state.firstname, "startdate": this.state.startdate})
-    emailjs.sendForm('gmail', 'enrollment',{childname: this.state.childname, to_name: this.state.firstname, startdate: this.state.startdate, email:this.state.email})
+    const template_params = {
+      "email":  `${this.state.email}`,
+      "childname": `${this.state.childname}`,
+      "firstname": `${this.state.firstname}`,
+      "startdate": `${this.state.startdate}`,
+    }
+    var service_id = "gmail";
+    var template_id = "enrollment";
+    await emailjs.send(service_id, template_id, template_params)
       .then((result) => {
           console.log(result.text);
       }, (error) => {
           console.log(error.text);
       });
-  }
+ }
 
   onstartChange = (date) => {
     this.setState({ startdate: date });
@@ -50,8 +57,35 @@ export default class Enroll extends Component {
     });
   };
 
+  handleSubmit(e) {
+    e.preventDefault()
+    const { name, email, subject, message } = this.state
+    let templateParams = {
+      from_name: email,
+      to_name: '<YOUR_EMAIL_ID>',
+      subject: subject,
+      message_html: message,
+     }
+     emailjs.send(
+      'gmail',
+      'template_XXXXXXXX',
+       templateParams,
+      'user_XXXXXXXXXXXXXXXXXXXX'
+     )
+     this.resetForm()
+ }
+resetForm() {
+    this.setState({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    })
+  }
+
   render() {
     const { addEnroll } = this.props;
+    console.log(this.state.email)
     return (
       <div class="enroll-page">
         
@@ -62,6 +96,7 @@ export default class Enroll extends Component {
         <h1>Enroll</h1>
         <form class="form"
           onSubmit={this.sendEmail}
+          method="post"
         >
           First Name:
           <input
@@ -134,7 +169,7 @@ export default class Enroll extends Component {
             <h4>Start:</h4>
             <DatePicker
               class="input-date"
-              name="date"
+              name="startdate"
               onChange={this.onstartChange}
               value={this.state.startdate}
             />
@@ -267,6 +302,7 @@ export default class Enroll extends Component {
             <div class="continue-payment">
               <button
                 class="submit"
+                
                 onClick={(e) => {
                   addEnroll(
                     this.state.firstname,

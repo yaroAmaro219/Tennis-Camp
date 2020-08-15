@@ -5374,3 +5374,208 @@ Processing by EnrollsController#create as HTML
 Completed 200 OK in 21ms (Views: 1.3ms | ActiveRecord: 3.2ms | Allocations: 2899)
 
 
+Started POST "/enrolls" for ::1 at 2020-08-13 05:44:10 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"hi", "childage"=>"", "question"=>"", "consent"=>true, "startdate"=>"2020-08-13T09:43:34.025Z", "enddate"=>"2020-08-13T09:43:34.025Z", "typeofday"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (7.3ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", "hi"], ["childage", ""], ["startdate", "2020-08-13T09:43:34.025Z"], ["enddate", "2020-08-13T09:43:34.025Z"], ["question", ""], ["consent", true], ["created_at", "2020-08-13 09:44:10.288608"], ["updated_at", "2020-08-13 09:44:10.288608"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 59ms (Views: 1.7ms | ActiveRecord: 20.9ms | Allocations: 13150)
+
+
+Started POST "/enrolls" for ::1 at 2020-08-13 06:10:18 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"yo", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-13T10:10:07.681Z", "enddate"=>"2020-08-13T10:10:07.681Z", "typeofday"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (4.7ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", "yo"], ["childage", ""], ["startdate", "2020-08-13T10:10:07.681Z"], ["enddate", "2020-08-13T10:10:07.681Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-13 10:10:18.700312"], ["updated_at", "2020-08-13 10:10:18.700312"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (19.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 92ms (Views: 1.6ms | ActiveRecord: 24.7ms | Allocations: 2930)
+
+
+Started POST "/enrolls" for ::1 at 2020-08-13 06:17:02 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"yo", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-13T10:16:35.169Z", "enddate"=>"2020-08-13T10:16:35.169Z", "typeofday"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (1.8ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", "yo"], ["childage", ""], ["startdate", "2020-08-13T10:16:35.169Z"], ["enddate", "2020-08-13T10:16:35.169Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-13 10:17:02.135692"], ["updated_at", "2020-08-13 10:17:02.135692"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 15ms (Views: 0.9ms | ActiveRecord: 2.4ms | Allocations: 2926)
+
+
+Started POST "/enrolls" for ::1 at 2020-08-13 06:20:47 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"hi", "childage"=>"hi", "question"=>"", "consent"=>false, "startdate"=>"2020-08-13T10:20:39.203Z", "enddate"=>"2020-08-13T10:20:39.203Z", "typeofday"=>""}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (0.8ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", "hi"], ["childage", "hi"], ["startdate", "2020-08-13T10:20:39.203Z"], ["enddate", "2020-08-13T10:20:39.203Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-13 10:20:47.558198"], ["updated_at", "2020-08-13 10:20:47.558198"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 1.8ms | Allocations: 2915)
+
+
+Started POST "/enrolls" for ::1 at 2020-08-13 06:22:27 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"maybe", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-13T10:22:18.265Z", "enddate"=>"2020-08-13T10:22:18.265Z", "typeofday"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (3.0ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", "maybe"], ["childage", ""], ["startdate", "2020-08-13T10:22:18.265Z"], ["enddate", "2020-08-13T10:22:18.265Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-13 10:22:27.703958"], ["updated_at", "2020-08-13 10:22:27.703958"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 46ms (Views: 6.1ms | ActiveRecord: 3.8ms | Allocations: 2915)
+
+
+Started POST "/enrolls" for ::1 at 2020-08-13 06:35:31 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"hi", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-13T10:35:26.659Z", "enddate"=>"2020-08-13T10:35:26.659Z", "typeofday"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (2.7ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", "hi"], ["childage", ""], ["startdate", "2020-08-13T10:35:26.659Z"], ["enddate", "2020-08-13T10:35:26.659Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-13 10:35:31.991036"], ["updated_at", "2020-08-13 10:35:31.991036"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 27ms (Views: 3.1ms | ActiveRecord: 4.5ms | Allocations: 2914)
+
+
+Started POST "/enrolls" for ::1 at 2020-08-13 06:46:11 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"maybe", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-13T10:46:04.256Z", "enddate"=>"2020-08-13T10:46:04.256Z", "typeofday"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (2.5ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", "maybe"], ["childage", ""], ["startdate", "2020-08-13T10:46:04.256Z"], ["enddate", "2020-08-13T10:46:04.256Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-13 10:46:11.434339"], ["updated_at", "2020-08-13 10:46:11.434339"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 28ms (Views: 0.6ms | ActiveRecord: 3.8ms | Allocations: 2917)
+
+
+Started POST "/enrolls" for ::1 at 2020-08-13 06:46:43 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-13T10:46:39.771Z", "enddate"=>"2020-08-13T10:46:39.771Z", "typeofday"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (0.5ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", ""], ["childage", ""], ["startdate", "2020-08-13T10:46:39.771Z"], ["enddate", "2020-08-13T10:46:39.771Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-13 10:46:43.490255"], ["updated_at", "2020-08-13 10:46:43.490255"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.1ms | Allocations: 2899)
+
+
+Started POST "/enrolls" for ::1 at 2020-08-13 06:48:26 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-13T10:48:21.336Z", "enddate"=>"2020-08-13T10:48:21.336Z", "typeofday"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (2.1ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", ""], ["childage", ""], ["startdate", "2020-08-13T10:48:21.336Z"], ["enddate", "2020-08-13T10:48:21.336Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-13 10:48:26.297361"], ["updated_at", "2020-08-13 10:48:26.297361"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 2.9ms | Allocations: 2897)
+
+
+Started POST "/enrolls" for ::1 at 2020-08-13 06:49:01 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-13T10:48:54.889Z", "enddate"=>"2020-08-13T10:48:54.889Z", "typeofday"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (0.7ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", ""], ["childage", ""], ["startdate", "2020-08-13T10:48:54.889Z"], ["enddate", "2020-08-13T10:48:54.889Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-13 10:49:01.970531"], ["updated_at", "2020-08-13 10:49:01.970531"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 2898)
+
+
+Started POST "/enrolls" for ::1 at 2020-08-13 06:50:54 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-13T10:50:48.531Z", "enddate"=>"2020-08-13T10:50:48.531Z", "typeofday"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (2.0ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", ""], ["childage", ""], ["startdate", "2020-08-13T10:50:48.531Z"], ["enddate", "2020-08-13T10:50:48.531Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-13 10:50:54.124866"], ["updated_at", "2020-08-13 10:50:54.124866"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 14ms (Views: 0.5ms | ActiveRecord: 5.8ms | Allocations: 2897)
+
+
+Started POST "/enrolls" for ::1 at 2020-08-13 06:52:03 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-13T10:51:59.423Z", "enddate"=>"2020-08-13T10:51:59.423Z", "typeofday"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (1.0ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", ""], ["childage", ""], ["startdate", "2020-08-13T10:51:59.423Z"], ["enddate", "2020-08-13T10:51:59.423Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-13 10:52:03.349595"], ["updated_at", "2020-08-13 10:52:03.349595"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 1.9ms | Allocations: 2897)
+
+
+Started POST "/enrolls" for ::1 at 2020-08-13 06:55:34 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"yo", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-13T10:55:27.985Z", "enddate"=>"2020-08-13T10:55:27.985Z", "typeofday"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (1.8ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", "yo"], ["childage", ""], ["startdate", "2020-08-13T10:55:27.985Z"], ["enddate", "2020-08-13T10:55:27.985Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-13 10:55:34.466402"], ["updated_at", "2020-08-13 10:55:34.466402"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 20ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 2898)
+
+
+Started POST "/enrolls" for ::1 at 2020-08-13 06:57:05 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-13T10:57:01.464Z", "enddate"=>"2020-08-13T10:57:01.464Z", "typeofday"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (0.7ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", ""], ["childage", ""], ["startdate", "2020-08-13T10:57:01.464Z"], ["enddate", "2020-08-13T10:57:01.464Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-13 10:57:05.683609"], ["updated_at", "2020-08-13 10:57:05.683609"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 1.5ms | Allocations: 2897)
+
+
+Started POST "/enrolls" for ::1 at 2020-08-13 06:57:44 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-13T10:57:40.291Z", "enddate"=>"2020-08-13T10:57:40.291Z", "typeofday"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (0.6ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", ""], ["childage", ""], ["startdate", "2020-08-13T10:57:40.291Z"], ["enddate", "2020-08-13T10:57:40.291Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-13 10:57:44.403989"], ["updated_at", "2020-08-13 10:57:44.403989"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 9ms (Views: 1.1ms | ActiveRecord: 3.2ms | Allocations: 2897)
+
+
+Started POST "/enrolls" for ::1 at 2020-08-13 07:03:48 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-13T11:03:43.086Z", "enddate"=>"2020-08-13T11:03:43.086Z", "typeofday"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (4.5ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", ""], ["childage", ""], ["startdate", "2020-08-13T11:03:43.086Z"], ["enddate", "2020-08-13T11:03:43.086Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-13 11:03:48.199130"], ["updated_at", "2020-08-13 11:03:48.199130"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 18ms (Views: 1.1ms | ActiveRecord: 5.5ms | Allocations: 2914)
+
+
+Started POST "/enrolls" for ::1 at 2020-08-13 07:05:23 -0400
+Processing by EnrollsController#create as HTML
+  Parameters: {"enroll"=>{"firstname"=>"Artemie", "lastname"=>"Amari", "phone"=>"3474006623", "email"=>"yaroamari@gmail.com", "childname"=>"", "childage"=>"", "question"=>"", "consent"=>false, "startdate"=>"2020-08-13T11:05:18.705Z", "enddate"=>"2020-08-13T11:05:18.705Z", "typeofday"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[36mEnroll Create (0.9ms)[0m  [1m[32mINSERT INTO "enrolls" ("firstname", "lastname", "phone", "email", "childname", "childage", "startdate", "enddate", "question", "consent", "created_at", "updated_at", "typeofday") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["firstname", "Artemie"], ["lastname", "Amari"], ["phone", "3474006623"], ["email", "yaroamari@gmail.com"], ["childname", ""], ["childage", ""], ["startdate", "2020-08-13T11:05:18.705Z"], ["enddate", "2020-08-13T11:05:18.705Z"], ["question", ""], ["consent", false], ["created_at", "2020-08-13 11:05:23.384145"], ["updated_at", "2020-08-13 11:05:23.384145"], ["typeofday", ""]]
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/enrolls_controller.rb:18:in `create'
+Completed 200 OK in 25ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 2897)
+
+
