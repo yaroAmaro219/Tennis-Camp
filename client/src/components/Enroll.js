@@ -73,8 +73,9 @@ export default class Enroll extends Component {
       'user_XXXXXXXXXXXXXXXXXXXX'
      )
      this.resetForm()
- }
-resetForm() {
+  }
+  
+  resetForm() {
     this.setState({
       name: '',
       email: '',
@@ -82,7 +83,7 @@ resetForm() {
       message: '',
     })
   }
-
+  
   render() {
     const { addEnroll } = this.props;
     console.log(this.state.email)

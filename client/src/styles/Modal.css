@@ -1,0 +1,47 @@
+.form-dialog {
+  width: 100%;
+  max-width: 450px;
+}
+.modal-header {
+  background: #ff5108;
+}
+.modal-body {
+  overflow-y: auto;
+  padding-right: 35px;
+  padding-bottom: 35px;
+  padding-left: 35px;
+}
+.modal-body h2 { 
+  font-size: 24px;
+}
+.modal-body .subtitle {
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+.modal-dialog-center {
+  position: relative;
+  margin: 30px auto;
+}
+.modal-header .close {
+  margin-top: -2px;
+  outline: none;
+  opacity: 1;
+  color: #fff;
+}
+.videoModal .modal-header {
+  background: #fff;
+}
+.videoModal .modal-content {
+  box-shadow: none;
+  border-radius: 0;
+  border: 0;
+}
+.videoModal .modal-body{
+  padding: 9px 10px;
+}
+.videoModal .modal-header .close {
+  color: #151515;
+}
+.modal-open .header {
+  padding-right: 17px;
+}

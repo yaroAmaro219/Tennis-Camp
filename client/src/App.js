@@ -1,22 +1,28 @@
-import React, {Component} from "react";
-import Nav from "./components/Nav";
+import React, { Component } from "react";
 import { Route, Switch } from 'react-router-dom'
+import Nav from "./components/Nav";
 import Show from './components/Show'
 import Enroll from './components/Enroll'
 import Home from './components/Home'
 import Payment from './components/Payment'
+import Users from './components/Users'
+import Stringing from "./components/Stringing";
+import Private from './components/Private'
 import insta from './images/instagram1.svg'
 import './styles/Nav.css'
 import './styles/Enroll.css'
 import './styles/Payment.css'
 import "./App.css";
 import './styles/Show.css'
+import './styles/Users.css'
+import './styles/Modal.css'
 
 import {
   postEnroll,
   showEnroll,
   destroyEnroll
 } from './services/api-helper'
+
 
 class App extends Component {
   constructor() {
@@ -111,6 +117,21 @@ class App extends Component {
               getEnroll={this.getEnroll}
               enroll={this.state.enroll}
               destroyEnroll={this.destroyEnroll}
+            />
+          )}/>
+           <Route exact path="/users" render={(props) => (
+            <Users
+              
+            />
+          )}/>
+          <Route exact path="/private-lessons" render={(props) => (
+            <Private
+              
+            />
+          )} />
+          <Route exact path="/stringing" render={(props) => (
+            <Stringing
+              
             />
           )}/>
         </Switch>

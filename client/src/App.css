@@ -115,13 +115,13 @@ html {
 .enroll-home {
   text-decoration: none;
   color: black;
-  padding: 15px 54px;
+  padding: 21px 54px;
   background-color: #abdb8f;
 }
 
 
 .beacon {
-  margin: 9px 0px 18px 0px;
+  margin: 0px 0px 18px 0px;
 }
 
 .map {
@@ -152,6 +152,10 @@ html {
   font-weight: 700;
 }
 
+.acalades2 {
+  margin: 0;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -161,6 +165,20 @@ html {
   width: 100%;
   color: white;
   height: 111px;
+}
+
+.string {
+  background-color: black;
+  color: white;
+  padding:36px;
+}
+
+.private {
+  padding: 36px;
+}
+
+.machine {
+  color:  #abdb8f;
 }
 
 

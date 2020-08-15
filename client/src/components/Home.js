@@ -17,8 +17,8 @@ export default class Home extends Component {
                 <h1 class='title'>Prospect Park Tennis Camp</h1>
               </div>
               <div class='sub-container'>
-                <p class='sub-title'>Weekdays</p>
                 <p class='sub-title'>August 3-28</p>
+                <p class='sub-title'>Sept 8-Oct 31</p>
                 </div>
               <div class='enroll-button-container'>
                 <p class='enroll-button'>
@@ -62,7 +62,7 @@ export default class Home extends Component {
           <h5 class='blurb'>​Coach Artemie is one of the top ranked Tennis Pros in the U.S.A. Artemie has a passion for all things tennis; with over 8 years of coaching experience, Artemie has shown hundreds of players how to make the most of their game while having an awesome time!</h5>
           <img class="profile-img" src={jacob} />
           <h4 class='acalades'>#2 in the country USTA (2011)</h4>
-          <h4 class='acalades'>City, State and National Champion</h4>
+          <h4 class='acalades2'>City, State and National Champion</h4>
           <h5 class='beacon'>( 2014, Beacon HS )</h5>
         </div>
         <div class="enroll" id='enroll'>
@@ -73,8 +73,22 @@ export default class Home extends Component {
         <div class='bring' id='bring'>
           <h1>What to Bring?</h1>
           <h1>-</h1>
-          <h3 class='bring-h3'>A Racket! We will have extras for those that need.</h3>
+          <h3 class='bring-h3'>A Racket! We will have extras for those that need them.</h3>
           <h3 class='bring-h3'>A water bottle!</h3>
+        </div>
+        <div class='string'>
+          <h1>Stringing</h1>
+          <h1>-</h1>
+          <h3>We offer racket stringing!</h3>
+          <h3>$25/racket</h3>
+          <h3>We use a <a class='machine'  target="_blank" rel="noopener noreferrer" href='https://www.wilson.com/en-us/badminton/stringing-machine/baiardo-l-stringing-machine'>Baiardo L Stringing Machine</a></h3>
+        </div>
+        <div class='private'>
+          <h1>Private Lessons</h1>
+          <h1>-</h1>
+          <h3>Portable net: $60/hour</h3>
+          <h3>Full court: $100/hour</h3>
+          <h3>*Location Flexible</h3>
         </div>
       </div>
     )

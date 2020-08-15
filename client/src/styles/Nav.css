@@ -84,13 +84,31 @@ a {
   border: none;
   text-decoration: none;
   color: white;
-  padding: 20px;
+  padding: 3px;
   display: block;
   border-bottom: 1px solid #ccc;
   text-transform: uppercase;
   font-weight: 900;
   /* padding: 18px;
   margin: 72px; */
+}
+
+.nav-link-button {
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  color: white;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: block;
+  border-bottom: 1px solid #ccc;
+  text-transform: uppercase;
+  font-weight: 900; 
+  border: 3px solid white;
+  width: 30%;
+  border-radius: 47%;
 }
 
 #nav-toggle {
