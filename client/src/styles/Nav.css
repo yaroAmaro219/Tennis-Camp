@@ -93,6 +93,16 @@ a {
   margin: 72px; */
 }
 
+button.sign-in {
+  text-decoration: unset;
+}
+
+.nav-social {
+  margin: 18px 9px ;
+  bottom: 9px;
+  position: absolute;
+}
+
 .nav-link-button {
   background-color: transparent;
   border: none;
@@ -100,6 +110,7 @@ a {
   color: white;
   padding: 6px;
   display: flex;
+  white-space: nowrap;
   align-items: center;
   justify-content: center;
   display: block;

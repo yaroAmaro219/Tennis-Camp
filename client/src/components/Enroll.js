@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import DatePicker from "react-date-picker";
 import emailjs from 'emailjs-com';
-import Modal from "./Modal";
+import Modal from "../services/Modal";
 
 export default class Enroll extends Component {
   constructor() {

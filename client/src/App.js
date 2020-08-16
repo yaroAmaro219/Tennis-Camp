@@ -18,9 +18,14 @@ import './styles/Users.css'
 import './styles/Modal.css'
 
 import {
+  showUser,
   postEnroll,
   showEnroll,
-  destroyEnroll
+  destroyEnroll,
+  registerUser,
+  loginUser,
+  verifyUser,
+  removeToken,
 } from './services/api-helper'
 
 
@@ -41,9 +46,30 @@ class App extends Component {
       modal: false,
       toggle: false,
       enroll: '',
-      typeofday: ''
+      typeofday: '',
+      authFormData: {
+        email: '',
+        password:''
+      },
     }
   }
+
+  componentDidMount = async () => {
+    const currentUser = await verifyUser();
+    if (currentUser) {
+      this.setState({
+        currentUser
+      })
+    }
+  }
+
+  getUser = async () => {
+    const user = await showUser();
+    if (user) {
+      this.setState({ user })
+    }
+  }
+
 
   addEnroll = async (firstname, lastname, phone, email, childname, childage, question, consent, startdate, enddate, typeofday) => {
    const newEnroll = await postEnroll({
@@ -90,6 +116,52 @@ class App extends Component {
       }
     }))
   }
+
+  handleLogin = async (e) => {
+    e.preventDefault();
+    const currentUser = await loginUser(this.state.authFormData);
+    this.setState({
+      currentUser
+    })
+    this.props.history.push("/home")
+  }
+
+  handleRegister = async (e) => {
+    e.preventDefault();
+    const currentUser = await registerUser(this.state.registerFormData);
+    this.setState({
+      currentUser
+    })
+    this.props.history.push("/home")
+  }
+
+  handleLogout = () => {
+    localStorage.removeItem("jwt");
+    this.setState({currentUser: null})
+    removeToken();
+    this.props.history.push("/login")
+  }
+
+  authHandleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState(prevState => ({
+      authFormData: {
+        ...prevState.authFormData,
+        [name]: value
+      }
+    }));
+  }
+
+  registerHandleChange = (e) => {
+    const { name, value } = e.target;
+    this.setState(prevState => ({
+      registerFormData: {
+        ...prevState.registerFormData,
+        [name]: value
+      }
+    }));
+  }
+  
 
   render() {
     return (

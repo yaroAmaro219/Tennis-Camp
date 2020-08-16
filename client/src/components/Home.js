@@ -76,19 +76,20 @@ export default class Home extends Component {
           <h3 class='bring-h3'>A Racket! We will have extras for those that need them.</h3>
           <h3 class='bring-h3'>A water bottle!</h3>
         </div>
-        <div class='string'>
-          <h1>Stringing</h1>
+        <div class='string' id='string'>
+          <h1>Racket Stringing</h1>
           <h1>-</h1>
           <h3>We offer racket stringing!</h3>
           <h3>$25/racket</h3>
-          <h3>We use a <a class='machine'  target="_blank" rel="noopener noreferrer" href='https://www.wilson.com/en-us/badminton/stringing-machine/baiardo-l-stringing-machine'>Baiardo L Stringing Machine</a></h3>
+          <h3>We use a <a class='machine' target="_blank" rel="noopener noreferrer" href='https://www.wilson.com/en-us/badminton/stringing-machine/baiardo-l-stringing-machine'>Baiardo L Stringing Machine</a></h3>
+          <h4>*String sold seperately</h4>
         </div>
-        <div class='private'>
+        <div class='private' id='private'>
           <h1>Private Lessons</h1>
           <h1>-</h1>
           <h3>Portable net: $60/hour</h3>
           <h3>Full court: $100/hour</h3>
-          <h3>*Location Flexible</h3>
+          <h3>*Location flexible</h3>
         </div>
       </div>
     )
