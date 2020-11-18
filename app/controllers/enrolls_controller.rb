@@ -16,7 +16,7 @@ class EnrollsController < ApplicationController
   def create
     @enroll = Enroll.new(enroll_params)
     if @enroll.save! 
-      render json: @enroll
+      render json: @enroll,
     else
       render json: @enroll.errors
     end

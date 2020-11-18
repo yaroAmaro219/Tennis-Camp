@@ -1,5 +1,5 @@
 .payment-page {
-  padding: 99px 18px 60px 18px;
+  /* padding: 60px 18px 60px 18px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,6 +8,56 @@
   margin-left: auto;
 }
 
+.href {
+  color:#485056;
+}
+
+.cart-title{
+  padding: 36px 0px;
+}
+
+.secure {
+  color:#485056;
+}
+
+.lock { 
+  height: 24px;
+  padding-right: 6px;
+  fill:#485056; 
+}
+
+.payment-page-container {
+  padding: 90px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accepted {
+  padding:36px;
+}
+
+.summary {
+  background-color: #F3F3F3;
+  padding: 36px;
+
+}
+
+@media screen and (max-width: 850px) {
+  .payment-page {
+    /* padding: 60px 0px 60px 0px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+  } 
+}
+
+.cart{
+  width: 50%;
+}
 
 .venmo {
   width: 100%;
@@ -15,4 +65,55 @@
 
 .or {
   margin-bottom: 0;
+}
+
+.stripe-checkout{
+  margin-top: 33px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 18px;
+  background-color: #abdb8f;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 800;
+  font-size: medium;
+  cursor: pointer;
+  border: 1.5px solid #abdb8f;
+}
+
+.stripe-checkout:hover{
+  background-color: white;
+  text-transform: uppercase;
+  color: #abdb8f;
+  font-weight: 800;
+  font-size: medium;
+  border: 1.5px solid #abdb8f;
+  transition: 0.3s;
+}
+
+.paypal-checkout{
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 9px;
+  background-color: white;
+  text-transform: uppercase;
+  color: #485056;
+  font-weight: 800;
+  font-size: medium;
+  border: 1.5px solid #485056;
+  cursor: pointer;
+}
+
+.paypal-checkout:hover{
+  background-color: #485056;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 800;
+  font-size: medium;
+  border: 1.5px solid #485056;
+  transition: 0.3s;
 }

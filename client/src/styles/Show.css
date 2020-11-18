@@ -1,3 +1,36 @@
 .show-page {
   padding-top: 90px;
+  min-height: 30vw;
+}
+
+.need-account {
+padding-top: 33px;
+}
+
+.sign-in-title {
+  padding: 18px 0px;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-style {
+  margin: 9px 0;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  width: 162px;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
 }

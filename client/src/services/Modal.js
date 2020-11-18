@@ -12,13 +12,14 @@ export default class Modal extends React.Component {
     }
     return (
       <div class="modal" id="modal">
-        <h2>Welcome to Tennis Coaches of NYC</h2>
+        <a href='#' class="toggle-button" onClick={this.onClose}>
+            X
+          </a>
+         <div class="sign-in-title">
+        
+          <h2>Welcome to Tennis Coaches of NYC</h2>
+          </div>
         <div class="content">{this.props.children}</div>
-        <div class="actions">
-          <button class="toggle-button" onClick={this.onClose}>
-            close
-          </button>
-        </div>
       </div>
     );
   }

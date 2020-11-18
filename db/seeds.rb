@@ -5,3 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+
+Coach.create({name:'Artemie', age:'24', location:'Park Slope', sessions_id:1, bio:'hi', image:'yo'})
+Location.create ([title:'Park Slope', time: '3:30pm', age_group: '3 - 9', image: 'hi', coach: 'Artemie', session_id:1])
+Location.create ([title:'Fort Greene', time: '3:30pm', age_group: '3 - 9', image: 'hi', coach: 'Andrew', session_id:2])
+Location.create ([title:'Astoria', time: '3:30pm', age_group: '3 - 9', image: 'hi', coach: 'Justin', session_id:3])
+Location.create ([title:'Lower East Side', time: '3:30pm', age_group: '3 - 9', image: 'hi', coach: 'John', session_id:4])
+Location.create ([title:'Upper East Side', time: '3:30pm', age_group: '3 - 9', image: 'hi', coach: 'Artemie', session_id:5])
+Child.create([name:'Kid', age:'7',image:'blank', users_id:1, sessions_id:1])
+Session.create([location_id:10, time: '3:30pm - 5pm', children_id:1, age: '3-6'])
+Session.create([location_id:11, time: '3:30pm - 5pm', children_id:1, age: '7-9'])
+Session.create([location_id:12 , time: '3:30pm - 5pm', children_id:1, age: '3-9'])
+User.create ([first_name:'Artemie', last_name:'Amari', child_name: 'Hi', email: 'amari@gmail.com', classes:'null', password_digest: '123456'])
+
+puts "#{Session.count} sessions were created"

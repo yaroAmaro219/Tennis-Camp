@@ -30,6 +30,46 @@ export const destroyEnroll = async (id) => {
   return resp.data
 }
 
+//========== LOCATIONS ===================
+
+export const showLocations = async () => {
+  const resp = await api.get(`/locations`)
+  return resp.data
+}
+
+export const showLocation = async (id) => {
+  const resp = await api.get(`/locations/${id}`)
+  return resp.data
+}
+
+export const showCoach = async (id) => {
+  const resp = await api.get(`/coaches/${id}`)
+  return resp.data
+}
+
+export const showChild = async (id, child_id) => {
+  const resp = await api.get(`/users/${id}/children/${child_id}`)
+  return resp.data
+}
+
+
+export const postLocation = async (postData) => {
+  const resp = await api.post(`/locations`, {location: postData })
+  return resp.data
+}
+
+export const destroyLocation = async (id) => {
+  const resp = await api.delete(`/locations/${id}`)
+  return resp.data
+}
+
+//========== COACHES ===================
+
+export const showCoaches = async () => {
+  const resp = await api.get(`/coaches`)
+  return resp.data
+}
+
 //========== AUTH ===================
 
 export const loginUser = async (loginData) => {

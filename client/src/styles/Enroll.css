@@ -41,11 +41,14 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
   margin-top: 36px;
-  width: 80%
+  width: 80%;
+  align-items: center;
 }
 
 .waiver {
-  width: 90%;
+  width: 100%;
+  text-align: justify;
+  padding-bottom: 9px;
 }
 
 .consent-popup {
@@ -53,10 +56,11 @@ flex-direction: column;
 }
 
 .input {
-  margin: 9px auto;
+  margin: 9px 0px 18px 0px;
   /* padding: 9px 50px; */
   font-weight: 300;
-  font-size: x-large;
+  font-size: large;
+
 }
 
 .enroll-one {
@@ -77,6 +81,10 @@ flex-direction: column;
   font-size: larger;
 }
 
+.input-question {
+  
+}
+
 .submit { 
   padding: 18px 36px;
   font-weight: 800;
@@ -85,3 +93,15 @@ flex-direction: column;
   display: flex;
   color: black;
 }
+
+@media screen and (max-width: 850px) { 
+.form {
+  align-items: flex-start !important;
+
+}
+
+.input {
+  width:100%;
+}
+
+ }

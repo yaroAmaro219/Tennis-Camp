@@ -1,0 +1,10 @@
+
+.contact-page {
+  padding: 96px 0px 63px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color:white;
+}

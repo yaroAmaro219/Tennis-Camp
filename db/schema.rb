@@ -10,10 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_15_204315) do
+ActiveRecord::Schema.define(version: 2020_11_18_181417) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "children", force: :cascade do |t|
+    t.string "name"
+    t.string "age"
+    t.string "image"
+    t.bigint "users_id"
+    t.bigint "sessions_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["sessions_id"], name: "index_children_on_sessions_id"
+    t.index ["users_id"], name: "index_children_on_users_id"
+  end
+
+  create_table "coaches", force: :cascade do |t|
+    t.string "name"
+    t.string "age"
+    t.string "location"
+    t.bigint "sessions_id"
+    t.string "bio"
+    t.string "image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["sessions_id"], name: "index_coaches_on_sessions_id"
+  end
 
   create_table "enrolls", force: :cascade do |t|
     t.string "firstname"
@@ -31,6 +55,39 @@ ActiveRecord::Schema.define(version: 2020_08_15_204315) do
     t.string "typeofday"
   end
 
+  create_table "locations", force: :cascade do |t|
+    t.string "title"
+    t.string "time"
+    t.string "age_group"
+    t.string "image"
+    t.string "coach"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "session_id"
+    t.index ["session_id"], name: "index_locations_on_session_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "name"
+    t.string "text"
+    t.string "date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "sessions", force: :cascade do |t|
+    t.bigint "location_id"
+    t.string "time"
+    t.bigint "children_id"
+    t.bigint "coaches_id"
+    t.string "age"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["children_id"], name: "index_sessions_on_children_id"
+    t.index ["coaches_id"], name: "index_sessions_on_coaches_id"
+    t.index ["location_id"], name: "index_sessions_on_location_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -42,6 +99,10 @@ ActiveRecord::Schema.define(version: 2020_08_15_204315) do
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "children_id"
+    t.index ["children_id"], name: "index_users_on_children_id"
   end
 
+  add_foreign_key "locations", "sessions"
+  add_foreign_key "users", "children", column: "children_id"
 end

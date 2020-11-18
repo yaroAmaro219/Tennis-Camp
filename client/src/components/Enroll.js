@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import DatePicker from "react-date-picker";
 import emailjs from 'emailjs-com';
-import Modal from "../services/Modal";
 
 export default class Enroll extends Component {
   constructor() {
@@ -86,17 +85,15 @@ export default class Enroll extends Component {
   
   render() {
     const { addEnroll } = this.props;
-    console.log(this.state.email)
     return (
       <div class="enroll-page">
-        
         <link
           href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap"
           rel="stylesheet"
         ></link>
         <h1>Enroll</h1>
         <form class="form"
-          onSubmit={this.sendEmail}
+          onSubmit="return confirm('We recieved your enrollment!');"
           method="post"
         >
           First Name:
@@ -142,30 +139,30 @@ export default class Enroll extends Component {
             onChange={this.handleChange}
           />
           <div class="checkbox">
-            <h2>Times:</h2>
-            <h3 class='full-day'>
-              Full Day:
-              <input
-                type="checkbox"
-                onClick={() => this.setState({ typeofday: "full day" })}
-              />
-            </h3>
+            <h2>Times</h2>
             <h3>
-              Half Day Morning (9-12):
+              Prospect Park (3:30 - 5):
               <input
                 type="checkbox"
-                onClick={() => this.setState({ typeofday: "half day morning" })}
+                onClick={() => this.setState({ typeofday: "Prospect Park, Fall 2020" })}
               />
-            </h3>
+            </h3> 
             <h3>
-              Fall Enrollment (3:30-5):
+            Fort Greene (3:30 - 5):
               <input
                 type="checkbox"
-                onClick={() => this.setState({ typeofday: "fall enrollment" })}
+                onClick={() => this.setState({ typeofday: "Ft Greene, Fall 2020" })}
+              />
+            </h3> 
+            <h3>
+            East Village (3:30 - 5):
+              <input
+                type="checkbox"
+                onClick={() => this.setState({ typeofday: "East Village, Fall 2020" })}
               />
             </h3> 
           </div>
-          <h2 class="dates-title">Dates:</h2>
+          <h2 class="dates-title">Dates</h2>
           <div class="input-dates">
             <h4>Start:</h4>
             <DatePicker
@@ -184,15 +181,35 @@ export default class Enroll extends Component {
           </div>
           <div class="questions">
             Have any questions?
-            <input
+            <textarea
               class="input"
               type="text"
               name="question"
               onChange={this.handleChange}
             />
           </div>
+          
+          <div class="consent-container">
+            <input
+              type="checkbox"
+              onClick={() => {
+                this.setState({ consent: !this.state.consent });
+              }}
+            />
+            <h4 class="consent">
+              I agree to{" "}
+              <a
+                onClick={() => {
+                  this.setState({ modal: !this.state.modal });
+                }}
+                href="#a"
+              >
+                terms and conditions
+              </a>
+            </h4>
+          </div>
           {this.state.modal ? (
-            <Modal
+            <div
               handleClose={() => {
                 this.setState({ modal: !this.state.modal });
               }}
@@ -209,7 +226,7 @@ export default class Enroll extends Component {
                   claims for damages for personal injury, property damages or
                   which may hereafter occur to my child as a result of their
                   participation in said summer program. This release is intended
-                  to discharge in advance the Town of Clinton, its officials,
+                  to discharge in advance the Tennis Coaches of NYC, its officials,
                   officers, employees, volunteers, and agents from liability,
                   even though that liability may arise out of perceived
                   negligence on the part of persons mentioned above. It is
@@ -278,32 +295,12 @@ export default class Enroll extends Component {
                   salon together with all owners, partners, and employees.
                 </p>
               </div>
-            </Modal>
+            </div>
           ) : null}
-          <div class="consent-container">
-            <input
-              type="checkbox"
-              onClick={() => {
-                this.setState({ consent: !this.state.consent });
-              }}
-            />
-            <h4 class="consent">
-              I agree to{" "}
-              <a
-                onClick={() => {
-                  this.setState({ modal: !this.state.modal });
-                }}
-                href="#"
-              >
-                terms and conditions
-              </a>
-            </h4>
-          </div>
           <Link class="link-payment" to="/payment">
             <div class="continue-payment">
               <button
                 class="submit"
-                
                 onClick={(e) => {
                   addEnroll(
                     this.state.firstname,
@@ -318,13 +315,15 @@ export default class Enroll extends Component {
                     this.state.enddate,
                     this.state.typeofday
                   );
+                  // window.alert(`Thank You ${this.state.firstname}. We have recieved you enrollment for ${this.state.childname}! We will reachout to you via e-mail regarding dates and questions!`);
                 }}
               >
-                Continue to payment
+                Enroll
               </button>
             </div>
           </Link>
         </form>
+        
       </div>
     );
   }
