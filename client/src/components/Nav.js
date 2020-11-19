@@ -141,18 +141,18 @@ export default class Nav extends Component {
                 }</li>
             <li><a href="/enrolls" class="nav-link"
                   onClick={() => document.getElementById("nav-toggle").checked = false}>Enroll</a></li>
-              <li><a href='/#dates' class="nav-link"
-                onClick={() => document.getElementById("nav-toggle").checked = false}>Dates</a></li>
+              {/* <li><a href='/#dates' class="nav-link"
+                onClick={() => document.getElementById("nav-toggle").checked = false}>Dates</a></li> */}
                 <li><a href="/locations" class="nav-link"
                   onClick={() => document.getElementById("nav-toggle").checked = false}>Find a class</a></li>
                  {/* <li><a href="/#pricing" class="nav-link"
                 onClick={() => document.getElementById("nav-toggle").checked = false}>Pricing</a></li> */}
                 <li><a href="/coaches" class="nav-link"
                   onClick={() => document.getElementById("nav-toggle").checked = false}>Team</a></li>
-                <li><a href='/private' class="nav-link" onClick={() => document.getElementById("nav-toggle").checked = false}>Private Lessons</a> </li>
+                {/* <li><a href='/private' class="nav-link" onClick={() => document.getElementById("nav-toggle").checked = false}>Private Lessons</a> </li> */}
                 <li><a href='/#string' class="nav-link" onClick={() => document.getElementById("nav-toggle").checked = false}>Racket Stringing</a> </li>
-                <li><a href="/#bring" class="nav-link"
-                  onClick={() => document.getElementById("nav-toggle").checked = false}>What to Bring</a></li>
+                {/* <li><a href="/#bring" class="nav-link"
+                  onClick={() => document.getElementById("nav-toggle").checked = false}>What to Bring</a></li> */}
                 <li><a href="/contact" class="nav-link"
                   onClick={() => document.getElementById("nav-toggle").checked = false}>Contact</a></li>
                  <li> <a  class="nav-link" onClick={e => {
