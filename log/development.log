@@ -24105,3 +24105,228 @@ Processing by LocationsController#index as HTML
 Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1361)
 
 
+Started GET "/auth/verify" for ::1 at 2020-11-19 17:43:23 -0500
+  [1m[35m (20.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `authorize_request'
+Completed 200 OK in 92ms (Views: 0.6ms | ActiveRecord: 6.0ms | Allocations: 12331)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:43:24 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 40ms (Views: 33.0ms | ActiveRecord: 4.1ms | Allocations: 8205)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:43:35 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (4.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 4.1ms | Allocations: 1380)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-19 17:43:35 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.5ms | Allocations: 994)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:43:35 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 1363)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:03 -0500
+Processing by LocationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-11-19 17:47:03 -0500
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.9ms | Allocations: 1711)
+
+
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 2.6ms | Allocations: 1078)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:03 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.1ms | Allocations: 1363)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:21 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (2.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 2.1ms | Allocations: 1380)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-19 17:47:21 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 976)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:21 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1361)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:26 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 1361)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-19 17:47:26 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 976)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:26 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1361)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:28 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1361)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-19 17:47:28 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 976)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:28 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1361)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:35 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1361)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-19 17:47:35 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 975)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:35 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1361)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:38 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.7ms | Allocations: 1361)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-19 17:47:38 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 975)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:38 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1361)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:45 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.3ms | Allocations: 1361)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-19 17:47:45 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `authorize_request'
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 2.7ms | Allocations: 975)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:45 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.3ms | Allocations: 1361)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:46 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 1.1ms | Allocations: 1361)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-19 17:47:46 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 975)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:47 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (2.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 2.0ms | Allocations: 1361)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:49 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1361)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-19 17:47:49 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 975)
+
+
+Started GET "/locations" for ::1 at 2020-11-19 17:47:49 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.7ms | Allocations: 1361)
+
+
