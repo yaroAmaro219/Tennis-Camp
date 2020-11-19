@@ -137,7 +137,7 @@ export default class Nav extends Component {
                   </div>
                 :
 
-                <a class='link' href='/login'>Login</a>
+                <a class='nav-link' href='/login'>Login</a>
                 }</li>
             <li><a href="/enrolls" class="nav-link"
                   onClick={() => document.getElementById("nav-toggle").checked = false}>Enroll</a></li>
