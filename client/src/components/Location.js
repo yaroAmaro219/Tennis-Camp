@@ -34,11 +34,12 @@ class Location extends Component {
     // })
     return (
       <div class="show-page">
+        <div class='location-page'>
         <div class="profile-top">
         <h1 class="profile-welcome"> {this.props.place
           &&
             this.props.place.title}</h1>
-          <h2>Area Supervisor 
+          <h2 class='supervisor'>Area Supervisor 
              {/* <Link to={`/coaches/${this.props.place.coach.id}`}> */}
                {` ${this.props.place && this.props.place.coach}`}
             {/* </Link> */}
@@ -51,7 +52,8 @@ class Location extends Component {
            {/* <Link to={`/locations/${this.props.match.params.id}/sessions/${session.id}`}>
             </Link> */}
           </div>
-        </div>
+          </div>
+          </div>
       </div>
     )
   }

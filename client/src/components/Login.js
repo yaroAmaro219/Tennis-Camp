@@ -17,7 +17,7 @@ const Login = (props) => {
       <>
       <div className='show-page'>
         <div class='login'>
-        <form className='left-container' onSubmit={handleLogin}>
+        <form  onSubmit={handleLogin}>
           <h1 className='sign-in-title'>SIGN IN</h1>
           <div className='input-container'>
             <input name="email" type="text" placeholder='Email' value={authFormData.email} onChange={handleChange} className='input-style' />
@@ -26,12 +26,11 @@ const Login = (props) => {
           <button className='submit-button'> Login</button>
           </form>
         
-        <div className='right-container'>
+        
           <div className="need-account">
             <h1 className='account-title' >Need An Account?</h1>
             <button onClick={() => { props.history.push('/register') }} className='register-button'>Register</button>
           </div>
-        </div>
         </div>
       </div>
       </>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import insta from '../images/instagram1.svg'
+import Totally from '../images/Totally Tennis Logo.png'
 // import Modal from '../services/Modal'
 import Google from '../services/GoogleBtn'
 import Tennis from '../images/Tennis-Ball-Download-Free-PNG.png'
@@ -60,12 +61,12 @@ export default class Nav extends Component {
       <>
       <div class="nav">
           <div class='nav-text'>
-            <h3 class='title9'>
-              <a class='a' href='/'>
-                <img class='ball' src={Tennis} />
-                Totally Tennis
-              </a>
-            </h3>
+           
+              {/* <a class='a' href='/'>
+                <img class='ball' src={Totally} />
+            
+              </a> */}
+        
             <div class='link-container'>
               <a class='link' href='/enrolls'>Enroll</a>
               {/* <a class='link' href='/#dates'>Dates</a> */}
@@ -89,10 +90,9 @@ export default class Nav extends Component {
                 ?
                 <>
                   {this.user().map(user => (
-                  
                     <a class="link" href={`/users/${user}`}>
-                    <svg  width="18" viewBox="0 0 16 18">
-                      <path d="M8 0C9.06087 0 10.0783 0.464774 10.8284 1.29208C11.5786 2.11938 12 3.24144 12 4.41143C12 5.58141 11.5786 6.70347 10.8284 7.53078C10.0783 8.35808 9.06087 8.82285 8 8.82285C6.93913 8.82285 5.92172 8.35808 5.17157 7.53078C4.42143 6.70347 4 5.58141 4 4.41143C4 3.24144 4.42143 2.11938 5.17157 1.29208C5.92172 0.464774 6.93913 0 8 0ZM8 11.0286C12.42 11.0286 16 13.0027 16 15.44V17.6457H0V15.44C0 13.0027 3.58 11.0286 8 11.0286Z" fill="black" />
+                    <svg width="18" viewBox="0 0 16 18">
+                      <path class='head' d="M8 0C9.06087 0 10.0783 0.464774 10.8284 1.29208C11.5786 2.11938 12 3.24144 12 4.41143C12 5.58141 11.5786 6.70347 10.8284 7.53078C10.0783 8.35808 9.06087 8.82285 8 8.82285C6.93913 8.82285 5.92172 8.35808 5.17157 7.53078C4.42143 6.70347 4 5.58141 4 4.41143C4 3.24144 4.42143 2.11938 5.17157 1.29208C5.92172 0.464774 6.93913 0 8 0ZM8 11.0286C12.42 11.0286 16 13.0027 16 15.44V17.6457H0V15.44C0 13.0027 3.58 11.0286 8 11.0286Z" fill="black" />
                       </svg>
                       <p class='name'>{this.props.currentUser.first_name}</p>
                     </a>
@@ -106,6 +106,7 @@ export default class Nav extends Component {
             </div>
             </div>
           <div class="hamburger">
+          
         <input type="checkbox" id="nav-toggle"/>
           <label for="nav-toggle">
             <span class="toggle-words"><i class="fa fa-bars" id="bar"><svg viewBox="0 0 100 80" width="40" height="40">
@@ -121,21 +122,38 @@ export default class Nav extends Component {
                 }}
                
                 >Sign In</button></li> */}
+                 <li>
+                {this.props.currentUser
+                ?
+                <div class='profile-link'>
+                  {this.user().map(user => (
+                    <a class="nav-link" onClick={() => document.getElementById("nav-toggle").checked = false} href={`/users/${user}`}>
+                    <svg width="18" viewBox="0 0 16 18">
+                      <path class='head' d="M8 0C9.06087 0 10.0783 0.464774 10.8284 1.29208C11.5786 2.11938 12 3.24144 12 4.41143C12 5.58141 11.5786 6.70347 10.8284 7.53078C10.0783 8.35808 9.06087 8.82285 8 8.82285C6.93913 8.82285 5.92172 8.35808 5.17157 7.53078C4.42143 6.70347 4 5.58141 4 4.41143C4 3.24144 4.42143 2.11938 5.17157 1.29208C5.92172 0.464774 6.93913 0 8 0ZM8 11.0286C12.42 11.0286 16 13.0027 16 15.44V17.6457H0V15.44C0 13.0027 3.58 11.0286 8 11.0286Z" fill="white" />
+                      </svg>
+                      <p class='name'>{this.props.currentUser.first_name}</p>
+                    </a>
+                    ))}
+                  </div>
+                :
+
+                <a class='link' href='/login'>Login</a>
+                }</li>
             <li><a href="/enrolls" class="nav-link"
                   onClick={() => document.getElementById("nav-toggle").checked = false}>Enroll</a></li>
               <li><a href='/#dates' class="nav-link"
                 onClick={() => document.getElementById("nav-toggle").checked = false}>Dates</a></li>
-                <li><a href="/#location" class="nav-link"
-                  onClick={() => document.getElementById("nav-toggle").checked = false}>Locations</a></li>
+                <li><a href="/locations" class="nav-link"
+                  onClick={() => document.getElementById("nav-toggle").checked = false}>Find a class</a></li>
                  {/* <li><a href="/#pricing" class="nav-link"
                 onClick={() => document.getElementById("nav-toggle").checked = false}>Pricing</a></li> */}
-                <li><a href="/#coaches" class="nav-link"
+                <li><a href="/coaches" class="nav-link"
                   onClick={() => document.getElementById("nav-toggle").checked = false}>Team</a></li>
-                <li><a href='/#private' class="nav-link" onClick={() => document.getElementById("nav-toggle").checked = false}>Private Lessons</a> </li>
+                <li><a href='/private' class="nav-link" onClick={() => document.getElementById("nav-toggle").checked = false}>Private Lessons</a> </li>
                 <li><a href='/#string' class="nav-link" onClick={() => document.getElementById("nav-toggle").checked = false}>Racket Stringing</a> </li>
                 <li><a href="/#bring" class="nav-link"
                   onClick={() => document.getElementById("nav-toggle").checked = false}>What to Bring</a></li>
-                <li><a href="/#contact" class="nav-link"
+                <li><a href="/contact" class="nav-link"
                   onClick={() => document.getElementById("nav-toggle").checked = false}>Contact</a></li>
                  <li> <a  class="nav-link" onClick={e => {
             this.showModal(e); document.getElementById("nav-toggle").checked = false 

@@ -1,0 +1,11 @@
+.profile-welcome {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.logout-button {
+  margin-left: auto;
+}

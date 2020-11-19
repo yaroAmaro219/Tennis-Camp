@@ -1,46 +1,70 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
-import artemie from "../images/jacob.jpg";
+import artemie from "../images/650178022-huge.jpg";
 import jacob from '../MTenn.JPG'
 import Andrew from '../images/Screen Shot 2020-03-23 at 11.55.30 AM.jpeg'
 import John from '../images/output.jpg'
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 export default class Home extends Component {
+  constructor(props) {
+    super(props)
+    this.play = this.play.bind(this)
+  }
+  play() {
+    this.slider.slickPlay();
+  }
   render() {
     const locations =
       this.props.locations
       &&
       this.props.locations.map((location, index) => {
         return (
-          <div class='location-one'>
-          <Link to={`/locations/${location.id}`}>
-            <h2>{`${location.title}`}</h2>
-          </Link>
-          </div>
-          )
+          <>
+            <Link to={`/locations/${location.id}`}>
+              <div class='location-one'>
+               <h2 class='location-title'>{`${location.title}`}</h2>
+              </div>
+            </Link>
+          </>
+        )
       })
+      const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 3000,
+        autoplaySpeed: 4000,
+        cssEase: "linear",
+        pauseOnHover: true
+      };
     return (
       <div class="home">
          <div class='first'>
-          <div class='left-container'>
-            <img src={artemie} class="home-img">
-            </img>
-        </div>
-          <div class='right-container'>
+          {/* <div class='left-container'> */}
+            {/* <img src={artemie} class="home-img">
+            </img> */}
+        {/* </div> */}
+          {/* <div class='right-container'> */}
             <div class='text-container'>
               <div class='title-container'>
 
                 {/* <h1 class='title9'>Tennis Coaches Of NYC</h1> */}
                 <h1 class='title'>Totally Tennis</h1>
               </div>
-              <div class='sub-container'>
+              {/* <div class='sub-container'>
                 <div class='sub2-container'>
                   <h2 class='sub-title4'>New York</h2>
                   <h2 class='sub-title4'>New Jersey</h2>
                   <h2 class='sub-title4'>California</h2>
                   </div>
 
-                </div>
+                </div> */}
               <div class='enroll-button-container'>
                 
                 <div class='button2'>
@@ -53,7 +77,29 @@ export default class Home extends Component {
                 </div>
             </div>
           </div>
-        </div>
+          {/* </div> */}
+          <div class='slider'>
+          <Slider ref={slider => (this.slider = slider)} {...settings}>
+          <div>
+            <h3>"I Love Tennis!" -Jacob</h3>
+          </div>
+          <div>
+            <h3>"Totally Tennis is the best!" -Wyatt</h3>
+          </div>
+          <div>
+            <h3>"Tennis is totally fun!" -Maya</h3>
+          </div>
+          <div>
+            <h3>"Our kids love it!" -Alex</h3>
+          </div>
+          <div>
+            <h3>"I've seen my daughter improve immensly just over the course of 6 classes" -Daniel</h3>
+          </div>
+          <div>
+            <h3>"Totally Tennis!" -Artemie</h3>
+          </div>
+            </Slider>
+            </div>
         </div>
         <div class='second' id='dates'>
           <div class='second-text-container'>
@@ -66,6 +112,7 @@ export default class Home extends Component {
         </div>
         <div class="third" id='location'>
           <h1>Find Your Location</h1>
+         
           <h1>-</h1>
           <div class='home-locations'>
             {locations}

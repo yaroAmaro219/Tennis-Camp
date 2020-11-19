@@ -31,13 +31,20 @@ class Coaches extends Component {
         
     return (
       <div class='show-page'>
-        <div class='coaches'>
+        <div class='coach-page'>
         <h1>Coaches</h1>
+        <div class='coaches'>
           {coaches}
         </div>
-        <h3>Add Coach</h3>
-        <input />
-        <button>Submit</button>
+          {this.props.currentUser
+            &&
+            this.props.currentUser.admin
+            ?
+            <button>Create New Coach</button>
+            :
+            null
+          }
+          </div>
       </div>
     );
   }

@@ -23,10 +23,22 @@ html {
 
 .home-locations {
   display: flex;
+  flex-wrap: wrap;
+  width: 81%;
 }
 
 .coaches {
   display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.profile-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: start;
+  padding-bottom: 36px;
 }
 
 .child-name {
@@ -35,7 +47,7 @@ html {
 
 .enroll-button-container {
   display: flex;
-  flex-direction: column;
+  
 }
 
 .enroll-button-trial {
@@ -59,12 +71,34 @@ margin-bottom: 18px;
   margin-bottom: 0;
 }
 
+.slider {
+  width: 90%;
+  padding: 33% 0px 0px 66px;
+}
+
+.head {
+  transition: .3s;
+}
+
+.link:hover .head {
+  fill: white;
+}
+
+
 #location {
   padding: 36px 270px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: fit-content;
+  width: 100%;
+}
+
+.footer-glasstop {
+  width: 81%;
+}
+
+.home {
+  width: 100%;
 }
 
 @media screen and (max-width: 850px) {
@@ -79,8 +113,20 @@ margin-bottom: 18px;
     position: absolute;
   }
 
+  .slider {
+    width: 290px !important;
+    padding: 18% 0px 0px 1% !important;
+  }
+
+
   .footer {
     width: 100%;
+    padding: 36px 0px !important;
+  }
+
+  .footer-copyright {
+    width: 81%;
+    text-align: center;
   }
 
   .bio-info {
@@ -93,7 +139,6 @@ margin-bottom: 18px;
 
   .button2 {
     display: flex;
-    margin-bottom: 66px !important;
     }
 
   html {
@@ -123,14 +168,18 @@ margin-bottom: 18px;
     }
 
   .text-container {
-    padding: 130px 18px 0px 18px !important;
+    padding: 252px 18px 0px 18px !important;
+    z-index: 1;
+    position: relative;
+    align-items: flex-start !important;
   }
 
   .home-img {
-    height: 675px;
+    height: 333px;
     position: absolute;
-    width: 925px !important;
-    padding-top: 0 !important;
+    /* width: 925px !important; */
+    padding-top:81px !important;
+
   }
 
   .private {
@@ -148,6 +197,13 @@ margin-bottom: 18px;
     padding-top: 9px;
   }
 
+  
+
+
+  .locations {
+    flex-direction: column !important;
+  }
+
   #coaches {
     padding: 36px !important;
     align-items: center;
@@ -156,6 +212,14 @@ margin-bottom: 18px;
 
   .first {
     flex-direction: column;
+    height: 540px !important;
+    background-position: 100% -20% !important;
+    /* padding-top: 199px; */
+    width: 100%;
+  }
+
+  .title {
+    display: none !important;
   }
 
   #pricing.pricing {
@@ -174,13 +238,15 @@ margin-bottom: 18px;
   }
 
   .second {
-    width: 700px;
+    width: 100%;
     padding: 36px !important;
   }
 
-  /* .enroll-button-container {
-    margin-top: 27px !important;
-  } */
+  .enroll-button-container {
+  flex-direction: column;
+  padding-left: 3%;
+  }
+
 
   .profile-img {
     width: 300px !important;
@@ -194,7 +260,6 @@ margin-bottom: 18px;
 
   .enroll-button1 {
     background-color: transparent !important;
-    position: absolute;
     margin-top: 9px;
   }
 
@@ -209,11 +274,39 @@ margin-bottom: 18px;
   .enroll-home {
 
   }
+
 }
+@media screen and (max-width: 769px) {
+
+  .first {
+    flex-direction: column;
+    height: 540px !important;
+    background-position: 80% 90px !important;
+    padding-top: 199px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .slider {
+    width: 240px !important;
+    padding: 28% 0px 0px 1% !important;
+  }
+}
+
 @media screen and (max-width: 450px) {
-.second {
-  width: 100% !important;
-}
+  .second {
+    width: 100% !important;
+  }
+
+  .home-locations {
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+  }
+
+  .a {
+    justify-content: center !important;
+  }
 }
 
 .enroll-home {
@@ -247,7 +340,7 @@ margin-bottom: 18px;
 
 .home-img {
   width: 100%;
-  padding-top: 36px;
+  padding-top:39px;
 }
 
 
@@ -283,10 +376,16 @@ margin-bottom: 18px;
 .footer {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   justify-content: center;
   background-color: #abdb8f;
   padding: 36px ;
   color: white;
+}
+
+.footer-copyright {
+  margin: unset;
 }
 
 .string {
@@ -393,6 +492,7 @@ p {
   cursor: pointer;
   color: black;
   border: none;
+  margin: 9px;
 }
 
 .bio-info {
@@ -409,7 +509,7 @@ p {
   font-size: 42px;
   display: flex;
   color: #abdb8f;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   text-transform: uppercase;
   letter-spacing: .1em;
   line-height: 0.88em;
@@ -417,6 +517,7 @@ p {
   transform: scale(1, 1.6);
   -webkit-text-stroke: 1.3px black; 
   width: 80%;
+  padding-bottom: 36px;
 }
 
 .title9 {
@@ -436,10 +537,10 @@ p {
 }
 
 .a {
-  color: #abdb8f;
+  color: black;
   width: 360px;
   display: flex;
-justify-content: center;
+justify-content: flex-end;
 align-items: center;
 }
 
@@ -450,8 +551,10 @@ align-items: center;
 
 .title-container {
   display: flex;
-  text-align: start;
+  text-align: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .sub-title {
@@ -515,10 +618,12 @@ h1 {
 .text-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: start;
-  padding: 120px 18px 0px 56px;
-  width: 300px;
+  align-items: center;
+  text-align: center;
+  /* padding: 360px 18px 0px 360px; */
+  z-index: 1;
+  width: 100%;
+  position: absolute;
   /* line-height: .88em; */
 }
 
@@ -529,12 +634,19 @@ h1 {
 
 .right-container {
   width: 40%;
+  position: absolute;
 }
 
 .first {
+  background-image: url("./images/650178022-huge.jpg");
+  background-attachment: fixed;
+  background-position: 100% 111px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height:100%;
   display: flex;
-  align-items: flex-start;
-  height: 666px;
+  align-items: center;
+  height: 888px;
   overflow: hidden;
 }
 
@@ -546,9 +658,10 @@ a {
   /* display:flex; */
   background-color: black;
   color: white;
-  padding: 54px 290px;
+  padding: 36px 270px;
   text-align: start;
 }
+
 
 .second-text-container {
   /* padding-left: 400px; */
@@ -573,17 +686,8 @@ a {
 
 }
 
-.contact {
 
-  min-height: 28px;
-  background-color: black;
-  padding: 36px 270px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
+
 
 .App-header {
   background-color: #282c34;

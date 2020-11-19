@@ -3,8 +3,76 @@
   padding: 96px 0px 63px 0px;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   background-color:white;
+  min-height: 33vw;
 }
+
+.contact {
+  min-height: 28px;
+  padding: 36px 36px 36px 270px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: start;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: start;
+  padding: 0px 36px;
+  border-left: 1px solid grey;
+}
+
+.contact-phone {
+  color: black;
+  padding: 3px 0px;
+}
+
+.contact-email {
+  color: black;
+  padding: 3px 0px;
+}
+
+@media screen and (max-width: 1026px) {
+  .link {
+    font-size: x-small;
+  }
+  .contact {
+    width: 423px;
+  }
+  .contact-info {
+    width: 423px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+.contact-page {
+  flex-direction: column !important;
+}
+
+.contact {
+  width: 80%;
+}
+
+.contact-info {
+  width: 80%;
+  border-left: unset !important;
+  min-height: 28px;
+  padding: unset !important;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: start;
+}
+}
+

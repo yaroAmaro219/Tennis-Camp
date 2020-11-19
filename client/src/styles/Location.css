@@ -1,14 +1,38 @@
+.locations-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-page {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+}
+
 .location-one {
 padding: 9px 9px;
-border: 2px solid black;
-align-items: center;
-justify-content: center;
+border: 1px solid grey;
+align-items: flex-start;
+justify-content: flex-start;
 flex-flow: column;
 flex-direction: column;
 cursor: pointer;
-margin: 3%;
-width: 225px;
-height: 180px;
+margin: 9px;
+width: 270px;
+height: 270px;
+white-space: normal;
+}
+
+.supervisor {
+  margin: 0;
+}
+
+
+.location-title {
+  color: black;
 }
 
 .locations {
@@ -16,20 +40,29 @@ height: 180px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .location-one:hover {
   box-shadow: 0vw 0.2vw 1vw 1vw rgba(0, 0, 0, 0.1);
 }
 
-.location-page {
-  padding-top: 90px;
-  display: flex;
-  flex-direction: column;
-}
+
 
 .locations {
 display: flex;
 min-height: 30vw;
+}
+
+.delete-button {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+  .location-one {
+    width: 270px !important;
+  }
 }
