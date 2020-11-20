@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     resources :sessions
   end
 
+  match '*path', via: [:options], to: lambda {|_| [204, { 'Content-Type' => 'text/plain' }]}
+
   resources :coaches do 
     resources :sessions
   end
