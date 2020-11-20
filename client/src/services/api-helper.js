@@ -1,7 +1,7 @@
 const axios = require('axios')
 
 const baseUrl = process.env.NODE_ENV ===
-  'production' ? 'https://tennis-camp.herokuapp.com' :
+  'production' ? 'https://tennis-camp.herokuapp.com/' :
   'http://localhost:3000'
 
 const api = axios.create({
