@@ -5,14 +5,11 @@
 
 # Read more: https://github.com/cyu/rack-cors
 
-Rails.application.config.hosts << "https://www.tenniscoachesofnyc.com"
-
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://www.tenniscoachesofnyc.com'
-
-    resource '*',
+    origins '*'
+    resource "#{Rails.application.config.assets.prefix}/*",
       headers: :any,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      methods: [:get, :post, :put, :patch, :delete, :options]
   end
 end
