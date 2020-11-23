@@ -47,7 +47,8 @@ import {
   destroyLocation,
   showCoaches,
   showCoach,
-  showChild
+  showChild,
+  removeToken
 } from './services/api-helper'
 
 

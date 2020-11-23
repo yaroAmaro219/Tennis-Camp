@@ -24839,3 +24839,681 @@ app/controllers/application_controller.rb:17:in `authorize_request'
 Completed 200 OK in 104ms (Views: 11.8ms | ActiveRecord: 90.1ms | Allocations: 101933)
 
 
+Started GET "/locations" for ::1 at 2020-11-23 13:24:24 -0500
+Started GET "/auth/verify" for ::1 at 2020-11-23 13:24:24 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 1932)
+
+
+  
+NameError (uninitialized constant ApplicationController::Active
+Did you mean?  ActiveJob):
+  
+app/controllers/application_controller.rb:20:in `rescue in authorize_request'
+app/controllers/application_controller.rb:17:in `authorize_request'
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (1.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 41ms (Views: 16.6ms | ActiveRecord: 22.6ms | Allocations: 17312)
+
+
+Started GET "/locations" for ::1 at 2020-11-23 13:25:23 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (1.9ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 1.9ms | Allocations: 1414)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-23 13:25:23 -0500
+Processing by AuthenticationController#verify as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1900)
+
+
+  
+NameError (uninitialized constant ApplicationController::Active
+Did you mean?  ActiveJob):
+  
+app/controllers/application_controller.rb:20:in `rescue in authorize_request'
+app/controllers/application_controller.rb:17:in `authorize_request'
+Started GET "/locations" for ::1 at 2020-11-23 13:25:46 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1371)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-23 13:25:46 -0500
+Processing by AuthenticationController#verify as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1895)
+
+
+  
+NameError (uninitialized constant ApplicationController::Active
+Did you mean?  ActiveJob):
+  
+app/controllers/application_controller.rb:20:in `rescue in authorize_request'
+app/controllers/application_controller.rb:17:in `authorize_request'
+Started GET "/coaches" for ::1 at 2020-11-23 13:25:48 -0500
+Started GET "/auth/verify" for ::1 at 2020-11-23 13:25:48 -0500
+Processing by CoachesController#index as HTML
+Processing by AuthenticationController#verify as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1895)
+
+
+  
+NameError (uninitialized constant ApplicationController::Active
+Did you mean?  ActiveJob):
+  
+app/controllers/application_controller.rb:20:in `rescue in authorize_request'
+app/controllers/application_controller.rb:17:in `authorize_request'
+  [1m[36mCoach Load (106.6ms)[0m  [1m[34mSELECT "coaches".* FROM "coaches"[0m
+  ↳ app/controllers/coaches_controller.rb:8:in `index'
+Completed 200 OK in 125ms (Views: 11.1ms | ActiveRecord: 111.1ms | Allocations: 108102)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-23 13:44:03 -0500
+Processing by AuthenticationController#verify as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 1895)
+
+
+  
+NameError (uninitialized constant ApplicationController::Active
+Did you mean?  ActiveJob):
+  
+app/controllers/application_controller.rb:20:in `rescue in authorize_request'
+app/controllers/application_controller.rb:17:in `authorize_request'
+Started POST "/auth/login" for ::1 at 2020-11-23 15:22:43 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"email"=>"hi@hi.com", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms | Allocations: 877)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: auth):
+  
+app/controllers/authentication_controller.rb:21:in `login_params'
+app/controllers/authentication_controller.rb:5:in `login'
+Started POST "/auth/login" for ::1 at 2020-11-23 15:22:52 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"email"=>"cole@hi.com", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 132)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: auth):
+  
+app/controllers/authentication_controller.rb:21:in `login_params'
+app/controllers/authentication_controller.rb:5:in `login'
+Started POST "/auth/login" for ::1 at 2020-11-23 15:22:59 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"email"=>"cole@hi.com", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: auth):
+  
+app/controllers/authentication_controller.rb:21:in `login_params'
+app/controllers/authentication_controller.rb:5:in `login'
+Started POST "/users" for ::1 at 2020-11-23 15:23:12 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"Hi", "last_name"=>"yo", "email"=>"hi@hi.com", "classes"=>"doodle", "child_name"=>"noodle", "admin"=>false, "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :admin[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (5.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "hi@hi.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 240ms (Views: 0.6ms | ActiveRecord: 11.6ms | Allocations: 14473)
+
+
+Started POST "/users" for ::1 at 2020-11-23 15:23:36 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"Art", "last_name"=>"yo", "email"=>"art@hi.com", "classes"=>"doodle", "child_name"=>"noodle", "admin"=>false, "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :admin[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "art@hi.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (68.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "child_name", "email", "classes", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Art"], ["last_name", "yo"], ["child_name", "noodle"], ["email", "art@hi.com"], ["classes", "doodle"], ["password_digest", "$2a$12$pGBo/kIIpCWeHiw0580OteG.9NKcml9TYmCxai9xkyMmbFi/7FHg."], ["created_at", "2020-11-23 20:23:36.938475"], ["updated_at", "2020-11-23 20:23:36.938475"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 201 Created in 337ms (Views: 1.0ms | ActiveRecord: 72.5ms | Allocations: 4201)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-23 15:23:44 -0500
+Processing by AuthenticationController#verify as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1834)
+
+
+  
+NameError (uninitialized constant ApplicationController::Active
+Did you mean?  ActiveJob):
+  
+app/controllers/application_controller.rb:20:in `rescue in authorize_request'
+app/controllers/application_controller.rb:17:in `authorize_request'
+Started POST "/auth/login" for ::1 at 2020-11-23 15:23:52 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"email"=>"art@hi.com", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 123)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: auth):
+  
+app/controllers/authentication_controller.rb:21:in `login_params'
+app/controllers/authentication_controller.rb:5:in `login'
+Started POST "/auth/login" for ::1 at 2020-11-23 15:23:58 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"email"=>"Art@hi.com", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 123)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: auth):
+  
+app/controllers/authentication_controller.rb:21:in `login_params'
+app/controllers/authentication_controller.rb:5:in `login'
+Started POST "/users" for ::1 at 2020-11-23 15:24:21 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"Happy", "last_name"=>"yo", "email"=>"happy@hi.com", "classes"=>"doodle", "child_name"=>"noodle", "admin"=>false, "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :admin[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "happy@hi.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "child_name", "email", "classes", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Happy"], ["last_name", "yo"], ["child_name", "noodle"], ["email", "happy@hi.com"], ["classes", "doodle"], ["password_digest", "$2a$12$jggXsAqVkfxOu6a9zDuZduf3Sel6UgaQGzkEnCSI9.BNTqilJfeKW"], ["created_at", "2020-11-23 20:24:22.346352"], ["updated_at", "2020-11-23 20:24:22.346352"]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 201 Created in 417ms (Views: 1.2ms | ActiveRecord: 1.7ms | Allocations: 4043)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-23 15:29:00 -0500
+  
+PG::Error (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:769:in `set_client_encoding'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:769:in `configure_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:287:in `block in reconnect!'
+activesupport (6.0.3.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:26:in `block (2 levels) in synchronize'
+activesupport (6.0.3.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+activesupport (6.0.3.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+activesupport (6.0.3.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+activesupport (6.0.3.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:284:in `reconnect!'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:554:in `verify!'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:936:in `block in checkout_and_verify'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:135:in `run_callbacks'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:825:in `_run_checkout_callbacks'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:935:in `checkout_and_verify'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.2) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/verify" for ::1 at 2020-11-23 15:29:29 -0500
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (1.2.3) lib/pg.rb:58:in `initialize'
+pg (1.2.3) lib/pg.rb:58:in `new'
+pg (1.2.3) lib/pg.rb:58:in `connect'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.2) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/auth/login" for ::1 at 2020-11-23 15:29:50 -0500
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (1.2.3) lib/pg.rb:58:in `initialize'
+pg (1.2.3) lib/pg.rb:58:in `new'
+pg (1.2.3) lib/pg.rb:58:in `connect'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.2) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-11-23 15:30:07 -0500
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (1.2.3) lib/pg.rb:58:in `initialize'
+pg (1.2.3) lib/pg.rb:58:in `new'
+pg (1.2.3) lib/pg.rb:58:in `connect'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.2) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.2) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-11-23 15:31:05 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"Yoseph", "last_name"=>"yo", "email"=>"yo@hi.com", "classes"=>"doodle", "child_name"=>"noodle", "admin"=>false, "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :admin[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yo@hi.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 242ms (Views: 0.2ms | ActiveRecord: 10.4ms | Allocations: 14448)
+
+
+Started POST "/users" for ::1 at 2020-11-23 15:31:46 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"Yoseph", "last_name"=>"yo", "email"=>"yo@hi.com", "classes"=>"doodle", "child_name"=>"noodle", "admin"=>false, "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yo@hi.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 241ms (Views: 0.1ms | ActiveRecord: 6.0ms | Allocations: 12219)
+
+
+Started POST "/users" for ::1 at 2020-11-23 15:34:45 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"Yoseph", "last_name"=>"yo", "email"=>"yo@hi.com", "classes"=>"doodle", "child_name"=>"noodle", "admin"=>false, "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yo@hi.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 227ms (Views: 0.1ms | ActiveRecord: 5.5ms | Allocations: 12219)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-23 15:34:56 -0500
+Processing by AuthenticationController#verify as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1849)
+
+
+  
+NameError (uninitialized constant ApplicationController::Active
+Did you mean?  ActiveJob):
+  
+app/controllers/application_controller.rb:20:in `rescue in authorize_request'
+app/controllers/application_controller.rb:17:in `authorize_request'
+Started POST "/users" for ::1 at 2020-11-23 15:35:13 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"yoseph", "last_name"=>"yo", "email"=>"yoseph@hi.com", "classes"=>"doodle", "child_name"=>"noodle", "admin"=>false, "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yoseph@hi.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (10.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "child_name", "email", "classes", "password_digest", "created_at", "updated_at", "admin") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "yoseph"], ["last_name", "yo"], ["child_name", "noodle"], ["email", "yoseph@hi.com"], ["classes", "doodle"], ["password_digest", "$2a$12$CPyoEp6lpBU3qpSCZz4WwOBm7gbKWamFQBX3u9ydaWdADolqETkaq"], ["created_at", "2020-11-23 20:35:14.210011"], ["updated_at", "2020-11-23 20:35:14.210011"], ["admin", false]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 500 Internal Server Error in 249ms (ActiveRecord: 11.0ms | Allocations: 5903)
+
+
+  
+NoMethodError (undefined method `username' for #<User:0x00007f92c0601fd0>):
+  
+app/controllers/users_controller.rb:22:in `create'
+Started POST "/users" for ::1 at 2020-11-23 15:36:11 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"yoseph", "last_name"=>"yo", "email"=>"yoseph@hi.com", "classes"=>"doodle", "child_name"=>"noodle", "admin"=>false, "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yoseph@hi.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 422 Unprocessable Entity in 232ms (Views: 0.1ms | ActiveRecord: 3.1ms | Allocations: 12252)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-23 15:36:44 -0500
+Processing by AuthenticationController#verify as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1844)
+
+
+  
+NameError (uninitialized constant ApplicationController::Active
+Did you mean?  ActiveJob):
+  
+app/controllers/application_controller.rb:20:in `rescue in authorize_request'
+app/controllers/application_controller.rb:17:in `authorize_request'
+Started POST "/auth/login" for ::1 at 2020-11-23 15:36:47 -0500
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"email"=>"cole@hi.com", "password"=>"[FILTERED]"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 140)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: auth):
+  
+app/controllers/authentication_controller.rb:21:in `login_params'
+app/controllers/authentication_controller.rb:5:in `login'
+Started POST "/users" for ::1 at 2020-11-23 15:37:37 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first_name"=>"Mar", "last_name"=>"yo", "email"=>"Mar@hi.com", "classes"=>"doodle", "child_name"=>"noodle", "admin"=>false, "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Mar@hi.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "child_name", "email", "classes", "password_digest", "created_at", "updated_at", "admin") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["first_name", "Mar"], ["last_name", "yo"], ["child_name", "noodle"], ["email", "Mar@hi.com"], ["classes", "doodle"], ["password_digest", "$2a$12$vqlFkKLgy1cZ9bsfydCl4ePiPzbAvDkiK5ETtz221/AvgYJYC1J4m"], ["created_at", "2020-11-23 20:37:37.261063"], ["updated_at", "2020-11-23 20:37:37.261063"], ["admin", false]]
+  ↳ app/controllers/users_controller.rb:21:in `create'
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:21:in `create'
+Completed 201 Created in 229ms (Views: 0.7ms | ActiveRecord: 13.8ms | Allocations: 4141)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-23 15:37:49 -0500
+Started GET "/home" for ::1 at 2020-11-23 15:37:49 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 19ms (Views: 2.8ms | ActiveRecord: 2.1ms | Allocations: 1331)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/locations" for ::1 at 2020-11-23 15:37:49 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (2.6ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 14.4ms | ActiveRecord: 12.9ms | Allocations: 9092)
+
+
+Started GET "/locations" for ::1 at 2020-11-23 15:37:51 -0500
+Processing by LocationsController#index as HTML
+Started GET "/auth/verify" for ::1 at 2020-11-23 15:37:51 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mLocation Load (11.1ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 15ms (Views: 3.5ms | ActiveRecord: 11.1ms | Allocations: 2732)
+
+
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 1.0ms | Allocations: 2316)
+
+
+Started GET "/locations" for ::1 at 2020-11-23 15:37:51 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1363)
+
+
+Started GET "/coaches" for ::1 at 2020-11-23 15:37:54 -0500
+Processing by CoachesController#index as HTML
+  [1m[36mCoach Load (4.4ms)[0m  [1m[34mSELECT "coaches".* FROM "coaches"[0m
+  ↳ app/controllers/coaches_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 20.6ms | ActiveRecord: 12.7ms | Allocations: 8389)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-23 15:37:54 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 978)
+
+
+Started GET "/locations" for ::1 at 2020-11-23 15:37:54 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1361)
+
+
+Started GET "/home" for ::1 at 2020-11-23 15:38:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/auth/verify" for ::1 at 2020-11-23 15:38:01 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 143ms (Views: 1.4ms | ActiveRecord: 48.5ms | Allocations: 24478)
+
+
+Started GET "/locations" for ::1 at 2020-11-23 15:38:01 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 1364)
+
+
+Started GET "/locations" for ::1 at 2020-11-23 15:38:05 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (3.0ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 3.0ms | Allocations: 1361)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-23 15:38:05 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 4.0ms | Allocations: 979)
+
+
+Started GET "/locations" for ::1 at 2020-11-23 15:38:05 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.8ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.8ms | Allocations: 1361)
+
+
+Started GET "/coaches" for ::1 at 2020-11-23 15:38:07 -0500
+Processing by CoachesController#index as HTML
+  [1m[36mCoach Load (0.9ms)[0m  [1m[34mSELECT "coaches".* FROM "coaches"[0m
+  ↳ app/controllers/coaches_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.9ms | Allocations: 2034)
+
+
+Started GET "/auth/verify" for ::1 at 2020-11-23 15:38:07 -0500
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 978)
+
+
+Started GET "/locations" for ::1 at 2020-11-23 15:38:07 -0500
+Processing by LocationsController#index as HTML
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT "locations".* FROM "locations"[0m
+  ↳ app/controllers/locations_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 1361)
+
+

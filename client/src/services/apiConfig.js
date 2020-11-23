@@ -1,4 +1,4 @@
-import Axios from 'axios'
+const Axios = require('axios')
 
 const JwtToken = localStorage.getItem('token') || null
 
