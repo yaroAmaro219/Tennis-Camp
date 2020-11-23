@@ -35,7 +35,7 @@ import './styles/Modal.css'
 import './styles/Contact.css'
 import './styles/Location.css'
 import './styles/Profile.css'
-
+import { verifyUser, loginUser, registerUser } from './services/auth'
 import {
   showLocations,
   showUser,
@@ -47,11 +47,7 @@ import {
   destroyLocation,
   showCoaches,
   showCoach,
-  showChild,
-  registerUser,
-  loginUser,
-  verifyUser,
-  removeToken,
+  showChild
 } from './services/api-helper'
 
 
