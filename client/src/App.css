@@ -29,8 +29,9 @@ html {
 
 .coaches {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: start;
+  flex-wrap: wrap;
 }
 
 .profile-top {

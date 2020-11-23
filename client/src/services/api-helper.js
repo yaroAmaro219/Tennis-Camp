@@ -1,12 +1,4 @@
-const axios = require('axios')
-
-const baseUrl = process.env.NODE_ENV ===
-  'production' ? 'https://tennis-camp.herokuapp.com/' :
-  'http://localhost:3000'
-
-const api = axios.create({
-  baseURL: baseUrl
-});
+import api from './apiConfig.js'
 
 export const showUser = async () => {
   const resp = await api.get(`/home`)
