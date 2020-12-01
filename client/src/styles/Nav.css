@@ -48,7 +48,6 @@
 
 .nav-text {
   display: flex;
-
   align-items: center;
   padding: 18px 0px 18px 0px;
   white-space: nowrap;
@@ -192,8 +191,6 @@ a {
   border-bottom: 1px solid #ccc;
   text-transform: uppercase;
   font-weight: 900;
-  /* padding: 18px;
-  margin: 72px; */
 }
 
 button.sign-in {
