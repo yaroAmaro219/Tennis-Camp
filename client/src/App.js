@@ -378,21 +378,6 @@ class App extends Component {
               {...props}
             />
           )} />
-          {/* <Route exact path="/profile/:id" render={(props) => (
-            <Profile
-              user={this.state.registerFormData}
-              handleLogout={this.handleLogout}
-              getUser={this.getUser}
-                showUser={this.showUser}
-                getPersonalPost={this.getPersonalPost}
-                {...props}
-                personalPost={this.state.personalPost}
-                deletePost={this.deletePost}
-                updatePost={this.updatePost}
-                user_id={this.state.user_id}
-                currentUser={this.state.currentUser}
-            />
-          )}/> */}
           <Route exact path="/Login" render={(props) => (
             <Login
             handleLogin={this.handleLogin}
@@ -427,12 +412,6 @@ class App extends Component {
             />
             )} />
         </Switch>
-        {/* <div class='contact' id='contact'>
-        <h1 class='title2'>Contact</h1>
-          <h1>-</h1>
-        <h1><a class='phone' href='tel:3474006623'>347-400-6623</a></h1>
-        <h3><a class='phone' href="mailto:tenniscoachesofnyc@gmail.com">TenniscoachesofNYC@gmail.com</a></h3>
-        </div> */}
       
         <div class='footer'>
           <h2 class='footer-copyright'>Tennis Coaches of NYC © </h2>
