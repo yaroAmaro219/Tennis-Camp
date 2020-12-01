@@ -117,6 +117,7 @@ margin-bottom: 18px;
 .home {
   width: 100%;
   overflow-y: hidden;
+  
 }
 
 @media screen and (max-width: 850px) {
@@ -665,7 +666,8 @@ h1 {
   min-height:100%;
   display: flex;
   align-items: center;
-  height: 888px;
+  /* height: 888px; */
+
   overflow: hidden;
 }
 
