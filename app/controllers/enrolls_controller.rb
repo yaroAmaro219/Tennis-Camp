@@ -1,5 +1,6 @@
 class EnrollsController < ApplicationController
-
+  before_action :set_enroll, only: [:show, :update, :destroy]
+  
   # GET /enrolls
   def index
     @enrolls = Enroll.all
@@ -15,8 +16,8 @@ class EnrollsController < ApplicationController
   # POST /enrolls
   def create
     @enroll = Enroll.new(enroll_params)
-    if @enroll.save! 
-      render json: @enroll,
+    if @enroll.save
+      render json: @enroll, status: :created
     else
       render json: @enroll.errors
     end
