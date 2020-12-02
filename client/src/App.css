@@ -9,22 +9,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.first:before {
-  content: "";
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -10;
-  background: url("./images/650178022-huge.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 .full-day {
   text-decoration: line-through;
 }
@@ -43,19 +27,22 @@ html {
   width: 81%;
 }
 
-.coaches {
-  display: flex;
-  flex-direction: row;
-  text-align: start;
-  flex-wrap: wrap;
-}
-
 .profile-top {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   text-align: start;
   padding-bottom: 36px;
+}
+
+.session {
+  border: 1px solid black;
+  margin: 6px;
+  padding: 6px;
+}
+
+.session:hover {
+  box-shadow: 0vw 0.2vw 1vw 1vw rgba(0, 0, 0, 0.1);
 }
 
 .child-name {
@@ -93,15 +80,6 @@ margin-bottom: 18px;
   padding: 33% 0px 0px 66px;
 }
 
-.head {
-  transition: .3s;
-}
-
-.link:hover .head {
-  fill: white;
-}
-
-
 #location {
   padding: 36px 270px;
   display: flex;
@@ -117,7 +95,7 @@ margin-bottom: 18px;
 .home {
   width: 100%;
   overflow-y: hidden;
-  
+  height: 100%;
 }
 
 @media screen and (max-width: 850px) {
@@ -133,10 +111,11 @@ margin-bottom: 18px;
   }
 
   .slider {
-    width: 290px !important;
-    padding: 18% 0px 0px 1% !important;
+    /* width: 290px !important; */
+    /* padding: 18% 0px 0px 1% !important; */
+    margin-top: 333px;
+    text-align: center;
   }
-
 
   .footer {
     width: 100%;
@@ -187,10 +166,11 @@ margin-bottom: 18px;
     }
 
   .text-container {
-    padding: 252px 18px 0px 18px !important;
+    padding: 261px 18px 0px 81px !important;
     z-index: 1;
     position: relative;
     align-items: flex-start !important;
+    justify-content: flex-start;
   }
 
   .home-img {
@@ -216,9 +196,6 @@ margin-bottom: 18px;
     padding-top: 9px;
   }
 
-  
-
-
   .locations {
     flex-direction: column !important;
   }
@@ -231,14 +208,8 @@ margin-bottom: 18px;
 
   .first {
     flex-direction: column;
-    height: 540px !important;
-    background-position: 100% -20% !important;
-    /* padding-top: 199px; */
-    width: 100%;
-  }
-
-  .title {
-    display: none !important;
+    height: 840px !important;
+    background-position: 80% 10vw !important;
   }
 
   #pricing.pricing {
@@ -260,12 +231,6 @@ margin-bottom: 18px;
     width: 100%;
     padding: 36px !important;
   }
-
-  .enroll-button-container {
-  flex-direction: column;
-  padding-left: 3%;
-  }
-
 
   .profile-img {
     width: 300px !important;
@@ -289,32 +254,34 @@ margin-bottom: 18px;
   .contact {
     padding: 36px  !important;
   }
-
-  .enroll-home {
-
-  }
-
 }
-@media screen and (max-width: 769px) {
 
+/* @media screen and (max-width: 769px) {
   .first {
     flex-direction: column;
-    height: 540px !important;
     background-position: 80% 90px !important;
-    padding-top: 199px;
+  
   }
-}
+} */
 
 @media screen and (max-width: 600px) {
   .slider {
     width: 240px !important;
     padding: 28% 0px 0px 1% !important;
   }
+
+  .first {
+    background-position: 80% 15vw !important;
+  }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 575px) {
   .second {
     width: 100% !important;
+  }
+
+  .slider {
+    margin-top: 515px !important;
   }
 
   .home-locations {
@@ -326,6 +293,39 @@ margin-bottom: 18px;
   .a {
     justify-content: center !important;
   }
+  .enroll-button-container {
+    flex-direction: column;
+    padding-left: 3%;
+    }
+
+    .title-container {
+      text-align: start !important;
+    }
+
+    .title {
+      width: 90% !important;
+    }
+}
+@media screen and (max-width: 490px) {
+    .text-container {
+       padding: 351px 0px 0px 0px !important;
+    }
+
+    .title {
+      display: none !important;
+    }
+
+    .first {
+      background-position: 80% 18vw !important;
+      background-size: cover !important;
+      -webkit-background-size: cover !important;
+      -moz-background-size: cover !important;
+      -o-background-size: cover !important;
+    }
+
+    .slider {
+      margin-top: 500px !important;
+    }
 }
 
 .enroll-home {
@@ -657,18 +657,19 @@ h1 {
 }
 
 .first {
-  overflow-y: scroll;
   background-image: url("./images/650178022-huge.jpg");
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: 100% 111px;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height:100%;
+  /* min-height:100%; */
   display: flex;
   align-items: center;
-  /* height: 888px; */
-
+  height: 1200px;
   overflow: hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 a {

@@ -5,7 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+User.destroy_all
+Location.destroy_all
+Coach.destroy_all
+Session.destroy_all
+Child.destroy_all
 
 Session.create([location_id:'null', time: '3:30pm - 5pm', children_id:'null', age: '3-6'])
 Session.create([location_id:'null', time: '3:30pm - 5pm', children_id:'null', age: '7-9'])
@@ -17,12 +21,12 @@ Coach.create({name:'Andrew', age:'22', location:'Fort Greene', sessions_id:'null
 Coach.create({name:'Gabby', age:'22', location:'Fort Greene', sessions_id:'null', bio:'hi', image:'yo'})
 Coach.create({name:'John', age:'34', location:'East Village', sessions_id:'null', bio:'hi', image:'yo'})
 Coach.create({name:'Justin', age:'34', location:'Astoria', sessions_id:'null', bio:'hi', image:'yo'})
-Location.create ([title:'Park Slope', time: '3:30pm', age_group: '3 - 9', image: 'hi', coach: 'Artemie', session_id:1])
-Location.create ([title:'Fort Greene', time: '3:30pm', age_group: '3 - 9', image: 'hi', coach: 'Andrew', session_id:1])
-Location.create ([title:'Astoria', time: '3:30pm', age_group: '3 - 9', image: 'hi', coach: 'Justin', session_id:1])
-Location.create ([title:'Lower East Side', time: '3:30pm', age_group: '3 - 9', image: 'hi', coach: 'John', session_id:1])
-Location.create ([title:'Upper East Side', time: '3:30pm', age_group: '3 - 9', image: 'hi', coach: 'Artemie', session_id:1])
-Child.create([name:'Kid', age:'7',image:'blank', users_id:'null', sessions_id:'null'])
-User.create ([first_name:'Artemie', last_name:'Amari', child_name: 'Hi', email: 'yaroamari@gmail.com', classes:'null', admin:true, password_digest: '123456'])
+Location.create ([title:'Park Slope', time: '3:30pm', age_group: '3 - 9', image: 'hi', coach: 'Artemie'])
+Location.create ([title:'Fort Greene', time: '3:30pm', age_group: '3 - 9', image: 'hi', coach: 'Andrew'])
+Location.create ([title:'Astoria', time: '3:30pm', age_group: '3 - 9', image: 'hi', coach: 'Justin'])
+Location.create ([title:'Lower East Side', time: '3:30pm', age_group: '3 - 9', image: 'hi', coach: 'John'])
+Location.create ([title:'Upper East Side', time: '3:30pm', age_group: '3 - 9', image: 'hi', coach: 'Artemie'])
+User.create ([first_name:'Artemie', last_name:'Amari', child_name: 'Hi', email: 'yaroamari@gmail.com', classes:'null', admin:true, password: '123456'])
+User.create ([first_name:'Artemie', last_name:'Amari', child_name: 'Hi', email: 'amari@gmail.com', classes:'null', admin:true, password: '123456'])
 
-puts "#{Session.count} sessions were created"
+puts "#{User.count} users were created"

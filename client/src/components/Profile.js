@@ -15,21 +15,6 @@ class Profile extends Component {
 
 
   render() {
-    console.log(this.props.match.params.id)
-    console.log(this.props.user)
-    // const user =
-    //   this.props.user
-    //   &&
-    //   this.props.user.map((data, index) => {
-    //     return (
-    //       <div class='location-one'>
-    //       <Link to={`/users/${data.id}/children/${data.children_id}`}>
-    //         <h2>{`${data.child_name}`}</h2>
-    //       </Link>
-           
-    //         </div>
-    //     )
-    //   })
     return (
       <div class="show-page">
         <div class="profile-top">
@@ -37,9 +22,6 @@ class Profile extends Component {
         <h1 class='profile-name'>Hello {this.props.user
           &&
             this.props.user.first_name}</h1>
-          {/* <h4>email: {this.props.user
-          &&
-            this.props.user.email}</h4> */}
             <button class="logout-button" onClick={this.props.handleLogout}>Logout</button>
           </div>
           </div>

@@ -11,7 +11,8 @@ export default class Locations extends Component {
       coach: '',
       title: '',
       image: '',
-      id:''
+      id: '',
+      add: ''
     };
   }
 
@@ -28,8 +29,16 @@ export default class Locations extends Component {
     return ([id])
   }
 
+  handleChange = (e) => {
+    const value = e.target.value;
+    this.setState({
+      ...this.state,
+      [e.target.name]: value
+    })
+  }
+
   render() {
-    const { addLocation, selectLocation, deleteLocation} = this.props;
+    const { addLocation, selectLocation, deleteLocation } = this.props;
     const locations =
       this.props.locations
       &&
@@ -52,10 +61,59 @@ export default class Locations extends Component {
             </>
         )
       }).reverse();
+    const {title, time, age_group, image, coach} = this.state
     return (
       <div class='show-page'>
         <div class='locations-page'>
           <h1>Our Locations Include</h1>
+          {this.props.currentUser
+            &&
+            this.props.currentUser.admin
+            ?
+            <button onClick={(e) => this.setState({add: !this.state.add})}>Add Location</button>
+            
+            :
+            null
+          }
+          {this.state.add
+            ?
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              addLocation(title, time, age_group, image, coach)
+            }}>
+              <h2>Title</h2>
+              <input
+                value={title}
+                placeholder='Title'
+                name='title'
+                onChange={this.handleChange}
+              />
+              <h2>Time</h2>
+              <input
+              value={time}
+                name='time'
+                placeholder='Time'
+                onChange={this.handleChange}
+              />
+              <h2>Age Group</h2>
+              <input
+                value={age_group}
+                name='age_group'
+                placeholder='Age'
+                onChange={this.handleChange}
+              />
+              <h2>Image</h2>
+              <input
+                value={image}
+                name='image'
+                placeholder='Image'
+                onChange={this.handleChange}
+              />
+              <button class='submit-button'>Submit</button>
+            </form>
+            :
+            null
+          }
           <div class='locations'>
             {locations}
           </div>

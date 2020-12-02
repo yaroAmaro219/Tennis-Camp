@@ -50,7 +50,8 @@ padding: 45px 0px 27px 0px;
 @media screen and (max-width: 850px) {
   .show-page {
     padding: 127px 0px 72px 0px !important;
-    text-align: center;
     width: 100%;
+    text-align: center;
   }
 }
+

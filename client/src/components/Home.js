@@ -49,6 +49,7 @@ export default class Home extends Component {
           {/* <div class='left-container'> */}
             {/* <img src={artemie} class="home-img">
             </img> */}
+            
         {/* </div> */}
           {/* <div class='right-container'> */}
             <div class='text-container'>

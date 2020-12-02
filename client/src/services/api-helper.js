@@ -34,8 +34,18 @@ export const showLocation = async (id) => {
   return resp.data
 }
 
+export const putCoach = async (id, coachData) => {
+  const resp = await api.put(`/coaches/${id}`, {coach: coachData})
+  return resp.data
+}
+
 export const showCoach = async (id) => {
   const resp = await api.get(`/coaches/${id}`)
+  return resp.data
+}
+
+export const destroyCoach = async (id) => {
+  const resp = await api.delete(`/coaches/${id}`)
   return resp.data
 }
 
@@ -56,6 +66,31 @@ export const postLocation = async (postData) => {
 
 export const destroyLocation = async (id) => {
   const resp = await api.delete(`/locations/${id}`)
+  return resp.data
+}
+
+export const destroySession = async (id) => {
+  const resp = await api.delete(`/sessions/${id}`)
+  return resp.data
+}
+
+export const showSession = async () => {
+  const resp = await api.get(`/sessions/`)
+  return resp.data
+}
+
+export const getSession = async (id) => {
+  const resp = await api.get(`/sessions/${id}`)
+  return resp.data
+}
+
+export const postSession = async (id, sessionData) => {
+  const resp = await api.post(`/locations/${id}/sessions/`, {session: sessionData})
+  return resp.data
+}
+
+export const putSession = async (id, sessionData) => {
+  const resp = await api.put(`/sessions/${id}`, { session: sessionData })
   return resp.data
 }
 

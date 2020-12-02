@@ -8,6 +8,7 @@ import Coaches from './components/Coaches'
 import Coach from './components/Coach'
 import Nav from "./components/Nav";
 import Show from './components/Show'
+import AddSession from './components/AddSession'
 import Enroll from './components/Enroll'
 import Home from './components/Home'
 import Payment from './components/Payment'
@@ -23,6 +24,7 @@ import List from './components/List'
 import Careers from './components/Careers'
 import Login from './components/Login'
 import Profile from './components/Profile'
+import Session from './components/Session'
 import insta from './images/instagram1.svg'
 import Totally from './images/Totally Tennis Logo.png'
 import './styles/Nav.css'
@@ -35,6 +37,8 @@ import './styles/Modal.css'
 import './styles/Contact.css'
 import './styles/Location.css'
 import './styles/Profile.css'
+import './styles/Coach.css'
+import './styles/Sessions.css'
 import { verifyUser, loginUser, registerUser } from './services/auth'
 import {
   showLocations,
@@ -45,8 +49,15 @@ import {
   postLocation,
   showLocation,
   destroyLocation,
+  putCoach,
+  destroyCoach,
   showCoaches,
   showCoach,
+  showSession,
+  getSession,
+  postSession,
+  putSession,
+  destroySession,
   showChild,
   removeToken
 } from './services/api-helper'
@@ -58,6 +69,11 @@ class App extends Component {
     this.state = {
       currentUser: null,
       user: [],
+      name: '',
+      age: '',
+      bio: '',
+      image: '',
+      coachLocation: '',
       firstname: '',
       lastname: '',
       phone: '',
@@ -75,20 +91,21 @@ class App extends Component {
       toggle: false,
       location:'',
       enroll: '',
+      session: '',
       time: '',
-      image: '',
+      dates: '',
       age_group: '',
       coach: '',
       typeofday: '',
       locations: '',
-      location: '',
+      sessions: '',
       registerFormData: {
         first_name: "",
         last_name: "yo",
         email: "",
         classes: "doodle",
         child_name: "noodle",
-        admin: false,
+        admin: true,
         password: ""
       },
       authFormData: {
@@ -135,6 +152,34 @@ class App extends Component {
     }))
   }
 
+  addSession = async (id) => {
+    await postSession(id, {
+      time: this.state.time,
+      age: this.state.age,
+      location_id: id
+    })
+    this.props.history.push(`/locations/${id}`)
+  }
+
+  getSessions = async () => {
+    const sessions = await showSession();
+    if (sessions) {
+      this.setState({sessions})
+    }
+  }
+
+  getSession = async (id) => {
+    const session = await getSession(id);
+    if (session) {
+      this.setState({session})
+    }
+  }
+
+  deleteSession = async (id) => {
+    await destroySession(id);
+    this.props.history.push("/locations") 
+  }
+
   getEnroll = async () => {
     const enroll = await showEnroll();
     if (enroll) {
@@ -147,6 +192,27 @@ class App extends Component {
     if (location) {
       this.setState({ location })
     }
+  }
+
+  updateCoach = async (id) => {
+    await putCoach(id, {
+      name: this.state.name,
+      age: this.state.age,
+      location: this.state.coachLocation,
+      bio: this.state.bio,
+      image: this.state.image,
+    })
+    this.props.history.push(`/coaches`)
+  }
+
+  updateSession = async (id) => {
+    await putSession(id, {
+      age: this.state.age,
+      location: this.state.location,
+      dates: this.state.dates,
+      time: this.state.time,
+    })
+    this.props.history.push(`/locations`)
   }
 
   getCoach = async (id) => {
@@ -182,6 +248,11 @@ class App extends Component {
     this.props.history.push("/locations") 
   }
 
+  deleteCoach = async (id) => {
+    await destroyCoach(id);
+    this.props.history.push('/coaches')
+  }
+
   handleChange = (e) => {
     const value = e.target.value;
     this.setState({
@@ -203,17 +274,14 @@ class App extends Component {
   }
 
   addLocation = async (title, time, age_group, image, coach) => {
-    const newLocation = await postLocation({
+    await postLocation({
       title: title,
       time: time, 
       age_group: age_group,
       image: image,
       coach: coach
-      
     })
-     this.setState(prevState => ({
-       location: newLocation,
-     }))
+     this.props.history.push("/")
    }
 
   handleLogin = async (e) => {
@@ -263,21 +331,20 @@ class App extends Component {
   
 
   render() {
-    console.log(this.state.currentUser)
+    console.log(this.state.location)
     return (
       <div class="App">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"></link>
         <div class="nav-container">
-        <a class='a' href='/'>
-                <img class='ball' src={Totally} />
-            
-              </a>
+          <a class='a' href='/'>
+            <img class='ball' src={Totally} />
+          </a>
           <Nav
             currentUser={this.state.currentUser}
             handleLogin={this.handleLogin}
-          handleLogout={this.handleLogout}
-          formData={this.state.authFormData}
-          user={this.state.user}
+            handleLogout={this.handleLogout}
+            formData={this.state.authFormData}
+            user={this.state.user}
           />
         </div>
         <Switch>
@@ -306,8 +373,17 @@ class App extends Component {
             )} />
             <Route exact path="/coaches/:id" render={(props) => (
             <Coach
+              deleteCoach={this.deleteCoach}
+              updateCoach={this.updateCoach}
+              currentUser={this.state.currentUser}
               getCoach={this.getCoach}
               coach={this.state.coach}
+              name={this.state.name}
+              age={this.state.age}
+              bio={this.state.bio}
+              image={this.state.image}
+              location={this.state.coachLocation}
+              handleChange={this.handleChange}
               {...props}
             />
             )} />
@@ -365,25 +441,63 @@ class App extends Component {
           <Route exact path="/locations" render={(props) => (
             <Locations
               getLocations={this.getLocations}
+              getSessions={this.getSessions}
               locations={this.state.locations}
               addLocation={this.addLocation}
               deleteLocation={this.deleteLocation}
               currentUser={this.state.currentUser}
             />
           )} />
-           <Route exact path="/locations/:id" render={(props) => (
-            <Location
+          <Route exact path="/locations/:id" render={(props) => (
+             <Location
+              // session={session}
               getLocation={this.getLocation}
               place={this.state.location}
+              currentUser={this.state.currentUser}
+              showSession={this.showSession}
+              addSession={this.addSession}
+              handleChange={this.handleChange}
+              sessions={this.state.sessions}
+              getSessions={this.getSessions}
+              {...props}
+            />
+          )} />
+          <Route exact path="/locations/:id/sessions" render={(props) => (
+            <AddSession
+              getLocation={this.getLocation}
+              place={this.state.location}
+              currentUser={this.state.currentUser}
+              showSession={this.showSession}
+              addSession={this.addSession}
+              handleChange={this.handleChange}
+              session={this.state.session}
+              location={this.state.location}
+              dates={this.state.dates}
+              age={this.state.age}
+              {...props}
+            />
+          )} />
+          <Route exact path="/locations/:location_id/sessions/:id" render={(props) => (
+            <Session
+              getLocation={this.getLocation}
+              place={this.state.location}
+              currentUser={this.state.currentUser}
+              showSession={this.showSession}
+              addSession={this.addSession}
+              handleChange={this.handleChange}
+              session={this.state.session}
+              getSession={this.getSession}
+              deleteSession={this.deleteSession}
+              updateSession={this.updateSession}
               {...props}
             />
           )} />
           <Route exact path="/Login" render={(props) => (
             <Login
-            handleLogin={this.handleLogin}
-            handleChange={this.authHandleChange}
-            authFormData={this.state.authFormData}
-            {...props}
+              handleLogin={this.handleLogin}
+              handleChange={this.authHandleChange}
+              authFormData={this.state.authFormData}
+              {...props}
             />
           )} />
           <Route exact path="/register" render={(props) => (

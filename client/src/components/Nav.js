@@ -229,8 +229,6 @@ export default class Nav extends Component {
                 </div>
           </Modal.Footer>
           <div class='modal-container'>
-          
-         
           </div>
           </Modal>
           <Modal onClose={this.showModal} show={this.state.register}>

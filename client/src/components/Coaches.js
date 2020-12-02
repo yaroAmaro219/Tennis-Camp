@@ -20,12 +20,14 @@ class Coaches extends Component {
       this.props.coaches
       &&
       this.props.coaches.map((coach, index) => {
-        return (
-          <div class='location-one'>
+        return (<>
             <Link to={`/coaches/${coach.id}`}>
-              <h2>{coach.name}</h2>
-              </Link>
-            </div>
+          <div class='coach-one'>
+              <h2 class='coach-name'>{coach.name}</h2>
+              <img class='coaches-img' src={coach.image}/>
+          </div>
+          </Link>
+          </>
         )
       })
         

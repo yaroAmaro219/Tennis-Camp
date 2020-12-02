@@ -61,6 +61,14 @@
   display: none;
 }
 
+.head {
+  transition: .222s;
+}
+
+.link:hover .head {
+  fill: white;
+}
+
 @media screen and (max-width: 1026px) {
   .link {
     font-size: x-small;
@@ -146,7 +154,6 @@
 
 .name {
   padding: 0 6px;
-
 }
 
 .dropdown {
@@ -160,8 +167,6 @@
   display: block;
 }
 
-
-
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -171,7 +176,6 @@
 
 #bar {
   color: white;
-
   display: block;
   transition: .5s transform;
   transition-timing-function: cubic-bezier(.38, .52, .37, 1.27);
@@ -187,11 +191,12 @@ a {
   text-decoration: none;
   color: white;
   padding: 3px;
-  display: block;
+  display: flex;
   border-bottom: 1px solid #ccc;
   text-transform: uppercase;
   font-weight: 900;
 }
+
 
 button.sign-in {
   text-decoration: unset;
@@ -301,8 +306,6 @@ button.sign-in {
   display: block;
   border-bottom: 1px solid #ccc;
 }
-
-
 
 li {
   margin: 18px;
