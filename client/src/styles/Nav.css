@@ -69,7 +69,7 @@
   fill: white;
 }
 
-@media screen and (max-width: 1026px) {
+@media screen and (max-width: 1100px) {
   .link {
     font-size: x-small;
   }

@@ -16,12 +16,6 @@ class Location extends Component {
   }
 
   render() {
-    console.log(this.props.sessions)
-    console.log(this.props.match.params.id)
-    // const session = this.props.sessions 
-    //   &&
-    //   this.props.sessions.find((session) => session.location_id === parseInt(props.match.params.id))
-    
     const session = this.props.sessions
       &&
       this.props.sessions.map((session, index) => {
@@ -30,29 +24,30 @@ class Location extends Component {
           <>
           <Link class='sessions-link' to={`/locations/${this.props.match.params.id}/sessions/${session.id}`} >
                 <div class='session'>
-                  <h2 class='location-h2'>Location</h2>
-                  <iframe class='map' src={session.location} width="400" height="300" frameborder="0"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                  <h2 class='location-h2'>Ages: {session.age}</h2>
-                  <h2 class='location-h2'>Time: {session.time}</h2>
-                  <h2 class='location-h2'>Dates: {session.dates}</h2>
+                  <div class='session-left'>
+                  <h2 class='location-h2'>Ages {session.age}</h2>
+                  <h2 class='location-h2'> {session.time}</h2>
+                    <h2 class='location-h2'> {session.dates}</h2>
+                  </div>
+                  <div class='session-right'>
+                    <h2 class='location-h2'>{session.title}</h2>
+                  <iframe class='map' src={session.location} width="100%" height="300" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
               </div>
               </Link>
               </>
         )
       })
-
+    const pic = this.props.place && this.props.place.image
+    console.log(pic)
     return (
-      <div class="show-page">
+      <div >
         <div class='location-page'>
-        <div class="profile-top">
-        <h1 class="profile-welcome"> {this.props.place
+          <div class="location-top" style={{ 'background-image': `url(${pic})`, 'background-position': '100% 43%'}}>
+            <div class='title-background'>
+        <h1 class="location-welcome"> {this.props.place
           &&
-              this.props.place.title}</h1>
-            <div class='supervisor'>
-          <h2 class='supervisor'>Area Supervisor: 
-          </h2>
-              <h2 class='supervisor-name'>{` ${this.props.place && this.props.place.coach}`}</h2>
-          </div>
+                this.props.place.title}</h1>
+              </div>
         </div>
           <div class='sessions-offered'>
             <div class='location-sessions'>
@@ -66,8 +61,14 @@ class Location extends Component {
                 null
               }
             </div>
-          <div class='sessions'>
-          {session}
+            <div class='sessions'>
+              {
+                 this.props.sessions 
+                  ?
+                   session 
+                  :
+                  <h3>No sessions currently available here. Check back soon!</h3>
+              }
           </div>
           </div>
           </div>

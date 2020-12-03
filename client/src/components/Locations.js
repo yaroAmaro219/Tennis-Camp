@@ -46,8 +46,10 @@ export default class Locations extends Component {
         return (
           <>
             <Link to={`/locations/${location.id}`}>
-              <div class='location-one'>
-              <h2 class='location-title'>{`${location.title}`}</h2>
+              <div class='location-one' style={{ 'background-image': `url(${location.image})` }}>
+                <div class='location-background'>
+                  <h2 class='location-title'>{`${location.title}`}</h2>
+                  </div>
               {this.props.currentUser
               &&
               this.props.currentUser.admin
@@ -71,7 +73,6 @@ export default class Locations extends Component {
             this.props.currentUser.admin
             ?
             <button onClick={(e) => this.setState({add: !this.state.add})}>Add Location</button>
-            
             :
             null
           }

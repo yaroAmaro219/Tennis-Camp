@@ -46,7 +46,7 @@ class SessionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def session_params
-      params.require(:session).permit(:location_id, :time, :children_id, :coaches_id, :age, :dates, :location )
+      params.require(:session).permit(:location_id, :time, :children_id, :coaches_id, :age, :dates, :location, :title )
     end
 end
 

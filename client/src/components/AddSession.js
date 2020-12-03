@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
 
 class AddSession extends Component {
-
   render() {
-    const {addSession, handleChange, time, age, dates, location} = this.props
+    const {addSession, handleChange, time, age, dates, location, title} = this.props
     return (
       <div class='show-page'>
-
         <h1>Add Session</h1>
         <form  onSubmit={(e) => {
           e.preventDefault();
           addSession(this.props.match.params.id)
         }}>
-          
           <h2 class='session-welcome'>Dates</h2>
             <input 
             class='session-input'
@@ -41,7 +38,13 @@ class AddSession extends Component {
             value={time}
             name='time'
             onChange={handleChange} />
-          
+            <h2 class='session-welcome'>Title</h2>
+            <input 
+            class='session-input'
+            placeholder='Title'
+            value={title}
+            name='title'
+            onChange={handleChange} />
           <button>Submit</button>
         </form>
       </div>

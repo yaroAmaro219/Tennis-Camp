@@ -24,8 +24,10 @@ export default class Home extends Component {
         return (
           <>
             <Link to={`/locations/${location.id}`}>
-              <div class='location-one'>
-               <h2 class='location-title'>{`${location.title}`}</h2>
+              <div class='location-one' style={{ 'background-image': `url(${location.image})` }}>
+                <div class='location-background'>
+                  <h2 class='location-title'>{`${location.title}`}</h2>
+                  </div>
               </div>
             </Link>
           </>
@@ -81,23 +83,23 @@ export default class Home extends Component {
           {/* </div> */}
           <div class='slider'>
           <Slider ref={slider => (this.slider = slider)} {...settings}>
-          <div>
+          <div class='review'>
             <h3>"I Love Tennis!" -Jacob</h3>
           </div>
-          <div>
+          <div class='review'>
             <h3>"Totally Tennis is the best!" -Wyatt</h3>
           </div>
-          <div>
+          <div class='review'>
             <h3>"Tennis is totally fun!" -Maya</h3>
           </div>
-          <div>
+          <div class='review'>
             <h3>"Our kids love it!" -Alex</h3>
           </div>
-          <div>
+          <div class='review'>
             <h3>"I've seen my daughter improve immensly just over the course of 6 classes" -Daniel</h3>
           </div>
-          <div>
-            <h3>"Totally Tennis!" -Artemie</h3>
+          <div class='review'>
+            <h3>"Totally Tennis is amazing!" -Artemie</h3>
           </div>
             </Slider>
             </div>
@@ -112,9 +114,11 @@ export default class Home extends Component {
             </div>
         </div>
         <div class="third" id='location'>
+          <div class='location-head'>
           <h1>Find Your Location</h1>
          
-          <h1>-</h1>
+            <h1>-</h1>
+            </div>
           <div class='home-locations'>
             {
               locations 

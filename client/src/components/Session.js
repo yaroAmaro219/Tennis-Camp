@@ -15,7 +15,7 @@ class Session extends Component {
 
   render() {
     console.log(this.props.session)
-    const {session, deleteSession, updateSession, handleChange, time, age, location, dates} = this.props
+    const {session, deleteSession, updateSession, handleChange, time, age, location, dates, title} = this.props
     return (
       <div class='show-page'>
         {
@@ -58,18 +58,33 @@ class Session extends Component {
                 value={time}
                 onChange={handleChange}
               />
+              <h2 class="session-welcome"> Title </h2>
+              <input
+                class='session-input'
+                placeholder='Title'
+                name='title'
+                value={title}
+                onChange={handleChange}
+              />
               <button class='submit-button' >Submit</button>
             </form>
             :
           <div class='session-page'>
-              <h1>Location</h1> 
-              <iframe class='map' src={session.location} width="400" height="300" frameborder="0"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            <h1>Age Group: {session.age}</h1>
-            <h1>Time: {session.time}</h1>
-            <h1>Dates: {session.dates} </h1>
-            <h1>Coaches</h1>
-            <h1>Kids</h1>
-          </div>
+              <h1>{session.title}</h1> 
+              <iframe class='map' src={session.location} width="400" height="300" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              <div class='session-container'>
+              <div class='session-info'>
+                <h1>Age Group: {session.age}</h1>
+                <h1>Time: {session.time}</h1>
+                <h1>Dates: {session.dates} </h1>
+                <h1>Coaches</h1>
+                <h1>Kids</h1>
+              </div>
+              <div class='session-signup'>
+                <button>Sign Up</button>
+                </div>
+              </div>
+            </div>
         }
         {this.props.currentUser
           &&

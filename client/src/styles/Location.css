@@ -9,32 +9,87 @@
 .location-page {
   display: flex;
   flex-direction: column;
-  padding: 18px;
+  padding: 111px 0px;
+}
+
+.location-welcome {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 9px;
+}
+
+.location-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: black;
+  margin: 0;
+}
+
+.title-background {
+  background-color: white;
+  opacity: .7;
+  padding: 9px;
+  margin-left: 81px;
+}
+
+.location-background {
+  display: flex;
+  background-color: white;
+  opacity: .7;
+  padding: 9px;
+  align-items: center;
+  justify-content: center;
 }
 
 .location-one {
-padding: 9px 9px;
-border: 1px solid grey;
-align-items: flex-start;
-justify-content: flex-start;
-flex-flow: column;
-flex-direction: column;
-cursor: pointer;
-margin: 9px;
-width: 270px;
-height: 270px;
-white-space: normal;
+  padding: 9px 9px;
+  border: 1px solid grey;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-flow: column;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 9px;
+  width: 270px;
+  height: 270px;
+  white-space: normal;
+  background-attachment: scroll;
+  background-position: 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  -webkit-background-size: cover;
 }
 
 .location-sessions {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+}
+
+
+.location-top {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 36px;
+  height: 234px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  -webkit-background-size: cover;
 }
 
 .add-session {
   height: 36px;
   margin-left: auto;
-  /* border: .3px solid black; */
+  color: black;
 }
 
 .supervisor {
@@ -52,33 +107,31 @@ margin: 0;
   margin: 6px 0;
 }
 
-
-.location-title {
-  color: black;
-}
-
 .locations {
-  width: 91%;
+  padding: 3px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-align: center;
   align-items: center;
   flex-wrap: wrap;
+  min-height: 30vw;
 }
 
 .location-one:hover {
   box-shadow: 0vw 0.2vw 1vw 1vw rgba(0, 0, 0, 0.1);
 }
 
-.locations {
-display: flex;
-min-height: 30vw;
-}
-
 .delete-button {
   margin-left: auto;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1155px) {
+  .location-one {
+    width: 210px;
+    height: 160px;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -89,4 +142,20 @@ min-height: 30vw;
    flex-direction: column;
     align-items: flex-start;
   }
+
+  .location-page {
+    padding: 90px 0px !important;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 615px) {
+.location-one {
+  width: 180px !important;
+  height: 160px;
+}
+
+.location-h2 {
+  font-size: 18px !important;
+}
 }
