@@ -1,10 +1,10 @@
 class ApplicationController < ActionController::API
   SECRET_KEY = Rails.env == 'production' ? ENV['SECRET_KEY'] : Rails.application.secrets.secret_key_base.to_s
   
-	def encode(payload, exp = 24.hours.from_now)
+	def encode(payload, exp = 30.days.from_now)
 		payload[:exp] = exp.to_i
 		JWT.encode(payload, SECRET_KEY)
-	end
+  end
 
 	def decode(token)
 		decoded = JWT.decode(token, SECRET_KEY)[0]
@@ -17,7 +17,7 @@ class ApplicationController < ActionController::API
 		begin
 			@decoded = decode(header)
 			@current_user = User.find(@decoded[:user_id])
-		rescue Active::RecordNotFound => e
+		rescue ActiveRecord::RecordNotFound => e
 			render json: {errors: e.message}, status: :unauthorized
 		rescue JWT::DecodeError => e
 			render json: {errors: e.message}, status: :unauthorized

@@ -54,6 +54,11 @@ export const showChild = async (id, child_id) => {
   return resp.data
 }
 
+export const showUsers = async () => {
+  const resp = await api.get(`/users`)
+  return resp.data
+}
+
 export const postChild = async (data) => {
   const resp = await api.post(`/children`, { child: data })
   return resp.data

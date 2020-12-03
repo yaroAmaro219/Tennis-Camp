@@ -53,6 +53,7 @@ import {
   destroyCoach,
   showCoaches,
   showCoach,
+  showUsers,
   showSession,
   getSession,
   postSession,
@@ -99,6 +100,7 @@ class App extends Component {
       typeofday: '',
       locations: '',
       sessions: '',
+      users: '',
       registerFormData: {
         first_name: "",
         last_name: "yo",
@@ -240,6 +242,13 @@ class App extends Component {
     const coaches = await showCoaches();
     if (coaches) {
       this.setState({ coaches})
+    }
+  }
+
+  getUsers = async () => {
+    const users = await showUsers();
+    if (users) {
+      this.setState({users})
     }
   }
 
@@ -425,7 +434,8 @@ class App extends Component {
           )}/>
            <Route exact path="/users" render={(props) => (
             <Users
-              
+              getUsers={this.getUsers}
+              users={this.state.users}
             />
           )}/>
           <Route exact path="/private-lessons" render={(props) => (
