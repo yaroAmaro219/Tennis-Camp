@@ -1,21 +1,13 @@
 import React, { Component } from 'react'
 
 export default class Users extends Component {
-  constructor() {
-    super() 
-
-    this.state = {
-      users: ''
-    }
-  }
-
+  
   componentDidMount() {
     this.props.getUsers()
   }
 
   render() {
     const { users } = this.props
-    console.log(users)
     const user =
       users
       &&
@@ -25,7 +17,8 @@ export default class Users extends Component {
             <h2>{user.first_name} {user.last_name}</h2>
             <h2>{user.email}</h2>
             <h2>{user.phone}</h2>
-            </div>
+            <h2>Created: {user.created_at}</h2>
+          </div>
       )
     })
     return (

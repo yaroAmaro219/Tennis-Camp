@@ -23,6 +23,7 @@ Rails.application.routes.draw do
     resources :sessions
   end
 
+  get '/login', to: 'authentication#login'
   get 'locations/:id', to: 'sessions#show'
   get '/profile/:id', to: 'posts#show'
   post '/auth/login', to: 'authentication#login'

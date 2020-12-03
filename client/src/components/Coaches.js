@@ -36,7 +36,13 @@ class Coaches extends Component {
         <div class='coach-page'>
         <h1>Coaches</h1>
         <div class='coaches'>
-          {coaches}
+            {
+              coaches 
+                ?
+                 coaches 
+                :
+                <div class="loader"></div>
+            }
         </div>
           {this.props.currentUser
             &&

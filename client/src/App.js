@@ -100,13 +100,14 @@ class App extends Component {
       locations: '',
       sessions: '',
       users: '',
+      error: '',
       registerFormData: {
         first_name: "",
         last_name: "yo",
         email: "",
         classes: "doodle",
         child_name: "noodle",
-        admin: true,
+        admin: false,
         password: ""
       },
       authFormData: {
@@ -123,7 +124,7 @@ class App extends Component {
         currentUser
       })
     }
-    this.getLocations()
+    this.getLocations();
   }
 
   getUser = async () => {
@@ -294,12 +295,19 @@ class App extends Component {
 
   handleLogin = async (e) => {
     e.preventDefault();
-    const currentUser = await loginUser({ 'email' : this.state.authFormData.email, 'password' : this.state.authFormData.password});
-    this.setState({
-      currentUser
-    })
-    this.props.history.push("/")
+    const currentUser = await loginUser({ 'email': this.state.authFormData.email, 'password': this.state.authFormData.password });
+    if (currentUser) {
+      this.setState({
+        currentUser
+      })
+      this.setState({error: ''})
+      this.props.history.push("/")
+    } else {
+      this.setState({ error: 'The email or password you are trying to use isn\'t valid. Please try again' })
+      this.props.history.push("/login")
+    }
   }
+  
 
   handleRegister = async (e) => {
     e.preventDefault();
@@ -338,7 +346,7 @@ class App extends Component {
   
 
   render() {
-    console.log(this.state.location)
+    console.log(this.state.error)
     return (
       <div class="App">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"></link>
@@ -505,6 +513,7 @@ class App extends Component {
               handleLogin={this.handleLogin}
               handleChange={this.authHandleChange}
               authFormData={this.state.authFormData}
+              error={this.state.error}
               {...props}
             />
           )} />

@@ -115,7 +115,13 @@ export default class Locations extends Component {
             null
           }
           <div class='locations'>
-            {locations}
+            {
+               locations 
+                ?
+                locations
+                :
+                <div class="loader"></div>
+            }
           </div>
         </div>
       </div>

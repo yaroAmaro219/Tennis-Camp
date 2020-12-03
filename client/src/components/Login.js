@@ -3,16 +3,10 @@ import {withRouter} from 'react-router-dom'
 
 const Login = (props) => {
   
-  // myFunction = () => {
-  //   let x = document.getElementById("myInput");
-  //   if (x.type === "password") {
-  //     x.type = "text";
-  //   } else {
-  //     x.type = "password";
-  //   }
-  // }
+ 
 
-    const { handleLogin, authFormData, handleChange } = props
+  const { handleLogin, authFormData, handleChange, error } = props
+
   return (
       <>
       <div className='show-page'>
@@ -25,8 +19,13 @@ const Login = (props) => {
           </div>
           <button className='submit-button'> Login</button>
           </form>
-        
-        
+          {error
+            ?
+            <h4>{error}</h4>
+            :
+            null
+          }
+          <a href='#'>Forgot Password?</a>
           <div className="need-account">
             <h1 className='account-title' >Need An Account?</h1>
             <button onClick={() => { props.history.push('/register') }} className='register-button'>Register</button>

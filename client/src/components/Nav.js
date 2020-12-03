@@ -149,15 +149,15 @@ export default class Nav extends Component {
                 <li><a href="/coaches" class="nav-link"
                   onClick={() => document.getElementById("nav-toggle").checked = false}>Team</a></li>
                 {/* <li><a href='/private' class="nav-link" onClick={() => document.getElementById("nav-toggle").checked = false}>Private Lessons</a> </li> */}
-                <li><a href='/#string' class="nav-link" onClick={() => document.getElementById("nav-toggle").checked = false}>Racket Stringing</a> </li>
+                {/* <li><a href='/#string' class="nav-link" onClick={() => document.getElementById("nav-toggle").checked = false}>Racket Stringing</a> </li> */}
                 {/* <li><a href="/#bring" class="nav-link"
                   onClick={() => document.getElementById("nav-toggle").checked = false}>What to Bring</a></li> */}
                 <li><a href="/contact" class="nav-link"
                   onClick={() => document.getElementById("nav-toggle").checked = false}>Contact</a></li>
-                 <li> <a  class="nav-link" onClick={e => {
+                 {/* <li> <a  class="nav-link" onClick={e => {
             this.showModal(e); document.getElementById("nav-toggle").checked = false 
                 }}
-                >Sign In</a></li>
+                >Sign In</a></li> */}
                   {/* <li><a href="/reviews" class="nav-link"
                   onClick={() => document.getElementById("nav-toggle").checked = false}>Reviews</a></li> */}
                   

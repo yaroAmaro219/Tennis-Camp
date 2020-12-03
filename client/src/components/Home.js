@@ -116,7 +116,13 @@ export default class Home extends Component {
          
           <h1>-</h1>
           <div class='home-locations'>
-            {locations}
+            {
+              locations 
+                ?
+                locations
+                :
+                <div class="loader"></div>
+            }
             </div>
           {/* <h2 class='place'><a href='/locations/{id}'>Prospect Park</a></h2> */}
           {/* <iframe class='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.479706453371!2d-73.97883028491002!3d40.66339814852492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b1b652da915%3A0x4f03686bcb67e3c8!2sProspect%20Park%20Bandshell!5e0!3m2!1sen!2sus!4v1597753402904!5m2!1sen!2sus" width="600" height="450" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
