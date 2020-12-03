@@ -59,8 +59,7 @@ import {
   postSession,
   putSession,
   destroySession,
-  showChild,
-  removeToken
+  showChild
 } from './services/api-helper'
 
 
@@ -295,7 +294,7 @@ class App extends Component {
 
   handleLogin = async (e) => {
     e.preventDefault();
-    const currentUser = await loginUser(this.state.authFormData);
+    const currentUser = await loginUser({ 'email' : this.state.authFormData.email, 'password' : this.state.authFormData.password});
     this.setState({
       currentUser
     })
@@ -312,10 +311,9 @@ class App extends Component {
   }
 
   handleLogout = () => {
-    localStorage.removeItem("jwt");
     this.setState({currentUser: null})
-    removeToken();
-    this.props.history.push("/login")
+    localStorage.removeItem("authToken");
+    this.props.history.push("/")
   }
 
   authHandleChange = (e) => {

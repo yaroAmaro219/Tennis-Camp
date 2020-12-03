@@ -192,6 +192,7 @@ a {
   color: white;
   padding: 3px;
   display: flex;
+  align-items: flex-end;
   border-bottom: 1px solid #ccc;
   text-transform: uppercase;
   font-weight: 900;

@@ -4,8 +4,8 @@ class AuthenticationController < ApplicationController
 	def login
 		@user = User.find_by_email(login_params[:email])
 		if @user.authenticate(login_params[:password])
-			token = encode(user_id: @user.id)
-			render json: {user: @user, token: token}, status: :ok
+			token = encode(user_id: @user.id, email:@user.email)
+			render json: {user: @user, token: token, status: :ok} 
 		else
 			render json: { errors: 'unauthorized' }, status: :unauthorized
 		end
@@ -18,6 +18,7 @@ class AuthenticationController < ApplicationController
 	private
 
 	def login_params
-		params.require(:auth).permit(:email, :password)
+		params.require(:authentication).permit(:email, :password)
 	end
 end
+
