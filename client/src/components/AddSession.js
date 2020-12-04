@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class AddSession extends Component {
   render() {
-    const {addSession, handleChange, time, age, dates, location, title} = this.props
+    const {addSession, handleChange, time, age, dates, location, title, price} = this.props
     return (
       <div class='show-page'>
         <h1>Add Session</h1>
@@ -44,6 +44,13 @@ class AddSession extends Component {
             placeholder='Title'
             value={title}
             name='title'
+            onChange={handleChange} />
+          <h2 class='session-welcome'>Price</h2>
+            <input 
+            class='session-input'
+            placeholder='Price'
+            value={price}
+            name='price'
             onChange={handleChange} />
           <button>Submit</button>
         </form>

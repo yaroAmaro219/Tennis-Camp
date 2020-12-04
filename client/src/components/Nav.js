@@ -106,13 +106,12 @@ export default class Nav extends Component {
             </div>
             </div>
           <div class="hamburger">
-          
         <input type="checkbox" id="nav-toggle"/>
           <label for="nav-toggle">
-            <span class="toggle-words"><i class="fa fa-bars" id="bar"><svg viewBox="0 0 100 80" width="40" height="40">
-    <rect width="100" height="15"></rect>
-    <rect y="30" width="100" height="15"></rect>
-    <rect y="60" width="100" height="15"></rect>
+            <span class="toggle-words"><i class="fa fa-bars" id="bar"><svg viewBox="0 0 120 60" width="40" height="30">
+    <rect width="100" height="9"></rect>
+    <rect y="30" width="100" height="9"></rect>
+    <rect y="60" width="100" height="9"></rect>
 </svg></i></span>
           </label>
       <div class="menu">

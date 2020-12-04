@@ -16,31 +16,36 @@ class Location extends Component {
   }
 
   render() {
+    console.log(this.props.sessions)
+    const location = this.props.sessions && this.props.sessions.location_id
+    console.log(location)
     const session = this.props.sessions
       &&
       this.props.sessions.map((session, index) => {
-        if (session.location_id === parseInt(this.props.match.params.id))
+        if (session.location_id === parseInt(this.props.match.params.id)) {
           return (
-          <>
-          <Link class='sessions-link' to={`/locations/${this.props.match.params.id}/sessions/${session.id}`} >
+            <>
+              <Link class='sessions-link' to={`/locations/${this.props.match.params.id}/sessions/${session.id}`} >
                 <div class='session'>
                   <div class='session-left'>
-                  <h2 class='location-h2'>Ages {session.age}</h2>
-                  <h2 class='location-h2'> {session.time}</h2>
+                    <h2 class='location-h2'>Ages {session.age}</h2>
+                    <h2 class='location-h2'> {session.time}</h2>
                     <h2 class='location-h2'> {session.dates}</h2>
+                    <h2 class='location-h2'>from ${session.price}</h2>
                   </div>
                   <div class='session-right'>
                     <h2 class='location-h2'>{session.title}</h2>
-                  <iframe class='map' src={session.location} width="100%" height="300" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
-              </div>
+                    <iframe class='map' src={session.location} width="100%" height="222" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+                </div>
               </Link>
-              </>
-        )
+            </>
+          )
+        } else {
+          return (undefined)
+        }
       })
     const pic = this.props.place && this.props.place.image
-    console.log(pic)
     return (
-      <div >
         <div class='location-page'>
           <div class="location-top" style={{ 'background-image': `url(${pic})`, 'background-position': '100% 43%'}}>
             <div class='title-background'>
@@ -63,16 +68,15 @@ class Location extends Component {
             </div>
             <div class='sessions'>
               {
-                 this.props.sessions 
+                session 
                   ?
-                   session 
+                 session 
                   :
                   <h3>No sessions currently available here. Check back soon!</h3>
               }
           </div>
           </div>
           </div>
-      </div>
     )
   }
 }

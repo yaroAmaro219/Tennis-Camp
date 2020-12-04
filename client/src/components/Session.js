@@ -14,8 +14,7 @@ class Session extends Component {
   }
 
   render() {
-    console.log(this.props.session)
-    const {session, deleteSession, updateSession, handleChange, time, age, location, dates, title} = this.props
+    const {session, deleteSession, updateSession, handleChange, time, age, location, dates, title, price} = this.props
     return (
       <div class='show-page'>
         {
@@ -66,22 +65,39 @@ class Session extends Component {
                 value={title}
                 onChange={handleChange}
               />
-              <button class='submit-button' >Submit</button>
+              <h2 class="session-welcome"> Price </h2>
+              <input
+                class='session-input'
+                placeholder='Price'
+                name='price'
+                value={price}
+                onChange={handleChange}
+              />
+              <button class='submit-button'>Submit</button>
             </form>
             :
-          <div class='session-page'>
-              <h1>{session.title}</h1> 
-              <iframe class='map' src={session.location} width="400" height="300" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div class='session-page'>
+             
+              <div class='session-seperator'>
+              
+                <div class='session-left2'>
+                <div>
+                <h1>{session.title}</h1> 
+                </div>
+                  <iframe class='map' src={session.location} width="400" height="300" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                  </div>
               <div class='session-container'>
-              <div class='session-info'>
-                <h1>Age Group: {session.age}</h1>
-                <h1>Time: {session.time}</h1>
-                <h1>Dates: {session.dates} </h1>
-                <h1>Coaches</h1>
-                <h1>Kids</h1>
-              </div>
-              <div class='session-signup'>
-                <button>Sign Up</button>
+                <div class='session-info'>
+                  <h2>from ${session.price}</h2>
+                  <h2>Ages: {session.age}</h2>
+                  <h2>Time: {session.time}</h2>
+                  <h2> {session.dates} </h2>
+                    <form >
+                      <h3># of Kids</h3>
+                      <input placeholder='kids' name='kids' onChange={handleChange}></input>
+                  </form>
+                    <button onClick={(e) => { }} class='add-to-cart'>Add to cart</button>
+                    </div>
                 </div>
               </div>
             </div>

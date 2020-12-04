@@ -25,6 +25,8 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .location-pic {
@@ -77,6 +79,10 @@ margin-bottom: 18px;
   padding: 23% 0px 0px 0px;
 }
 
+.footer-container {
+  width: 100%;
+}
+
 #location {
   display: flex;
   flex-direction: column;
@@ -92,7 +98,7 @@ margin-bottom: 18px;
 }
 
 .footer-glasstop {
-  width: 81%;
+  width: fit-content;
 }
 
 .home {
@@ -100,6 +106,22 @@ margin-bottom: 18px;
   overflow-y: hidden;
   height: 100%;
 }
+
+.footer-options {
+  display: flex;
+  width: 33%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: start;
+}
+
+.footer-choice {
+  padding: 3px;
+  color: white;
+}
+
+
 
 @media screen and (max-width: 1600px) {
   .first {
@@ -129,6 +151,10 @@ margin-bottom: 18px;
     position: absolute;
   }
 
+  .footer-options {
+    width: 100% !important;
+  }
+
   .location-head {
     padding: 36px 36px 9px 36px !important;
   }
@@ -147,7 +173,7 @@ margin-bottom: 18px;
 
   .footer-copyright {
     width: 81%;
-    text-align: center;
+    text-align: start;
   }
 
   .bio-info {
@@ -293,9 +319,9 @@ margin-bottom: 18px;
 }
 
 @media screen and (max-width: 575px) {
-  .second {
+  /* .second {
     width: 100% !important;
-  }
+  } */
 
   .review {
     text-align: start;
@@ -321,10 +347,7 @@ margin-bottom: 18px;
 
   .home-locations {
     flex-direction: row;
-    /* width: 80%; */
     align-items: center;
-    margin-right: auto;
-    margin-left: auto;
   }
 
   .a {
@@ -433,15 +456,26 @@ margin-bottom: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: #abdb8f;
-  padding: 36px ;
+  padding: 36px 270px;
   color: white;
 }
 
 .footer-copyright {
-  margin: unset;
+  width: fit-content;
+}
+
+.footer-copyright h2 {
+  margin: 0;
+}
+
+.social-container {
+  padding-top: 9px;
+  display: flex;
+  align-items: center !important;
+  justify-content: center;
+  text-align: center !important;
 }
 
 .string {
@@ -726,16 +760,10 @@ a {
 }
 
 .second {
-  /* display:flex; */
   background-color: black;
   color: white;
   padding: 36px 270px;
   text-align: start;
-}
-
-
-.second-text-container {
-  /* padding-left: 400px; */
 }
 
 .pricing {

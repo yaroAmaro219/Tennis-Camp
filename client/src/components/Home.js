@@ -106,22 +106,20 @@ export default class Home extends Component {
         </div>
         <div class='second' id='dates'>
           <div class='second-text-container'>
-          <h1 class='title2'>Date + Time:</h1>
+          <h1 class='title2'>Covid-19 Update</h1>
           <h1>-</h1>
-          <h2>Weekdays</h2>
-          <h3>May - October 2021</h3>
-
+          <h2>We are offering lessons through this pandemic! It is our first priority to ensure everyones safety and well being.</h2>
+          {/* <h3>May - October 2021</h3> */}
             </div>
         </div>
         <div class="third" id='location'>
           <div class='location-head'>
           <h1>Find Your Location</h1>
-         
             <h1>-</h1>
             </div>
           <div class='home-locations'>
             {
-              locations 
+              this.props.locations 
                 ?
                 locations
                 :

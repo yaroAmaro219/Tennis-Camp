@@ -29,37 +29,88 @@
   text-align: start;
 }
 
+.sessions-offered h2 {
+  margin: 0;
+}
+
 .session {
   display: flex;
   text-align: start;
-  padding: 9px;
+  padding: 36px 9px;
   border-bottom: 1px solid black;
-  margin: 6px;
+  margin: 36px 6px;
   cursor: pointer;
 }
 
-.session-left {
-  width: 40%;
+.session-page {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  text-align: start;
+}
+
+.session-seperator {
+  display: flex;
+  align-items: flex-end;
 }
 
 .session-info {
-  padding: 9px;
+  padding: 18px;
   text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.session-info h2 {
+  margin: 0;
+}
+
+.session-left {
+  padding: 18px;
+  margin-top: 36px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.session-left2 {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.add-to-cart {
+  font-size: 27px;
+  padding: 18px 36px;
+  background-color: black;
+  color: white;
+  border: none;
+  transition: .222s;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+.add-to-cart:hover {
+  padding: 18px 36px;
+  background-color: #484848;
+  color: white;
+  border: none;
 }
 
 .session-right {
   display: flex;
   flex-direction: column;
-  width: 60%;
   align-items: flex-start;
   justify-content: center;
+  width: 60%;
 }
 
 .session-container {
   display: flex;
+  align-items: center;
 }
 
 .session:hover {

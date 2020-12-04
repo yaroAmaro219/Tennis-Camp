@@ -2,25 +2,47 @@
   display: flex;
   padding: 9px 9px;
   border: 1px solid grey;
-  align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   flex-flow: column;
   flex-direction: column;
   cursor: pointer;
   margin: 9px;
-  width: 210px;
+  width: 333px;
   height: 210px;
   white-space: normal;
+  background-position: 80%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  -webkit-background-size: cover;
   }
 
 .coach-one:hover {
   box-shadow: 0vw 0.2vw 1vw 1vw rgba(0, 0, 0, 0.1);
 }
 
+.coach-background {
+  display: flex;
+  background-color: white;
+  opacity: .7;
+  padding: 6px;
+  align-items: center;
+  justify-content: center;
+}
+
+.coach-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  color: black;
+  margin: 0;
+}
+
 .coach-name {
   color: black;
   margin-top: 0;
-  margin-bottom: 3vw;
+  margin-bottom: .3vw;
 }
 
 .coaches {
@@ -52,6 +74,13 @@
   margin: .9% 0 .9% 0;
 }
 
+.coach-page {
+  padding: 0px 36px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
 @media screen and (max-width: 850px) {
   .coach-img {
     width: 60%;
@@ -76,6 +105,10 @@
     text-align: center;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .coach-one {
+    width: 77vw !important;
   }
 }
 
