@@ -16,9 +16,7 @@ class Location extends Component {
   }
 
   render() {
-    console.log(this.props.sessions)
     const location = this.props.sessions && this.props.sessions.location_id
-    console.log(location)
     const session = this.props.sessions
       &&
       this.props.sessions.map((session, index) => {

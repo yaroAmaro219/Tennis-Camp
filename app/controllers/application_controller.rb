@@ -22,5 +22,14 @@ class ApplicationController < ActionController::API
 		rescue JWT::DecodeError => e
 			render json: {errors: e.message}, status: :unauthorized
 		end
-	end
+  end
+  
+  def token
+    request.headers["Authorization"]
+  end
+
+  def current_site_user
+    user_id = decode[0]["user_id"]
+    user = User.find(user_id)
+  end
 end

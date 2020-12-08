@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addToCart } from '../redux/actions';
+import { grabSingleSession } from '../redux/actions'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Session extends Component {
   constructor() {
     super()
 
     this.state = {
-      edit: false
+      edit: false,
+      quantity: 1,
+      add_to_cart: false
     }
   }
 
@@ -13,7 +19,59 @@ class Session extends Component {
     this.props.getSession(this.props.match.params.id)
   }
 
+  handleChange = event => {
+    this.setState({quantity: event.target.value})
+  }
+  
+  handleSubmit = event => {        
+    event.preventDefault()
+    // localStorage.token ?
+      this.props.addToCart({ ...this.state, user: this.props.user, session: this.props.session })
+      // : this.props.history.push('/login');
+    // this.state.add_to_cart = true
+    this.setState({add_to_cart: true})
+  }
+  
+  handleClick = () => {
+    this.props.history.push('/')
+}
+
+handleRightClick = () => {
+    this.props.history.push('/cart')
+}
+  
+addToCartConfirmation = () => {
+  return this.state.add_to_cart ? 
+  <div className="link-to-cart">
+  <div className="cart-confirmation-div">
+      <div className="added-to-cart">
+          <div className="tick"><FontAwesomeIcon icon="check"/></div>
+          {/* <div className="prod-image"><img src={this.returnImage()} alt="Hello World"></img></div> */}
+          <div className="text-added"><p>Added to Cart</p></div>
+      </div>
+      <div className="cart-subtotal">
+          <p>Cart subtotal ( {this.state.quantity} item ): ${this.state.quantity * this.props.session.price}</p>
+      </div>
+      <div className="proceed-to-cart">
+          
+          <div onClick={this.handleClick} className="left">
+              <FontAwesomeIcon icon="angle-double-left"/>
+              <p>Continue Shopping</p>
+          </div>
+          <div onClick={this.handleRightClick} className="right">
+              <FontAwesomeIcon icon="angle-double-right"/>
+              <p>Proceed to Cart</p>
+          </div>
+      </div>
+  </div>
+</div>
+  :
+null;    
+}
+  
+
   render() {
+    console.log(this.props.session)
     const {session, deleteSession, updateSession, handleChange, time, age, location, dates, title, price, kids, cart, addToCart} = this.props
     return (
       <div class='show-page'>
@@ -90,14 +148,22 @@ class Session extends Component {
                   <h2>Ages: {session.age}</h2>
                   <h2>Time: {session.time}</h2>
                   <h2> {session.dates} </h2>
-                    <form >
+                    {/* <form >
                       <h3># of Kids</h3>
                       <input placeholder='kids' name='kids' onChange={handleChange}></input>
-                  </form>
+                    </form> */}
+                    <div className="add-to-cart-button">
+                                    <form onSubmit={this.handleSubmit}>
+                                        <button type="submit" class='add-to-cart'>Add To Cart</button>
+                                        <label htmlFor="quantity">Qty:</label>
+                                        <input type="number" name="quantity" value={this.state.quantity} onChange={this.handleChange}></input>
+                                    </form>
+                                </div>
                     {/* <button onClick={(e) => { addToCart(session.price, session.age, session.time, session.dates, session.location, kids, session.id, session.location_id) }} class='add-to-cart'>Add to cart</button> */}
-                    <button onClick={(e) => {addToCart(session.id)}} class='add-to-cart'>Add to cart</button>
+                    {/* <button onClick={(e) => {addToCart(session.id)}} class='add-to-cart'>Add to cart</button> */}
                     </div>
                 </div>
+                {this.addToCartConfirmation()}
               </div>
             </div>
         }
@@ -117,4 +183,14 @@ class Session extends Component {
   }
 }
 
-export default Session;
+const mapStateToProps = state => ({
+  session: state.session,
+  user: state.current_site_user
+})
+
+const mapDispatchToProps = dispatch => ({
+  addToCart: (singleSession) => dispatch(addToCart(singleSession)),
+  grabSingleSession:(session_id) => dispatch(grabSingleSession(session_id))
+})
+
+export default (Session);

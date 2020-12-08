@@ -28,6 +28,11 @@ import Profile from './components/Profile'
 import Session from './components/Session'
 import Footer from './components/Footer'
 import Totally from './images/Totally Tennis Logo.png'
+import CheckOut from './components/CheckOut'
+import { connect } from 'react-redux'
+import { getProfileFetch, fetchSessions, fetchCart} from './redux/actions';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faEnvelope, faKey, faShoppingCart, faBook, faTimes, faArrowRight, faSignInAlt, faUserPlus, faCheck, faAngleDoubleRight, faAngleDoubleLeft } from '@fortawesome/free-solid-svg-icons';
 import { verifyUser, loginUser, registerUser } from './services/auth'
 import {
   newOrder,
@@ -122,12 +127,21 @@ class App extends Component {
     }
   }
 
+  library() { library.add(faEnvelope, faKey, faShoppingCart, faBook, faTimes, faArrowRight, faSignInAlt, faUserPlus, faCheck, faAngleDoubleRight, faAngleDoubleLeft); }
+
   componentDidMount = async () => {
+    this.props.fetchSessions()
     const currentUser = await verifyUser();
     if (currentUser) {
       this.setState({
         currentUser
-      })
+      });
+      this.library()
+      this.props.fetchCart(this.props.current_user)
+    }
+    if (localStorage.token) {
+      this.props.getProfileFetch()
+      this.props.fetchCart(this.props.current_user)
     }
     this.getLocations();
   }
@@ -149,12 +163,11 @@ class App extends Component {
       });
      this.setState({ order: startOrder });
    }
-      const addItem = await newOrderItem({
-        orders_id: current_order,
-        sessions_id: sessionId,
-        quantity: parseInt(this.state.kids)
+       await newOrderItem({
+        order_id: current_order,
+        session_id: sessionId,
+        quantity: this.state.kids
       });
-      this.setState({cart: addItem})
     }
 
   addEnroll = async (firstname, lastname, phone, email, childname, childage, question, consent, startdate, enddate, typeofday) => {
@@ -371,10 +384,9 @@ class App extends Component {
   }
   
   render() {
-    console.log(this.state.currentUser && this.state.currentUser.current_order)
     return (
       <div class="App">
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"/>
         <div class="nav-container">
           <a class='a' href='/'>
             <img class='ball' src={Totally} />
@@ -400,9 +412,15 @@ class App extends Component {
           )} />
             <Route exact path="/cart" render={(props) => (
             <Cart
+              {...props}
               cart={this.state.cart}
             />
-          )}/>
+          )} />
+          < Route exact path = '/checkout'
+          component = {
+            CheckOut
+          }
+          />
           <Route exact path="/users/:user_id/children/:id" render={(props) => (
             <Child
               children={this.state.children}
@@ -584,5 +602,15 @@ class App extends Component {
   }
 }
 
-export default withRouter(App);
+const mapStateToProps = state => ({
+  current_user: state.current_site_user
+})
+
+const mapDispatchToProps = {
+  getProfileFetch: getProfileFetch,
+  fetchSessions: fetchSessions,
+  fetchCart: fetchCart
+  }
+
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(App));
 

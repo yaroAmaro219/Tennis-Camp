@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   has_secure_password
-  has_many :order
+  has_many :orders
+
+  def current_orders
+    []
+  end
   
   validates :email, presence: true, uniqueness: true
   validates :email, format: {with: URI::MailTo::EMAIL_REGEXP}

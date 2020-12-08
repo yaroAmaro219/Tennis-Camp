@@ -25,6 +25,9 @@ Rails.application.routes.draw do
     resources :sessions
   end
 
+  post 'orders/neworder', to: 'orders#neworder'
+  patch 'orders/shipping/:id', to: 'orders#shipping'
+  patch 'users/order_complete/:id', to: 'users#order_complete'
   get '/', to: 'locations#show'
   get '/login', to: 'authentication#login'
   get 'locations/:id', to: 'sessions#show'

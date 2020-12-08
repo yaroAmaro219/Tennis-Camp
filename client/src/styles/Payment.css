@@ -81,6 +81,7 @@
   font-size: medium;
   cursor: pointer;
   border: 1.5px solid #abdb8f;
+  transition: .222s;
 }
 
 .stripe-checkout:hover{
@@ -106,6 +107,7 @@
   font-size: medium;
   border: 1.5px solid #485056;
   cursor: pointer;
+  transition: .222s;
 }
 
 .paypal-checkout:hover{

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_07_213918) do
+ActiveRecord::Schema.define(version: 2020_12_08_170224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,10 +71,9 @@ ActiveRecord::Schema.define(version: 2020_12_07_213918) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "quantity"
-    t.bigint "sessions_id"
-    t.bigint "orders_id"
-    t.index ["orders_id"], name: "index_order_items_on_orders_id"
-    t.index ["sessions_id"], name: "index_order_items_on_sessions_id"
+    t.integer "order_id"
+    t.integer "session_id"
+    t.integer "item_price"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -84,6 +83,8 @@ ActiveRecord::Schema.define(version: 2020_12_07_213918) do
     t.string "session_id"
     t.string "order_id"
     t.string "user_id"
+    t.integer "total_price"
+    t.integer "total_qty"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -132,8 +133,6 @@ ActiveRecord::Schema.define(version: 2020_12_07_213918) do
   end
 
   add_foreign_key "locations", "sessions"
-  add_foreign_key "order_items", "orders", column: "orders_id"
-  add_foreign_key "order_items", "sessions", column: "sessions_id"
   add_foreign_key "users", "children", column: "children_id"
   add_foreign_key "users", "orders", column: "orders_id"
 end
