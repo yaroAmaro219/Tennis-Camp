@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :order_items
+  resources :orders
   resources :sessions
   resources :coaches
   resources :children
@@ -23,6 +25,7 @@ Rails.application.routes.draw do
     resources :sessions
   end
 
+  get '/', to: 'locations#show'
   get '/login', to: 'authentication#login'
   get 'locations/:id', to: 'sessions#show'
   get '/profile/:id', to: 'posts#show'

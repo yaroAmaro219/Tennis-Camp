@@ -149,7 +149,7 @@ margin: 0;
   }
 }
 
-@media screen and (max-width: 615px) {
+@media screen and (max-width: 650px) {
 .location-one {
   width: 180px !important;
   height: 160px;
@@ -158,4 +158,22 @@ margin: 0;
 .location-h2 {
   font-size: 18px !important;
 }
+}
+
+@media screen and (max-width: 440px) {
+.location-one {
+  width: 160px !important;
+}
+}
+
+@media screen and (max-width: 400px) {
+  .location-one {
+    width: 130px !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .location-one {
+    width: 110px !important;
+  }
 }

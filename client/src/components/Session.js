@@ -14,7 +14,7 @@ class Session extends Component {
   }
 
   render() {
-    const {session, deleteSession, updateSession, handleChange, time, age, location, dates, title, price} = this.props
+    const {session, deleteSession, updateSession, handleChange, time, age, location, dates, title, price, kids, cart, addToCart} = this.props
     return (
       <div class='show-page'>
         {
@@ -77,9 +77,7 @@ class Session extends Component {
             </form>
             :
             <div class='session-page'>
-             
               <div class='session-seperator'>
-              
                 <div class='session-left2'>
                 <div>
                 <h1>{session.title}</h1> 
@@ -96,7 +94,8 @@ class Session extends Component {
                       <h3># of Kids</h3>
                       <input placeholder='kids' name='kids' onChange={handleChange}></input>
                   </form>
-                    <button onClick={(e) => { }} class='add-to-cart'>Add to cart</button>
+                    {/* <button onClick={(e) => { addToCart(session.price, session.age, session.time, session.dates, session.location, kids, session.id, session.location_id) }} class='add-to-cart'>Add to cart</button> */}
+                    <button onClick={(e) => {addToCart(session.id)}} class='add-to-cart'>Add to cart</button>
                     </div>
                 </div>
               </div>

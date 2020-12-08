@@ -204,8 +204,9 @@ button.sign-in {
 
 .nav-social {
   margin: 18px 9px ;
-  bottom: 9px;
+  /* margin-bottom: 33px; */
   position: absolute;
+  bottom: 66px;
 }
 
 .nav-link-button {

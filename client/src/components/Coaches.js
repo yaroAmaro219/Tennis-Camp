@@ -19,15 +19,16 @@ class Coaches extends Component {
       this.props.coaches
       &&
       this.props.coaches.map((coach, index) => {
-        return (<>
-            <Link to={`/coaches/${coach.id}`}>
+        return (
+          <div class='coaches-hover'>
+          <Link to={`/coaches/${coach.id}`}>
             <div class='coach-one' style={{ 'background-image': `url(${coach.image})` }}>
               <div class='coach-background'>
                 <h2 class='coach-title'>{coach.name}</h2>
                 </div>
           </div>
           </Link>
-          </>
+          </div>
         )
       })
         

@@ -128,4 +128,9 @@
   .sessions-offered {
     padding: 9px !important;
   }
+
+  .session-seperator {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

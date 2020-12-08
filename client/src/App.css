@@ -14,7 +14,7 @@ html {
 }
 
 .web-dev {
-  bottom: 36px;
+  bottom: 81px;
   padding-top: 121px;
   color: white;
   padding: 36px 9px;
@@ -27,6 +27,7 @@ html {
   justify-content: center;
   margin-right: auto;
   margin-left: auto;
+  padding: 0px 18px;
 }
 
 .location-pic {
@@ -114,6 +115,7 @@ margin-bottom: 18px;
   align-items: flex-start;
   justify-content: flex-start;
   text-align: start;
+  margin-top: 18px;
 }
 
 .footer-choice {
@@ -153,6 +155,14 @@ margin-bottom: 18px;
 
   .footer-options {
     width: 100% !important;
+  }
+
+  .about-page {
+    width: 77%;
+    padding: 0px 9px !important;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: start;
   }
 
   .location-head {
@@ -319,19 +329,16 @@ margin-bottom: 18px;
 }
 
 @media screen and (max-width: 575px) {
-  /* .second {
-    width: 100% !important;
-  } */
 
   .review {
-    text-align: start;
+    border-radius: 50% 50%;
+    text-align: center;
     display: flex !important;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     background-color: white;
     opacity: .77;
-    min-height: 36px;
-    height: 100%;
+    height: 99px;
   }
   
   .review h3 {
@@ -366,6 +373,7 @@ margin-bottom: 18px;
       width: 90% !important;
     }
 }
+
 @media screen and (max-width: 470px) {
     .text-container {
        padding: 10% 0px 0px 0px !important;
@@ -471,11 +479,16 @@ margin-bottom: 18px;
 }
 
 .social-container {
-  padding-top: 9px;
+  padding: 18px 0px 9px 0px;
   display: flex;
   align-items: center !important;
   justify-content: center;
   text-align: center !important;
+}
+
+.about-page {
+  width: 77%;
+  padding: 0px 81px;
 }
 
 .string {
@@ -558,8 +571,8 @@ p {
 }
 
 .loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db; 
   border-right: 16px solid green;
   border-bottom: 16px solid red;
   border-left: 16px solid pink;
@@ -703,7 +716,6 @@ align-items: center;
 
 .title2 {
   color: #abdb8f;
-  /* font-weight: 900; */
   font-size: 36px;
 }
 
@@ -723,7 +735,6 @@ h1 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  /* padding: 360px 18px 0px 360px; */
   z-index: 1;
   width: 100%;
   position: absolute;
