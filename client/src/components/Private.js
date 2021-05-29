@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Private extends Component {
   render() {
     return (
-      <div class='users-container'>
+      <div class='enroll-page'>
         <h1>Private Lessons</h1>
       </div>
     )

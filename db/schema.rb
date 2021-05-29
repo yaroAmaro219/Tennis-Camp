@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_08_170224) do
+ActiveRecord::Schema.define(version: 2021_05_17_235430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -112,6 +112,16 @@ ActiveRecord::Schema.define(version: 2020_12_08_170224) do
     t.index ["location_id"], name: "index_sessions_on_location_id"
   end
 
+  create_table "states", force: :cascade do |t|
+    t.string "title"
+    t.string "timezone"
+    t.string "image"
+    t.bigint "locations_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["locations_id"], name: "index_states_on_locations_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -128,11 +138,14 @@ ActiveRecord::Schema.define(version: 2020_12_08_170224) do
     t.boolean "coach"
     t.integer "current_order"
     t.bigint "orders_id"
+    t.binary "picture"
+    t.string "profile_picture"
     t.index ["children_id"], name: "index_users_on_children_id"
     t.index ["orders_id"], name: "index_users_on_orders_id"
   end
 
   add_foreign_key "locations", "sessions"
+  add_foreign_key "states", "locations", column: "locations_id"
   add_foreign_key "users", "children", column: "children_id"
   add_foreign_key "users", "orders", column: "orders_id"
 end

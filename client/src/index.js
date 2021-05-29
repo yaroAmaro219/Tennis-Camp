@@ -14,15 +14,20 @@ import './styles/Profile.css'
 import './styles/Coach.css'
 import './styles/Sessions.css'
 import './styles/Reviews.css'
+import './styles/Careers.css'
+import './styles/Review.css'
+import './styles/Search.css'
+import './styles/Community.css'
+import './styles/States.css'
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom'
 import { createStore, applyMiddleware, compose } from 'redux'
 import rootReducer from './redux/reducers/rootReducer'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 

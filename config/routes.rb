@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :states
   resources :order_items
   resources :orders
   resources :sessions

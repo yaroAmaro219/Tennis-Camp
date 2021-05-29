@@ -23,13 +23,13 @@ class ApplicationController < ActionController::API
 			render json: {errors: e.message}, status: :unauthorized
 		end
   end
-  
-  def token
-    request.headers["Authorization"]
-  end
 
-  def current_site_user
-    user_id = decode[0]["user_id"]
-    user = User.find(user_id)
+  def current_site_user 
+    header = request.headers['Authorization']
+		header = header.split(' ').last if header
+		begin
+			@decoded = decode(header)
+      @current_user = User.find(@decoded[:user_id])
+    end
   end
 end

@@ -38,6 +38,7 @@ class Cart extends Component {
         // const order = this.current_order()
         // debugger
         // const order_items = order.order_items
+      console.log(this.props.cart)
         return (
             <div className="show-page">
                 <div className="cart-section">

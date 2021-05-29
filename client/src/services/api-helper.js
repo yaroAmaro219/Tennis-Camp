@@ -34,6 +34,16 @@ export const showLocation = async (id) => {
   return resp.data
 }
 
+export const postState = async (data) => {
+  const resp = await api.post(`/states`, { state: data })
+  return resp.data
+}
+
+export const showState = async (id) => {
+  const resp = await api.get(`/states`)
+  return resp.data
+}
+
 export const putCoach = async (id, coachData) => {
   const resp = await api.put(`/coaches/${id}`, {coach: coachData})
   return resp.data

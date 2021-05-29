@@ -84,10 +84,6 @@ class Coach extends Component {
           &&
               this.props.coach.name}</h1>
             <img class='coach-img' src={this.props.coach && this.props.coach.image}/>
-            
-            <h2 class="coach-welcome"> Age: {this.props.coach
-          &&
-            this.props.coach.age}</h2>
             <h2 class="coach-welcome"> Location: {this.props.coach
           &&
             this.props.coach.location}</h2>

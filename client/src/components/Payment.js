@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Lock from '../images/144-lock.svg'
 import Venmo from '../images/venmo-ar21.svg'
+
  
 function Payment () {
   return (

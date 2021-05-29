@@ -41,6 +41,8 @@ import {
   showUser,
   postEnroll,
   showEnroll,
+  postState,
+  showState,
   destroyEnroll,
   postLocation,
   showLocation,
@@ -79,6 +81,7 @@ class App extends Component {
       child: '',
       childname: '',
       childage: '',
+      profile_picture: [],
       kids: [],
       startdate: new Date(),
       enddate: new Date(),
@@ -95,6 +98,7 @@ class App extends Component {
       coach: '',
       typeofday: '',
       locations: '',
+      states: '',
       sessions: '',
       cart: [
          {
@@ -113,10 +117,10 @@ class App extends Component {
       title: '',
       registerFormData: {
         first_name: "",
-        last_name: "",
+        last_name: "Q",
         email: "",
-        classes: "",
-        child_name: "",
+        classes: "k",
+        child_name: "k",
         admin: false,
         password: ""
       },
@@ -144,6 +148,7 @@ class App extends Component {
       this.props.fetchCart(this.props.current_user)
     }
     this.getLocations();
+    // this.getStates();
   }
 
   getUser = async () => {
@@ -153,7 +158,10 @@ class App extends Component {
     }
   }
 
+  
+
   addToCart = async (sessionId) => {
+    console.log(this.state.currentUser.current_order)
     const  current_order  = this.state.currentUser && this.state.currentUser.current_order
     if (current_order === null) {
       const startOrder = await newOrder({
@@ -200,6 +208,7 @@ class App extends Component {
     this.props.history.push(`/locations/${id}`)
   }
 
+
   getSessions = async () => {
     const sessions = await showSession();
     if (sessions) {
@@ -230,6 +239,13 @@ class App extends Component {
     const location = await showLocation(id);
     if (location) {
       this.setState({ location })
+    }
+  }
+
+  getState = async (id) => {
+    const state = await showState(id);
+    if (state) {
+      this.setState({ state })
     }
   }
 
@@ -330,7 +346,15 @@ class App extends Component {
       coach: coach
     })
      this.props.history.push("/")
-   }
+  }
+  
+  addState = async (title, time, image) => {
+    await postState({
+      title: title,
+      time: time, 
+      image: image,
+    })
+  }
 
   handleLogin = async (e) => {
     e.preventDefault();
@@ -382,8 +406,21 @@ class App extends Component {
       }
     }));
   }
+
+
+  handleImage = async (picture) => {
+    this.setState({
+      profile_picture:  picture 
+    })
+  }
+
+  submitImage = async (e) => {
+    e.preventDefault();
+    await putUser(this.state.currentUser && this.state.currentUser.id, { 'profile_picture': this.state.profile_picture })
+  }
   
   render() {
+    console.log(this.state.profile_picture)
     return (
       <div class="App">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"/>
@@ -476,6 +513,9 @@ class App extends Component {
               updatePost={this.updatePost}
               user_id={this.state.user_id}
               user={this.state.currentUser}
+              handleImage={this.handleImage}
+              profile_picture={this.state.profile_picture}
+              submitImage={this.submitImage}
             />
           )}/>
           <Route exact path="/show" render={(props) => (
@@ -491,9 +531,8 @@ class App extends Component {
               users={this.state.users}
             />
           )}/>
-          <Route exact path="/private-lessons" render={(props) => (
+          <Route exact path="/private" render={(props) => (
             <Private
-              
             />
           )} />
           <Route exact path="/stringing" render={(props) => (

@@ -42,6 +42,11 @@
   cursor: pointer;
 }
 
+.cart-confirmation-div {
+  padding: 9px;
+  border: 1px solid grey;
+}
+
 .session-page {
   display: flex;
   flex-direction: column;
@@ -121,12 +126,17 @@
   
   .session {
     text-align: start;
+    margin: 0 !important;
   }
 }
 
 @media screen and (max-width: 500px) {
   .sessions-offered {
     padding: 9px !important;
+  }
+
+  .session-left {
+    padding: 3px !important;
   }
 
   .session-seperator {

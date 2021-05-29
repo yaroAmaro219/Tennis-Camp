@@ -1,6 +1,5 @@
-
 .contact-page {
-  padding: 96px 0px 63px 0px;
+  padding: 122px 0px 63px 0px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -58,9 +57,9 @@
   flex-direction: column !important;
 }
 
-.contact {
+/* .contact {
   width: 80%;
-}
+} */
 
 .contact-info {
   width: 80%;
@@ -73,6 +72,12 @@
   align-items: flex-start;
   justify-content: flex-start;
   text-align: start;
+}
+}
+
+@media screen and (max-width: 500px) {
+.contact-email {
+  font-size: large;
 }
 }
 

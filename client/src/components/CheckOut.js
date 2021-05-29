@@ -1,5 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import {Elements} from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+import {CardElement} from '@stripe/react-stripe-js';
+const stripePromise = loadStripe('pk_test_JJ1eMdKN0Hp4UFJ6kWXWO4ix00jtXzq5X');
+
 
 class CheckOut extends Component {
 
@@ -58,7 +63,26 @@ class CheckOut extends Component {
                     </form>
 
                 </div> */}
-                <div className="checkout-button">
+            <div className="checkout-button">
+            <Elements stripe={stripePromise}>
+                {/* <MyCheckoutForm /> */}
+                <CardElement
+                  options={{
+                    style: {
+                      base: {
+                        width: '66%',
+                        fontSize: '16px',
+                        color: '#424770',
+                        '::placeholder': {
+                          color: '#aab7c4',
+                        },
+                      },
+                      invalid: {
+                        color: '#9e2146',
+                      },
+                    },
+                  }}/>
+            </Elements>
                     <button onClick={this.handleClick}>Purchase</button>
                 </div>
             </div>

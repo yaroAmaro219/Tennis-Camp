@@ -7,7 +7,7 @@ class Footer extends Component {
       <div class='footer'>
       <div class='inner-footer'>
         <div class='footer-copyright'>
-          <h2>Tennis Coaches of NYC © </h2>
+          <h2>Totally Tennis © </h2>
         </div>
         <div class='footer-options'>
           <a class='footer-choice' href='/about'>About</a>

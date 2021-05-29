@@ -8,6 +8,7 @@ export default class Users extends Component {
 
   render() {
     const { users } = this.props
+    console.log(users)
     const user =
       users
       &&

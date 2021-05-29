@@ -16,23 +16,30 @@ export default class Home extends Component {
   play() {
     this.slider.slickPlay();
   }
+
+  locations() {
+    const location =
+    this.props.locations
+    &&
+    this.props.locations.map((location, index) => {
+      return (
+        <>
+          <Link to={`/locations/${location.id}`}>
+            <div class='location-one' style={{ 'background-image': `url(${location.image})` }}>
+              <div class='location-background'>
+                <h2 class='location-title'>{`${location.title}`}</h2>
+                </div>
+            </div>
+          </Link>
+        </>
+      )
+    })
+    return location
+}
+
+
+
   render() {
-    const locations =
-      this.props.locations
-      &&
-      this.props.locations.map((location, index) => {
-        return (
-          <>
-            <Link to={`/locations/${location.id}`}>
-              <div class='location-one' style={{ 'background-image': `url(${location.image})` }}>
-                <div class='location-background'>
-                  <h2 class='location-title'>{`${location.title}`}</h2>
-                  </div>
-              </div>
-            </Link>
-          </>
-        )
-      })
       const settings = {
         dots: true,
         infinite: true,
@@ -58,7 +65,7 @@ export default class Home extends Component {
               <div class='title-container'>
 
                 {/* <h1 class='title9'>Tennis Coaches Of NYC</h1> */}
-                <h1 class='title'>Totally Tennis</h1>
+                {/* <h1 class='title'>Totally Tennis</h1> */}
               </div>
               {/* <div class='sub-container'>
                 <div class='sub2-container'>
@@ -106,9 +113,13 @@ export default class Home extends Component {
         </div>
         <div class='second' id='dates'>
           <div class='second-text-container'>
-          <h1 class='title2'>Covid-19 Update</h1>
+          <h1 class='title2'>Our Mission</h1>
           <h1>-</h1>
-          <h2>We are offering lessons through this pandemic! It is our first priority to ensure everyones safety and well being.</h2>
+            <h2>Our mission is to teach kids the fundamentals that will make tennis a lot more fun when they're older!</h2>
+            <br/>
+            <h2>We get kids outside, running around and making new friends! </h2>
+            <br/>
+            <h2> We look to support our communities by bringing them together through our Totally Tennis Programs!</h2>
           {/* <h3>May - October 2021</h3> */}
             </div>
         </div>
@@ -121,7 +132,7 @@ export default class Home extends Component {
             {
               this.props.locations 
                 ?
-                locations
+                this.locations()
                 :
                 <div class="loader"></div>
             }
