@@ -420,7 +420,6 @@ class App extends Component {
   }
   
   render() {
-    console.log(this.state.profile_picture)
     return (
       <div class="App">
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"/>

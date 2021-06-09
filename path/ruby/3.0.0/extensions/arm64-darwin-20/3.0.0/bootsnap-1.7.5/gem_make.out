@@ -1,0 +1,15 @@
+current directory: /Users/artemieamari/Desktop/websecure/Tennis-Camp/path/ruby/3.0.0/gems/bootsnap-1.7.5/ext/bootsnap
+/Users/artemieamari/.rvm/rubies/ruby-3.0.0/bin/ruby -I /Users/artemieamari/.rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0 -r ./siteconf20210609-87439-gycc6o.rb extconf.rb
+creating Makefile
+
+current directory: /Users/artemieamari/Desktop/websecure/Tennis-Camp/path/ruby/3.0.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/artemieamari/Desktop/websecure/Tennis-Camp/path/ruby/3.0.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/artemieamari/Desktop/websecure/Tennis-Camp/path/ruby/3.0.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR=" install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20210609-87439-ypoivz/bootsnap

@@ -11,7 +11,7 @@ const Login = (props) => {
   const { handleLogin, authFormData, handleChange, error } = props
 
   return (
-      <>
+    
       <div className='show-page'>
         <div class='login'>
         <form  onSubmit={handleLogin}>
@@ -44,7 +44,7 @@ const Login = (props) => {
           </div>
         </div>
       </div>
-      </>
+
     )
   }
   

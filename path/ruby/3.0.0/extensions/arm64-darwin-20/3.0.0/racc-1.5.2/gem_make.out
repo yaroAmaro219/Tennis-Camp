@@ -1,0 +1,16 @@
+current directory: /Users/artemieamari/Desktop/websecure/Tennis-Camp/path/ruby/3.0.0/gems/racc-1.5.2/ext/racc/cparse
+/Users/artemieamari/.rvm/rubies/ruby-3.0.0/bin/ruby -I /Users/artemieamari/.rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0 -r ./siteconf20210609-87439-1lnd4j.rb extconf.rb
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/artemieamari/Desktop/websecure/Tennis-Camp/path/ruby/3.0.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" clean
+
+current directory: /Users/artemieamari/Desktop/websecure/Tennis-Camp/path/ruby/3.0.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR="
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/artemieamari/Desktop/websecure/Tennis-Camp/path/ruby/3.0.0/gems/racc-1.5.2/ext/racc/cparse
+make "DESTDIR=" install
+/opt/homebrew/opt/coreutils/bin/ginstall -c -m 0755 cparse.bundle ./.gem.20210609-87439-7adzuc/racc

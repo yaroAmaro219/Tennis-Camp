@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/yaroamaro219/Tennis-Camp/issues"
   },
-  "homepage": "https://github.com/yaroamaro219/Tennis-Camp#readme"
+  "homepage": "https://github.com/yaroamaro219/Tennis-Camp#readme",
+  "dependencies": {
+    "bundle": "^2.1.0"
+  }
 }

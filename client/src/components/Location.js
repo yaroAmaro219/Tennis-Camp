@@ -22,7 +22,7 @@ class Location extends Component {
       this.props.sessions.map((session, index) => {
         if (session.location_id === parseInt(this.props.match.params.id)) {
           return (
-            <>
+            
               <Link class='sessions-link' to={`/locations/${this.props.match.params.id}/sessions/${session.id}`} >
                 <div class='session'>
                   <div class='session-left'>
@@ -36,7 +36,7 @@ class Location extends Component {
                     <iframe class='map' src={session.location} width="100%" height="222" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
                 </div>
               </Link>
-            </>
+            
           )
         } else {
           return (undefined)

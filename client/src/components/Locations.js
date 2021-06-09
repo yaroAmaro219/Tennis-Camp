@@ -44,7 +44,7 @@ export default class Locations extends Component {
       &&
       this.props.locations.map((location, index) => {
         return (
-          <>
+        
             <Link to={`/locations/${location.id}`}>
               <div class='location-one' style={{ 'background-image': `url(${location.image})` }}>
                 <div class='location-background'>
@@ -60,7 +60,7 @@ export default class Locations extends Component {
             }
             </div>
             </Link>
-            </>
+          
         )
       }).reverse();
     const {title, time, age_group, image, coach} = this.state
