@@ -27,6 +27,7 @@ import Login from './components/Login'
 import Profile from './components/Profile'
 import Session from './components/Session'
 import Footer from './components/Footer'
+import Questions from "./components/Questions";
 import Totally from './images/Totally Tennis Logo.png'
 import CheckOut from './components/CheckOut'
 import { connect } from 'react-redux'
@@ -628,6 +629,11 @@ class App extends Component {
             )} />
             <Route exact path="/careers" render={(props) => (
             <Careers
+              
+            />
+            )} />
+            <Route exact path="/questions" render={(props) => (
+            <Questions
               
             />
             )} />
