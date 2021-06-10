@@ -475,7 +475,7 @@ class App extends Component {
     return (
       <div class="App">
         {/* <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"/> */}
-        {/* <div class="nav-container"> */}
+       
           
           {/* <Nav
             currentUser={this.state.currentUser}
@@ -486,7 +486,7 @@ class App extends Component {
           /> */}
             
           <this.TestNav/>
-        {/* </div> */}
+       
         <Switch>
         <Route exact path="/about" render={(props) => (
             <About
