@@ -427,7 +427,7 @@ class App extends Component {
     const changePosition = 10;
     
     let position = useWindowScrollPosition();
-    // position == { x: 0, y: 0 }
+    
   
     if (position.y > changePosition && !change) {
       setChange(true);
