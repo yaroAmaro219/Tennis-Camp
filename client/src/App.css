@@ -140,9 +140,9 @@ p {
 
 
 @media screen and (max-width: 1600px) {
-  .first {
+  /* .first {
     height: 700px !important;
-  }
+  } */
   }
 
 @media screen and (max-width: 1100px) {
@@ -153,6 +153,12 @@ p {
 .slider {
   padding: 30% 0 0 0 !important;
 }
+}
+
+@media screen and (max-width: 1045px) {
+  .first {
+    background-position: 80% 0px !important;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -276,8 +282,8 @@ p {
 
   .first {
     flex-direction: column;
-    height: 777px !important;
-    background-position: 70% 10vw !important;
+    /* height: 777px !important;
+    background-position: 70% 10vw !important; */
   }
 
   #pricing.pricing {
@@ -333,9 +339,9 @@ p {
 
 @media screen and (max-width: 615px) {
 
-  .first {
+  /* .first {
     background-position: 77% 15vw !important;
-  }
+  } */
 
   .slider {
     margin-top: 28%;
@@ -405,13 +411,13 @@ p {
       padding-bottom: 9px;
     }
 
-    .first {
+    /* .first {
       background-position: 77% 23vw !important;
       background-size: cover !important;
       -webkit-background-size: cover !important;
       -moz-background-size: cover !important;
       -o-background-size: cover !important;
-    }
+    } */
 
     .slider {
       margin-top: 66% !important;
@@ -776,7 +782,7 @@ h1 {
 .first {
   background-image: url("./images/650178022-huge.jpg");
   background-attachment: scroll;
-  background-position: 80% 111px;
+  background-position: 80% 99px;
   background-repeat: no-repeat;
   background-size: cover;
   min-height:100%;

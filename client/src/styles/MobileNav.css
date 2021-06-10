@@ -1,0 +1,21 @@
+.mobile-nav {
+    display: none;
+}
+
+.ball2 {
+    display: none;
+}
+
+@media screen and (max-width: 1045px) {
+    .ball2 {
+        display: flex !important;
+        padding: 0 9px;
+    }
+
+    .mobile-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}

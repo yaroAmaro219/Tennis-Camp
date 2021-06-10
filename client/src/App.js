@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Route, Switch } from 'react-router-dom'
 import { withRouter } from 'react-router';
 import About from './components/About'
@@ -27,9 +27,11 @@ import Login from './components/Login'
 import Profile from './components/Profile'
 import Session from './components/Session'
 import Footer from './components/Footer'
+import MobileNav from './components/MobileNav'
 import Questions from "./components/Questions";
 import Totally from './images/Totally Tennis Logo.png'
 import CheckOut from './components/CheckOut'
+import useWindowScrollPosition from "@rehooks/window-scroll-position";
 import { connect } from 'react-redux'
 import { getProfileFetch, fetchSessions, fetchCart} from './redux/actions';
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -367,7 +369,7 @@ class App extends Component {
       this.setState({error: ''})
       this.props.history.push("/")
     } else {
-      this.setState({ error: 'The email or password you are trying to use isn\'t valid. Please try again' })
+      this.setState({ error: 'The email or password you are trying to use isn\'t valid.' })
       this.props.history.push("/login")
     }
   }
@@ -419,23 +421,72 @@ class App extends Component {
     e.preventDefault();
     await putUser(this.state.currentUser && this.state.currentUser.id, { 'profile_picture': this.state.profile_picture })
   }
+
+  TestNav = () => {
+    const [change, setChange] = useState(false);
+    const changePosition = 10;
+    
+    let position = useWindowScrollPosition();
+    // position == { x: 0, y: 0 }
+  
+    if (position.y > changePosition && !change) {
+      setChange(true);
+    }
+  
+    if (position.y <= changePosition && change) {
+      setChange(false);
+    }
+  
+    let style = {
+      backgroundColor: change ? "#ABDB8F" : "transparent",
+      transition: ".3s ease",
+      height: "93px",
+      position: "fixed",
+      right: 0,
+      left: 0,
+      top: 0,
+    };
+   
+   let style2 = {
+     color: change ? "#464646" : "#ABDB8F", 
+   }
+
+   let navtext = {
+     width: '100%',
+     display: 'flex',
+     margin: ' 0 0 0 auto',
+  }
+  
+    return (
+      <div style={style} id='nav-container'>
+        
+          
+          
+          <a href='/'>
+             <img class='ball2' src={Totally} />
+            </a>
+          <MobileNav/>
+          <Nav/>
+        </div>
+    );
+  }
   
   render() {
     return (
       <div class="App">
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"/>
-        <div class="nav-container">
-          <a class='a' href='/'>
-            <img class='ball' src={Totally} />
-          </a>
-          <Nav
+        {/* <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"/> */}
+        {/* <div class="nav-container"> */}
+          
+          {/* <Nav
             currentUser={this.state.currentUser}
             handleLogin={this.handleLogin}
             handleLogout={this.handleLogout}
             formData={this.state.authFormData}
             user={this.state.user}
-          />
-        </div>
+          /> */}
+            
+          <this.TestNav/>
+        {/* </div> */}
         <Switch>
         <Route exact path="/about" render={(props) => (
             <About

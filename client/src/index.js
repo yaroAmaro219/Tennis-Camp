@@ -19,6 +19,7 @@ import './styles/Review.css'
 import './styles/Search.css'
 import './styles/Community.css'
 import './styles/States.css'
+import './styles/MobileNav.css'
 import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom'
 import { createStore, applyMiddleware, compose } from 'redux'
