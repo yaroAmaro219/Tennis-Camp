@@ -474,7 +474,6 @@ class App extends Component {
   render() {
     return (
       <div class="App">
-        {/* <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"/> */}
        
           
           {/* <Nav
